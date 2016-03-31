@@ -1,0 +1,6 @@
+
+State Machine - |ff|state
+Name state.tdata state.synch state.idle 
+state.idle 0 0 0 
+state.synch 0 1 1 
+state.tdata 1 0 1 

@@ -1,0 +1,20 @@
+|pwm
+clk_in => sw_sig[0].CLK
+clk_in => sw_sig[1].CLK
+clk_in => sw_sig[2].CLK
+clk_in => sw_sig[3].CLK
+clk_in => sw_sig[4].CLK
+clk_in => sw_sig[5].CLK
+clk_in => sw_sig[6].CLK
+clk_in => sw_sig[7].CLK
+sw_in[0] => LessThan0.IN8
+sw_in[1] => LessThan0.IN7
+sw_in[2] => LessThan0.IN6
+sw_in[3] => LessThan0.IN5
+sw_in[4] => LessThan0.IN4
+sw_in[5] => LessThan0.IN3
+sw_in[6] => LessThan0.IN2
+sw_in[7] => LessThan0.IN1
+pwm_out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+

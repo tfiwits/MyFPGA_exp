@@ -1,0 +1,35 @@
+|tts_bdf
+dc_out[0] <= tts:inst.dc_out[0]
+dc_out[1] <= tts:inst.dc_out[1]
+clk_in => tts:inst.clk_in
+aw_ck_in => tts:inst.sw_ck_in
+sw_in[0] => tts:inst.sw_in[0]
+sw_in[1] => tts:inst.sw_in[1]
+sw_in[2] => tts:inst.sw_in[2]
+sw_in[3] => tts:inst.sw_in[3]
+sw_in[4] => tts:inst.sw_in[4]
+sw_in[5] => tts:inst.sw_in[5]
+sw_in[6] => tts:inst.sw_in[6]
+
+
+|tts_bdf|tts:inst
+clk_in => sw_st[0].CLK
+clk_in => sw_st[1].CLK
+clk_in => sw_st[2].CLK
+clk_in => sw_st[3].CLK
+clk_in => sw_st[4].CLK
+clk_in => sw_st[5].CLK
+clk_in => sw_st[6].CLK
+sw_in[0] => LessThan0.IN7
+sw_in[1] => LessThan0.IN6
+sw_in[2] => LessThan0.IN5
+sw_in[3] => LessThan0.IN4
+sw_in[4] => LessThan0.IN3
+sw_in[5] => LessThan0.IN2
+sw_in[6] => LessThan0.IN1
+dc_out[0] <= dc_out_sig.DB_MAX_OUTPUT_PORT_TYPE
+dc_out[1] <= dc_out_sig.DB_MAX_OUTPUT_PORT_TYPE
+sw_ck_in => dc_out_sig.OUTPUTSELECT
+sw_ck_in => dc_out_sig.OUTPUTSELECT
+
+

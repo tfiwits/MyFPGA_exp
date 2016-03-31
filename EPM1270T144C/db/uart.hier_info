@@ -1,0 +1,31 @@
+|uart
+clk_in_325hz => recv[0].CLK
+clk_in_325hz => recv[1].CLK
+clk_in_325hz => recv[2].CLK
+clk_in_325hz => recv[3].CLK
+clk_in_325hz => recv[4].CLK
+clk_in_325hz => recv[5].CLK
+clk_in_325hz => recv[6].CLK
+clk_in_325hz => recv[7].CLK
+clk_in_325hz => recv[8].CLK
+clk_in_325hz => rxd_ck.CLK
+clk_in_325hz => rec_st[0].CLK
+clk_in_325hz => rec_st[1].CLK
+clk_in_325hz => rec_st[2].CLK
+clk_in_325hz => rec_st[3].CLK
+clk_in_325hz => rxd_ck_st[0].CLK
+clk_in_325hz => rxd_ck_st[1].CLK
+clk_in_325hz => rxd_ck_st[2].CLK
+rxd_in => recv.DATAB
+rxd_in => rxd_ck.DATAIN
+rxd_out[0] <= recv[0].DB_MAX_OUTPUT_PORT_TYPE
+rxd_out[1] <= recv[1].DB_MAX_OUTPUT_PORT_TYPE
+rxd_out[2] <= recv[2].DB_MAX_OUTPUT_PORT_TYPE
+rxd_out[3] <= recv[3].DB_MAX_OUTPUT_PORT_TYPE
+rxd_out[4] <= recv[4].DB_MAX_OUTPUT_PORT_TYPE
+rxd_out[5] <= recv[5].DB_MAX_OUTPUT_PORT_TYPE
+rxd_out[6] <= recv[6].DB_MAX_OUTPUT_PORT_TYPE
+rxd_out[7] <= recv[7].DB_MAX_OUTPUT_PORT_TYPE
+rxd_out[8] <= recv[8].DB_MAX_OUTPUT_PORT_TYPE
+
+

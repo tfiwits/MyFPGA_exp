@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_in'
+Slack : -4.026
+TNS   : -44.718
+
+Type  : Slow 1200mV 85C Model Setup 'clk_sig'
+Slack : -1.109
+TNS   : -2.881
+
+Type  : Slow 1200mV 85C Model Hold 'clk_in'
+Slack : -0.125
+TNS   : -0.125
+
+Type  : Slow 1200mV 85C Model Hold 'clk_sig'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_in'
+Slack : -3.000
+TNS   : -32.740
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_sig'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 0C Model Setup 'clk_in'
+Slack : -3.723
+TNS   : -39.856
+
+Type  : Slow 1200mV 0C Model Setup 'clk_sig'
+Slack : -0.893
+TNS   : -2.281
+
+Type  : Slow 1200mV 0C Model Hold 'clk_in'
+Slack : -0.085
+TNS   : -0.085
+
+Type  : Slow 1200mV 0C Model Hold 'clk_sig'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_in'
+Slack : -3.000
+TNS   : -32.740
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_sig'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Fast 1200mV 0C Model Setup 'clk_in'
+Slack : -1.118
+TNS   : -7.891
+
+Type  : Fast 1200mV 0C Model Setup 'clk_sig'
+Slack : 0.079
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_in'
+Slack : -0.220
+TNS   : -0.220
+
+Type  : Fast 1200mV 0C Model Hold 'clk_sig'
+Slack : 0.167
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_in'
+Slack : -3.000
+TNS   : -24.240
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_sig'
+Slack : -1.000
+TNS   : -3.000
+
+------------------------------------------------------------

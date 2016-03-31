@@ -1,0 +1,286 @@
+Analysis & Synthesis report for two_led_bdf
+Tue Oct 16 16:11:16 2012
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Oct 16 16:11:16 2012        ;
+; Quartus II Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name               ; two_led_bdf                                  ;
+; Top-level Entity Name       ; two_led_bdf                                  ;
+; Family                      ; MAX II                                       ;
+; Total logic elements        ; 175                                          ;
+; Total pins                  ; 21                                           ;
+; Total virtual pins          ; 0                                            ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
++-----------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EPM1270T144C5      ;                    ;
+; Top-level entity name                                                      ; two_led_bdf        ; two_led_bdf        ;
+; Family name                                                                ; MAX II             ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
+; two_led_bdf.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/EPM1270T144C/two_led_bdf.bdf ;
+; two_led.vhd                      ; yes             ; Auto-Found VHDL File               ; C:/Users/Administrator/Desktop/EPM1270T144C/two_led.vhd     ;
+; clock.vhd                        ; yes             ; Auto-Found VHDL File               ; C:/Users/Administrator/Desktop/EPM1270T144C/clock.vhd       ;
+; key.vhd                          ; yes             ; Auto-Found VHDL File               ; C:/Users/Administrator/Desktop/EPM1270T144C/key.vhd         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Total logic elements                        ; 175    ;
+;     -- Combinational with no register       ; 79     ;
+;     -- Register only                        ; 45     ;
+;     -- Combinational with a register        ; 51     ;
+;                                             ;        ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 37     ;
+;     -- 3 input functions                    ; 30     ;
+;     -- 2 input functions                    ; 48     ;
+;     -- 1 input functions                    ; 15     ;
+;     -- 0 input functions                    ; 0      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 136    ;
+;     -- arithmetic mode                      ; 39     ;
+;     -- qfbk mode                            ; 0      ;
+;     -- register cascade mode                ; 0      ;
+;     -- synchronous clear/load mode          ; 0      ;
+;     -- asynchronous clear/load mode         ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 96     ;
+; Total logic cells in carry chains           ; 42     ;
+; I/O pins                                    ; 21     ;
+; Maximum fan-out node                        ; clk_in ;
+; Maximum fan-out                             ; 44     ;
+; Total fan-out                               ; 523    ;
+; Average fan-out                             ; 2.67   ;
++---------------------------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name       ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------+--------------+
+; |two_led_bdf               ; 175 (0)     ; 96           ; 0          ; 21   ; 0            ; 79 (0)       ; 45 (0)            ; 51 (0)           ; 42 (0)          ; 0 (0)      ; |two_led_bdf              ; work         ;
+;    |clock:inst1|           ; 93 (93)     ; 44           ; 0          ; 0    ; 0            ; 49 (49)      ; 22 (22)           ; 22 (22)          ; 37 (37)         ; 0 (0)      ; |two_led_bdf|clock:inst1  ; work         ;
+;    |key:inst7|             ; 29 (29)     ; 16           ; 0          ; 0    ; 0            ; 13 (13)      ; 1 (1)             ; 15 (15)          ; 5 (5)           ; 0 (0)      ; |two_led_bdf|key:inst7    ; work         ;
+;    |two_led:inst|          ; 53 (53)     ; 36           ; 0          ; 0    ; 0            ; 17 (17)      ; 22 (22)           ; 14 (14)          ; 0 (0)           ; 0 (0)      ; |two_led_bdf|two_led:inst ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 96    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 15    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; two_led:inst|com_tmp[0]                 ; 2       ;
+; key:inst7|row_sig[0]                    ; 3       ;
+; two_led:inst|scan_g_tmp[7]              ; 2       ;
+; two_led:inst|scan_o_tmp[7]              ; 2       ;
+; two_led:inst|scan_r_tmp[7]              ; 2       ;
+; two_led:inst|scan_g_tmp[6]              ; 2       ;
+; two_led:inst|scan_o_tmp[6]              ; 2       ;
+; two_led:inst|scan_r_tmp[6]              ; 2       ;
+; two_led:inst|scan_g_tmp[5]              ; 2       ;
+; two_led:inst|scan_o_tmp[5]              ; 2       ;
+; two_led:inst|scan_r_tmp[5]              ; 2       ;
+; two_led:inst|scan_g_tmp[4]              ; 2       ;
+; two_led:inst|scan_o_tmp[4]              ; 2       ;
+; two_led:inst|scan_r_tmp[4]              ; 2       ;
+; two_led:inst|scan_g_tmp[3]              ; 2       ;
+; two_led:inst|scan_o_tmp[3]              ; 2       ;
+; two_led:inst|scan_r_tmp[3]              ; 2       ;
+; two_led:inst|scan_g_tmp[2]              ; 2       ;
+; two_led:inst|scan_o_tmp[2]              ; 2       ;
+; two_led:inst|scan_r_tmp[2]              ; 2       ;
+; two_led:inst|scan_r_tmp[1]              ; 2       ;
+; two_led:inst|scan_g_tmp[0]              ; 2       ;
+; Total number of inverted registers = 22 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |two_led_bdf|key:inst7|key_stt[4] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |two_led_bdf|key:inst7|x8_SIG[0]  ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |two_led_bdf|key:inst7|col_tmp[1] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |two_led_bdf|two_led:inst|Mux4    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Oct 16 16:11:15 2012
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off two_led_bdf -c two_led_bdf
+Info: Found 1 design units, including 1 entities, in source file two_led_bdf.bdf
+    Info: Found entity 1: two_led_bdf
+Info: Elaborating entity "two_led_bdf" for the top level hierarchy
+Warning: Using design file two_led.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: two_led-a
+    Info: Found entity 1: two_led
+Info: Elaborating entity "two_led" for hierarchy "two_led:inst"
+Warning: Using design file clock.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: clock-a
+    Info: Found entity 1: clock
+Info: Elaborating entity "clock" for hierarchy "clock:inst1"
+Warning: Using design file key.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: key-a
+    Info: Found entity 1: key
+Info: Elaborating entity "key" for hierarchy "key:inst7"
+Info: Implemented 196 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 18 output pins
+    Info: Implemented 175 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 230 megabytes
+    Info: Processing ended: Tue Oct 16 16:11:16 2012
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

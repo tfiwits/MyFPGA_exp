@@ -1,0 +1,542 @@
+Classic Timing Analyzer report for led8_24hour_bdf
+Fri Oct 05 14:34:44 2012
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk_in'
+  7. tco
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                ;
++------------------------------+-------+---------------+----------------------------------+------------------------------+------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                         ; To                     ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+------------------------------+------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 22.630 ns                        ; led8_24hour:inst4|led_sig[3] ; led_out[0]             ; clk_in     ; --       ; 0            ;
+; Clock Setup: 'clk_in'        ; N/A   ; None          ; 105.41 MHz ( period = 9.487 ns ) ; clock:inst|clk_sig[9]        ; clock:inst|clk_sig[12] ; clk_in     ; clk_in   ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                              ;                        ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+------------------------------+------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EPM1270T144C5      ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk_in          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk_in'                                                                                                                                                                                                                                                         ;
++-----------------------------------------+-----------------------------------------------------+---------------------------------+---------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                            ; To                              ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+---------------------------------+---------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 105.41 MHz ( period = 9.487 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.778 ns                ;
+; N/A                                     ; 105.47 MHz ( period = 9.481 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.772 ns                ;
+; N/A                                     ; 105.50 MHz ( period = 9.479 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.770 ns                ;
+; N/A                                     ; 105.53 MHz ( period = 9.476 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[13]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.767 ns                ;
+; N/A                                     ; 108.01 MHz ( period = 9.258 ns )                    ; led8_24hour:inst4|led_s[1]      ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.549 ns                ;
+; N/A                                     ; 108.08 MHz ( period = 9.252 ns )                    ; led8_24hour:inst4|led_s[1]      ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.543 ns                ;
+; N/A                                     ; 108.41 MHz ( period = 9.224 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.515 ns                ;
+; N/A                                     ; 108.46 MHz ( period = 9.220 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[11]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.511 ns                ;
+; N/A                                     ; 108.48 MHz ( period = 9.218 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.509 ns                ;
+; N/A                                     ; 108.92 MHz ( period = 9.181 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 8.472 ns                ;
+; N/A                                     ; 109.37 MHz ( period = 9.143 ns )                    ; clock:inst|clk_sig[11]          ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.434 ns                ;
+; N/A                                     ; 109.43 MHz ( period = 9.138 ns )                    ; clock:inst|clk_sig[3]           ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.429 ns                ;
+; N/A                                     ; 109.45 MHz ( period = 9.137 ns )                    ; clock:inst|clk_sig[11]          ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.428 ns                ;
+; N/A                                     ; 109.47 MHz ( period = 9.135 ns )                    ; clock:inst|clk_sig[11]          ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.426 ns                ;
+; N/A                                     ; 109.47 MHz ( period = 9.135 ns )                    ; clock:inst|clk_sig[3]           ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.426 ns                ;
+; N/A                                     ; 109.51 MHz ( period = 9.132 ns )                    ; clock:inst|clk_sig[11]          ; clock:inst|clk_sig[13]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.423 ns                ;
+; N/A                                     ; 109.51 MHz ( period = 9.132 ns )                    ; clock:inst|clk_sig[3]           ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.423 ns                ;
+; N/A                                     ; 109.53 MHz ( period = 9.130 ns )                    ; clock:inst|clk_sig[3]           ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.421 ns                ;
+; N/A                                     ; 109.57 MHz ( period = 9.127 ns )                    ; clock:inst|clk_sig[3]           ; clock:inst|clk_sig[13]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.418 ns                ;
+; N/A                                     ; 109.81 MHz ( period = 9.107 ns )                    ; clock:inst|clk_sig[5]           ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.398 ns                ;
+; N/A                                     ; 109.88 MHz ( period = 9.101 ns )                    ; clock:inst|clk_sig[5]           ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.392 ns                ;
+; N/A                                     ; 109.90 MHz ( period = 9.099 ns )                    ; clock:inst|clk_sig[5]           ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.390 ns                ;
+; N/A                                     ; 109.94 MHz ( period = 9.096 ns )                    ; clock:inst|clk_sig[5]           ; clock:inst|clk_sig[13]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.387 ns                ;
+; N/A                                     ; 110.17 MHz ( period = 9.077 ns )                    ; led8_24hour:inst4|led_s[0]      ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.368 ns                ;
+; N/A                                     ; 110.17 MHz ( period = 9.077 ns )                    ; clock:inst|clk_sig[5]           ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.368 ns                ;
+; N/A                                     ; 110.24 MHz ( period = 9.071 ns )                    ; led8_24hour:inst4|led_s[0]      ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.362 ns                ;
+; N/A                                     ; 110.80 MHz ( period = 9.025 ns )                    ; led8_24hour:inst4|led_s[3]      ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.316 ns                ;
+; N/A                                     ; 110.88 MHz ( period = 9.019 ns )                    ; led8_24hour:inst4|led_s[3]      ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.310 ns                ;
+; N/A                                     ; 110.93 MHz ( period = 9.015 ns )                    ; clock:inst|clk_sig[3]           ; clock:inst|clk_sig[11]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.306 ns                ;
+; N/A                                     ; 111.02 MHz ( period = 9.007 ns )                    ; clock:inst|clk_sig[3]           ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.298 ns                ;
+; N/A                                     ; 111.43 MHz ( period = 8.974 ns )                    ; clock:inst|clk_sig[14]          ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.265 ns                ;
+; N/A                                     ; 111.51 MHz ( period = 8.968 ns )                    ; clock:inst|clk_sig[14]          ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.259 ns                ;
+; N/A                                     ; 111.53 MHz ( period = 8.966 ns )                    ; clock:inst|clk_sig[14]          ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.257 ns                ;
+; N/A                                     ; 111.57 MHz ( period = 8.963 ns )                    ; clock:inst|clk_sig[14]          ; clock:inst|clk_sig[13]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.254 ns                ;
+; N/A                                     ; 111.64 MHz ( period = 8.957 ns )                    ; clock:inst|clk_sig[5]           ; clock:inst|clk_sig[11]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.248 ns                ;
+; N/A                                     ; 111.74 MHz ( period = 8.949 ns )                    ; led8_24hour:inst4|led_sig_t[2]  ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.240 ns                ;
+; N/A                                     ; 111.74 MHz ( period = 8.949 ns )                    ; clock:inst|clk_sig[5]           ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.240 ns                ;
+; N/A                                     ; 111.82 MHz ( period = 8.943 ns )                    ; led8_24hour:inst4|led_sig_t[2]  ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.234 ns                ;
+; N/A                                     ; 111.98 MHz ( period = 8.930 ns )                    ; led8_24hour:inst4|led_sig_t[3]  ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.221 ns                ;
+; N/A                                     ; 112.06 MHz ( period = 8.924 ns )                    ; led8_24hour:inst4|led_sig_t[3]  ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.215 ns                ;
+; N/A                                     ; 112.42 MHz ( period = 8.895 ns )                    ; clock:inst|clk_sig[14]          ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.186 ns                ;
+; N/A                                     ; 112.49 MHz ( period = 8.890 ns )                    ; led8_24hour:inst4|led_s[1]      ; led8_24hour:inst4|led_sig_ht[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.181 ns                ;
+; N/A                                     ; 112.51 MHz ( period = 8.888 ns )                    ; clock:inst|clk_sig[7]           ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.179 ns                ;
+; N/A                                     ; 112.59 MHz ( period = 8.882 ns )                    ; clock:inst|clk_sig[12]          ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.173 ns                ;
+; N/A                                     ; 112.61 MHz ( period = 8.880 ns )                    ; clock:inst|clk_sig[11]          ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.171 ns                ;
+; N/A                                     ; 112.66 MHz ( period = 8.876 ns )                    ; clock:inst|clk_sig[11]          ; clock:inst|clk_sig[11]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.167 ns                ;
+; N/A                                     ; 112.66 MHz ( period = 8.876 ns )                    ; clock:inst|clk_sig[12]          ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.167 ns                ;
+; N/A                                     ; 112.68 MHz ( period = 8.875 ns )                    ; led8_24hour:inst4|led_sig_s[0]  ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.166 ns                ;
+; N/A                                     ; 112.69 MHz ( period = 8.874 ns )                    ; clock:inst|clk_sig[12]          ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.165 ns                ;
+; N/A                                     ; 112.69 MHz ( period = 8.874 ns )                    ; clock:inst|clk_sig[11]          ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.165 ns                ;
+; N/A                                     ; 112.73 MHz ( period = 8.871 ns )                    ; clock:inst|clk_sig[12]          ; clock:inst|clk_sig[13]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.162 ns                ;
+; N/A                                     ; 112.73 MHz ( period = 8.871 ns )                    ; clock:inst|clk_sig[13]          ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.162 ns                ;
+; N/A                                     ; 112.75 MHz ( period = 8.869 ns )                    ; led8_24hour:inst4|led_sig_s[0]  ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.160 ns                ;
+; N/A                                     ; 112.79 MHz ( period = 8.866 ns )                    ; led8_24hour:inst4|led_sig_s[1]  ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.157 ns                ;
+; N/A                                     ; 112.87 MHz ( period = 8.860 ns )                    ; led8_24hour:inst4|led_sig_s[1]  ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.151 ns                ;
+; N/A                                     ; 113.16 MHz ( period = 8.837 ns )                    ; clock:inst|clk_sig[11]          ; clock:inst|clk_sig[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 8.128 ns                ;
+; N/A                                     ; 113.22 MHz ( period = 8.832 ns )                    ; clock:inst|clk_sig[3]           ; clock:inst|clk_sig[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 8.123 ns                ;
+; N/A                                     ; 113.44 MHz ( period = 8.815 ns )                    ; clock:inst|clk_sig[12]          ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.106 ns                ;
+; N/A                                     ; 113.62 MHz ( period = 8.801 ns )                    ; clock:inst|clk_sig[5]           ; clock:inst|clk_sig[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 8.092 ns                ;
+; N/A                                     ; 114.16 MHz ( period = 8.760 ns )                    ; clock:inst|clk_sig[7]           ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.051 ns                ;
+; N/A                                     ; 114.63 MHz ( period = 8.724 ns )                    ; clock:inst|clk_sig[2]           ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.015 ns                ;
+; N/A                                     ; 114.71 MHz ( period = 8.718 ns )                    ; clock:inst|clk_sig[2]           ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.009 ns                ;
+; N/A                                     ; 114.72 MHz ( period = 8.717 ns )                    ; led8_24hour:inst4|led_s[2]      ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.008 ns                ;
+; N/A                                     ; 114.73 MHz ( period = 8.716 ns )                    ; clock:inst|clk_sig[2]           ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.007 ns                ;
+; N/A                                     ; 114.77 MHz ( period = 8.713 ns )                    ; clock:inst|clk_sig[2]           ; clock:inst|clk_sig[13]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.004 ns                ;
+; N/A                                     ; 114.78 MHz ( period = 8.712 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[24]          ; clk_in     ; clk_in   ; None                        ; None                      ; 8.003 ns                ;
+; N/A                                     ; 114.80 MHz ( period = 8.711 ns )                    ; led8_24hour:inst4|led_s[2]      ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.002 ns                ;
+; N/A                                     ; 114.82 MHz ( period = 8.709 ns )                    ; led8_24hour:inst4|led_s[0]      ; led8_24hour:inst4|led_sig_ht[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 8.000 ns                ;
+; N/A                                     ; 114.85 MHz ( period = 8.707 ns )                    ; clock:inst|clk_sig[14]          ; clock:inst|clk_sig[11]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.998 ns                ;
+; N/A                                     ; 114.88 MHz ( period = 8.705 ns )                    ; clock:inst|clk_sig[14]          ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.996 ns                ;
+; N/A                                     ; 114.90 MHz ( period = 8.703 ns )                    ; led8_24hour:inst4|led_t[3]      ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.994 ns                ;
+; N/A                                     ; 114.98 MHz ( period = 8.697 ns )                    ; led8_24hour:inst4|led_t[3]      ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.988 ns                ;
+; N/A                                     ; 115.13 MHz ( period = 8.686 ns )                    ; clock:inst|clk_sig[7]           ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.977 ns                ;
+; N/A                                     ; 115.37 MHz ( period = 8.668 ns )                    ; clock:inst|clk_sig[14]          ; clock:inst|clk_sig[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 7.959 ns                ;
+; N/A                                     ; 115.38 MHz ( period = 8.667 ns )                    ; clock:inst|clk_sig[7]           ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.958 ns                ;
+; N/A                                     ; 115.41 MHz ( period = 8.665 ns )                    ; clock:inst|clk_sig[7]           ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.956 ns                ;
+; N/A                                     ; 115.45 MHz ( period = 8.662 ns )                    ; clock:inst|clk_sig[7]           ; clock:inst|clk_sig[13]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.953 ns                ;
+; N/A                                     ; 115.51 MHz ( period = 8.657 ns )                    ; led8_24hour:inst4|led_s[3]      ; led8_24hour:inst4|led_sig_ht[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.948 ns                ;
+; N/A                                     ; 116.08 MHz ( period = 8.615 ns )                    ; clock:inst|clk_sig[12]          ; clock:inst|clk_sig[11]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.906 ns                ;
+; N/A                                     ; 116.10 MHz ( period = 8.613 ns )                    ; clock:inst|clk_sig[12]          ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.904 ns                ;
+; N/A                                     ; 116.12 MHz ( period = 8.612 ns )                    ; clock:inst|clk_sig[3]           ; clock:inst|clk_sig[20]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.903 ns                ;
+; N/A                                     ; 116.33 MHz ( period = 8.596 ns )                    ; clock:inst|clk_sig_1hz[3]       ; clock:inst|clk_sig_1hz[9]       ; clk_in     ; clk_in   ; None                        ; None                      ; 7.887 ns                ;
+; N/A                                     ; 116.54 MHz ( period = 8.581 ns )                    ; led8_24hour:inst4|led_sig_t[2]  ; led8_24hour:inst4|led_sig_ht[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.872 ns                ;
+; N/A                                     ; 116.54 MHz ( period = 8.581 ns )                    ; clock:inst|clk_sig_1hz[3]       ; clock:inst|clk_sig_1hz[10]      ; clk_in     ; clk_in   ; None                        ; None                      ; 7.872 ns                ;
+; N/A                                     ; 116.60 MHz ( period = 8.576 ns )                    ; clock:inst|clk_sig[12]          ; clock:inst|clk_sig[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 7.867 ns                ;
+; N/A                                     ; 116.80 MHz ( period = 8.562 ns )                    ; led8_24hour:inst4|led_sig_t[3]  ; led8_24hour:inst4|led_sig_ht[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.853 ns                ;
+; N/A                                     ; 116.88 MHz ( period = 8.556 ns )                    ; clock:inst|clk_sig[3]           ; clock:inst|clk_sig[17]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.847 ns                ;
+; N/A                                     ; 116.90 MHz ( period = 8.554 ns )                    ; clock:inst|clk_sig[5]           ; clock:inst|clk_sig[20]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.845 ns                ;
+; N/A                                     ; 117.16 MHz ( period = 8.535 ns )                    ; led8_24hour:inst4|led_sig_hs[1] ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.826 ns                ;
+; N/A                                     ; 117.19 MHz ( period = 8.533 ns )                    ; clock:inst|clk_sig[13]          ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.824 ns                ;
+; N/A                                     ; 117.25 MHz ( period = 8.529 ns )                    ; led8_24hour:inst4|led_sig_hs[1] ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.820 ns                ;
+; N/A                                     ; 117.40 MHz ( period = 8.518 ns )                    ; led8_24hour:inst4|led_t[2]      ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.809 ns                ;
+; N/A                                     ; 117.47 MHz ( period = 8.513 ns )                    ; led8_24hour:inst4|led_sig_t[2]  ; led8_24hour:inst4|led_sig_ht[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.804 ns                ;
+; N/A                                     ; 117.48 MHz ( period = 8.512 ns )                    ; led8_24hour:inst4|led_t[2]      ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.803 ns                ;
+; N/A                                     ; 117.55 MHz ( period = 8.507 ns )                    ; led8_24hour:inst4|led_sig_s[0]  ; led8_24hour:inst4|led_sig_ht[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.798 ns                ;
+; N/A                                     ; 117.67 MHz ( period = 8.498 ns )                    ; led8_24hour:inst4|led_sig_s[1]  ; led8_24hour:inst4|led_sig_ht[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.789 ns                ;
+; N/A                                     ; 117.67 MHz ( period = 8.498 ns )                    ; clock:inst|clk_sig[5]           ; clock:inst|clk_sig[17]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.789 ns                ;
+; N/A                                     ; 117.73 MHz ( period = 8.494 ns )                    ; led8_24hour:inst4|led_sig_t[3]  ; led8_24hour:inst4|led_sig_ht[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.785 ns                ;
+; N/A                                     ; 117.80 MHz ( period = 8.489 ns )                    ; clock:inst|clk_sig[13]          ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.780 ns                ;
+; N/A                                     ; 117.81 MHz ( period = 8.488 ns )                    ; clock:inst|clk_sig[4]           ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.779 ns                ;
+; N/A                                     ; 117.97 MHz ( period = 8.477 ns )                    ; led8_24hour:inst4|led_sig_s[2]  ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.768 ns                ;
+; N/A                                     ; 118.05 MHz ( period = 8.471 ns )                    ; led8_24hour:inst4|led_sig_s[2]  ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.762 ns                ;
+; N/A                                     ; 118.19 MHz ( period = 8.461 ns )                    ; clock:inst|clk_sig[2]           ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.752 ns                ;
+; N/A                                     ; 118.25 MHz ( period = 8.457 ns )                    ; clock:inst|clk_sig[2]           ; clock:inst|clk_sig[11]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.748 ns                ;
+; N/A                                     ; 118.26 MHz ( period = 8.456 ns )                    ; clock:inst|clk_sig[6]           ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.747 ns                ;
+; N/A                                     ; 118.27 MHz ( period = 8.455 ns )                    ; clock:inst|clk_sig[2]           ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.746 ns                ;
+; N/A                                     ; 118.44 MHz ( period = 8.443 ns )                    ; clock:inst|clk_sig_1hz[3]       ; clock:inst|clk_sig_1hz[15]      ; clk_in     ; clk_in   ; None                        ; None                      ; 7.734 ns                ;
+; N/A                                     ; 118.50 MHz ( period = 8.439 ns )                    ; led8_24hour:inst4|led_sig_s[0]  ; led8_24hour:inst4|led_sig_ht[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.730 ns                ;
+; N/A                                     ; 118.62 MHz ( period = 8.430 ns )                    ; led8_24hour:inst4|led_sig_s[1]  ; led8_24hour:inst4|led_sig_ht[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.721 ns                ;
+; N/A                                     ; 118.72 MHz ( period = 8.423 ns )                    ; clock:inst|clk_sig_1hz[3]       ; clock:inst|clk_sig_1hz[13]      ; clk_in     ; clk_in   ; None                        ; None                      ; 7.714 ns                ;
+; N/A                                     ; 118.79 MHz ( period = 8.418 ns )                    ; clock:inst|clk_sig[2]           ; clock:inst|clk_sig[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 7.709 ns                ;
+; N/A                                     ; 118.96 MHz ( period = 8.406 ns )                    ; clock:inst|clk_sig[7]           ; clock:inst|clk_sig[11]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.697 ns                ;
+; N/A                                     ; 119.01 MHz ( period = 8.403 ns )                    ; clock:inst|clk_sig[16]          ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.694 ns                ;
+; N/A                                     ; 119.06 MHz ( period = 8.399 ns )                    ; clock:inst|clk_sig[8]           ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.690 ns                ;
+; N/A                                     ; 119.20 MHz ( period = 8.389 ns )                    ; clock:inst|clk_sig[13]          ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.680 ns                ;
+; N/A                                     ; 119.32 MHz ( period = 8.381 ns )                    ; clock:inst|clk_sig[13]          ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.672 ns                ;
+; N/A                                     ; 119.35 MHz ( period = 8.379 ns )                    ; clock:inst|clk_sig[10]          ; clock:inst|clk_sig[18]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.670 ns                ;
+; N/A                                     ; 119.36 MHz ( period = 8.378 ns )                    ; clock:inst|clk_sig[13]          ; clock:inst|clk_sig[13]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.669 ns                ;
+; N/A                                     ; 119.45 MHz ( period = 8.372 ns )                    ; clock:inst|clk_sig[14]          ; clock:inst|clk_sig[20]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.663 ns                ;
+; N/A                                     ; 119.49 MHz ( period = 8.369 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[21]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.660 ns                ;
+; N/A                                     ; 119.50 MHz ( period = 8.368 ns )                    ; clock:inst|clk_sig[11]          ; clock:inst|clk_sig[24]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.659 ns                ;
+; N/A                                     ; 119.50 MHz ( period = 8.368 ns )                    ; clock:inst|clk_sig[4]           ; clock:inst|clk_sig[11]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.659 ns                ;
+; N/A                                     ; 119.52 MHz ( period = 8.367 ns )                    ; clock:inst|clk_sig[7]           ; clock:inst|clk_sig[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 7.658 ns                ;
+; N/A                                     ; 119.52 MHz ( period = 8.367 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[20]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.658 ns                ;
+; N/A                                     ; 119.53 MHz ( period = 8.366 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_out_sig          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.657 ns                ;
+; N/A                                     ; 119.55 MHz ( period = 8.365 ns )                    ; clock:inst|clk_sig[7]           ; clock:inst|clk_sig[20]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.656 ns                ;
+; N/A                                     ; 119.57 MHz ( period = 8.363 ns )                    ; clock:inst|clk_sig[3]           ; clock:inst|clk_sig[24]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.654 ns                ;
+; N/A                                     ; 119.62 MHz ( period = 8.360 ns )                    ; clock:inst|clk_sig[4]           ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.651 ns                ;
+; N/A                                     ; 119.65 MHz ( period = 8.358 ns )                    ; led8_24hour:inst4|led_sig_s[3]  ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.649 ns                ;
+; N/A                                     ; 119.65 MHz ( period = 8.358 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[6]           ; clk_in     ; clk_in   ; None                        ; None                      ; 7.649 ns                ;
+; N/A                                     ; 119.73 MHz ( period = 8.352 ns )                    ; led8_24hour:inst4|led_sig_s[3]  ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.643 ns                ;
+; N/A                                     ; 119.77 MHz ( period = 8.349 ns )                    ; led8_24hour:inst4|led_s[2]      ; led8_24hour:inst4|led_sig_ht[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.640 ns                ;
+; N/A                                     ; 119.77 MHz ( period = 8.349 ns )                    ; clock:inst|clk_sig[9]           ; clock:inst|clk_sig[22]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.640 ns                ;
+; N/A                                     ; 119.79 MHz ( period = 8.348 ns )                    ; clock:inst|clk_sig[13]          ; clock:inst|clk_sig[20]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.639 ns                ;
+; N/A                                     ; 119.96 MHz ( period = 8.336 ns )                    ; clock:inst|clk_sig[6]           ; clock:inst|clk_sig[11]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.627 ns                ;
+; N/A                                     ; 119.98 MHz ( period = 8.335 ns )                    ; led8_24hour:inst4|led_t[3]      ; led8_24hour:inst4|led_sig_ht[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.626 ns                ;
+; N/A                                     ; 120.02 MHz ( period = 8.332 ns )                    ; clock:inst|clk_sig[5]           ; clock:inst|clk_sig[24]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.623 ns                ;
+; N/A                                     ; 120.08 MHz ( period = 8.328 ns )                    ; clock:inst|clk_sig[6]           ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.619 ns                ;
+; N/A                                     ; 120.24 MHz ( period = 8.317 ns )                    ; clock:inst|clk_sig_1hz[3]       ; clock:inst|clk_sig_1hz[8]       ; clk_in     ; clk_in   ; None                        ; None                      ; 7.608 ns                ;
+; N/A                                     ; 120.25 MHz ( period = 8.316 ns )                    ; clock:inst|clk_sig[14]          ; clock:inst|clk_sig[17]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.607 ns                ;
+; N/A                                     ; 120.35 MHz ( period = 8.309 ns )                    ; clock:inst|clk_sig[7]           ; clock:inst|clk_sig[17]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.600 ns                ;
+; N/A                                     ; 120.41 MHz ( period = 8.305 ns )                    ; clock:inst|clk_sig_1hz[3]       ; clock:inst|clk_sig_1hz[11]      ; clk_in     ; clk_in   ; None                        ; None                      ; 7.596 ns                ;
+; N/A                                     ; 120.60 MHz ( period = 8.292 ns )                    ; clock:inst|clk_sig[13]          ; clock:inst|clk_sig[17]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.583 ns                ;
+; N/A                                     ; 120.60 MHz ( period = 8.292 ns )                    ; clock:inst|clk_sig[12]          ; clock:inst|clk_sig[20]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.583 ns                ;
+; N/A                                     ; 120.69 MHz ( period = 8.286 ns )                    ; clock:inst|clk_sig[4]           ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.577 ns                ;
+; N/A                                     ; 120.90 MHz ( period = 8.271 ns )                    ; clock:inst|clk_sig[8]           ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.562 ns                ;
+; N/A                                     ; 120.96 MHz ( period = 8.267 ns )                    ; clock:inst|clk_sig_1hz[2]       ; clock:inst|clk_sig_1hz[16]      ; clk_in     ; clk_in   ; None                        ; None                      ; 7.558 ns                ;
+; N/A                                     ; 121.15 MHz ( period = 8.254 ns )                    ; clock:inst|clk_sig[6]           ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.545 ns                ;
+; N/A                                     ; 121.20 MHz ( period = 8.251 ns )                    ; clock:inst|clk_sig[10]          ; clock:inst|clk_sig[16]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.542 ns                ;
+; N/A                                     ; 121.36 MHz ( period = 8.240 ns )                    ; led8_24hour:inst4|led_sig_t[2]  ; led8_24hour:inst4|led_sig_hs[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.531 ns                ;
+; N/A                                     ; 121.42 MHz ( period = 8.236 ns )                    ; clock:inst|clk_sig[12]          ; clock:inst|clk_sig[17]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.527 ns                ;
+; N/A                                     ; 121.52 MHz ( period = 8.229 ns )                    ; led8_24hour:inst4|led_sig_t[2]  ; led8_24hour:inst4|led_sig_hs[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.520 ns                ;
+; N/A                                     ; 121.54 MHz ( period = 8.228 ns )                    ; clock:inst|clk_sig_1hz[3]       ; clock:inst|clk_sig_1hz[12]      ; clk_in     ; clk_in   ; None                        ; None                      ; 7.519 ns                ;
+; N/A                                     ; 121.58 MHz ( period = 8.225 ns )                    ; clock:inst|clk_sig_1hz[14]      ; clock:inst|clk_sig_1hz[16]      ; clk_in     ; clk_in   ; None                        ; None                      ; 7.516 ns                ;
+; N/A                                     ; 121.64 MHz ( period = 8.221 ns )                    ; led8_24hour:inst4|led_sig_t[3]  ; led8_24hour:inst4|led_sig_hs[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.512 ns                ;
+; N/A                                     ; 121.71 MHz ( period = 8.216 ns )                    ; clock:inst|clk_sig[3]           ; clock:inst|clk_sig[9]           ; clk_in     ; clk_in   ; None                        ; None                      ; 7.507 ns                ;
+; N/A                                     ; 121.74 MHz ( period = 8.214 ns )                    ; led8_24hour:inst4|led_sig_s[0]  ; led8_24hour:inst4|led_sig_t[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 7.505 ns                ;
+; N/A                                     ; 121.74 MHz ( period = 8.214 ns )                    ; led8_24hour:inst4|led_sig_s[0]  ; led8_24hour:inst4|led_sig_t[1]  ; clk_in     ; clk_in   ; None                        ; None                      ; 7.505 ns                ;
+; N/A                                     ; 121.74 MHz ( period = 8.214 ns )                    ; led8_24hour:inst4|led_sig_s[0]  ; led8_24hour:inst4|led_sig_t[0]  ; clk_in     ; clk_in   ; None                        ; None                      ; 7.505 ns                ;
+; N/A                                     ; 121.80 MHz ( period = 8.210 ns )                    ; led8_24hour:inst4|led_sig_t[3]  ; led8_24hour:inst4|led_sig_hs[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.501 ns                ;
+; N/A                                     ; 121.82 MHz ( period = 8.209 ns )                    ; clock:inst|clk_sig_1hz[3]       ; clock:inst|clk_sig_1hz[14]      ; clk_in     ; clk_in   ; None                        ; None                      ; 7.500 ns                ;
+; N/A                                     ; 121.88 MHz ( period = 8.205 ns )                    ; led8_24hour:inst4|led_sig_s[1]  ; led8_24hour:inst4|led_sig_t[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 7.496 ns                ;
+; N/A                                     ; 121.88 MHz ( period = 8.205 ns )                    ; led8_24hour:inst4|led_sig_s[1]  ; led8_24hour:inst4|led_sig_t[1]  ; clk_in     ; clk_in   ; None                        ; None                      ; 7.496 ns                ;
+; N/A                                     ; 121.88 MHz ( period = 8.205 ns )                    ; led8_24hour:inst4|led_sig_s[1]  ; led8_24hour:inst4|led_sig_t[0]  ; clk_in     ; clk_in   ; None                        ; None                      ; 7.496 ns                ;
+; N/A                                     ; 121.97 MHz ( period = 8.199 ns )                    ; clock:inst|clk_sig[14]          ; clock:inst|clk_sig[24]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.490 ns                ;
+; N/A                                     ; 121.98 MHz ( period = 8.198 ns )                    ; clock:inst|clk_sig[10]          ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.489 ns                ;
+; N/A                                     ; 122.00 MHz ( period = 8.197 ns )                    ; clock:inst|clk_sig[8]           ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.488 ns                ;
+; N/A                                     ; 122.07 MHz ( period = 8.192 ns )                    ; clock:inst|clk_sig[10]          ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.483 ns                ;
+; N/A                                     ; 122.10 MHz ( period = 8.190 ns )                    ; clock:inst|clk_sig[10]          ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.481 ns                ;
+; N/A                                     ; 122.14 MHz ( period = 8.187 ns )                    ; clock:inst|clk_sig[10]          ; clock:inst|clk_sig[13]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.478 ns                ;
+; N/A                                     ; 122.16 MHz ( period = 8.186 ns )                    ; clock:inst|clk_sig[4]           ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.477 ns                ;
+; N/A                                     ; 122.20 MHz ( period = 8.183 ns )                    ; clock:inst|clk_sig_1hz[3]       ; clock:inst|clk_sig_1hz[16]      ; clk_in     ; clk_in   ; None                        ; None                      ; 7.474 ns                ;
+; N/A                                     ; 122.32 MHz ( period = 8.175 ns )                    ; clock:inst|clk_sig[0]           ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.466 ns                ;
+; N/A                                     ; 122.34 MHz ( period = 8.174 ns )                    ; clock:inst|clk_sig[16]          ; clock:inst|clk_sig[12]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.465 ns                ;
+; N/A                                     ; 122.41 MHz ( period = 8.169 ns )                    ; clock:inst|clk_sig[0]           ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.460 ns                ;
+; N/A                                     ; 122.43 MHz ( period = 8.168 ns )                    ; clock:inst|clk_sig[16]          ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.459 ns                ;
+; N/A                                     ; 122.44 MHz ( period = 8.167 ns )                    ; led8_24hour:inst4|led_sig_hs[1] ; led8_24hour:inst4|led_sig_ht[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.458 ns                ;
+; N/A                                     ; 122.44 MHz ( period = 8.167 ns )                    ; clock:inst|clk_sig[0]           ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.458 ns                ;
+; N/A                                     ; 122.46 MHz ( period = 8.166 ns )                    ; led8_24hour:inst4|led_sig_s[0]  ; led8_24hour:inst4|led_sig_hs[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.457 ns                ;
+; N/A                                     ; 122.46 MHz ( period = 8.166 ns )                    ; clock:inst|clk_sig[16]          ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.457 ns                ;
+; N/A                                     ; 122.49 MHz ( period = 8.164 ns )                    ; led8_24hour:inst4|led_t[0]      ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.455 ns                ;
+; N/A                                     ; 122.49 MHz ( period = 8.164 ns )                    ; clock:inst|clk_sig[0]           ; clock:inst|clk_sig[13]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.455 ns                ;
+; N/A                                     ; 122.50 MHz ( period = 8.163 ns )                    ; clock:inst|clk_sig[16]          ; clock:inst|clk_sig[13]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.454 ns                ;
+; N/A                                     ; 122.55 MHz ( period = 8.160 ns )                    ; led8_24hour:inst4|led_t[1]      ; led8_24hour:inst4|led_sig_ht[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.451 ns                ;
+; N/A                                     ; 122.58 MHz ( period = 8.158 ns )                    ; led8_24hour:inst4|led_t[0]      ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.449 ns                ;
+; N/A                                     ; 122.58 MHz ( period = 8.158 ns )                    ; clock:inst|clk_sig[5]           ; clock:inst|clk_sig[9]           ; clk_in     ; clk_in   ; None                        ; None                      ; 7.449 ns                ;
+; N/A                                     ; 122.59 MHz ( period = 8.157 ns )                    ; led8_24hour:inst4|led_sig_s[1]  ; led8_24hour:inst4|led_sig_hs[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.448 ns                ;
+; N/A                                     ; 122.62 MHz ( period = 8.155 ns )                    ; led8_24hour:inst4|led_sig_s[0]  ; led8_24hour:inst4|led_sig_hs[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.446 ns                ;
+; N/A                                     ; 122.64 MHz ( period = 8.154 ns )                    ; led8_24hour:inst4|led_t[1]      ; led8_24hour:inst4|led_sig_ht[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.445 ns                ;
+; N/A                                     ; 122.64 MHz ( period = 8.154 ns )                    ; clock:inst|clk_sig[6]           ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.445 ns                ;
+; N/A                                     ; 122.70 MHz ( period = 8.150 ns )                    ; led8_24hour:inst4|led_t[2]      ; led8_24hour:inst4|led_sig_ht[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.441 ns                ;
+; N/A                                     ; 122.74 MHz ( period = 8.147 ns )                    ; clock:inst|clk_sig[11]          ; clock:inst|clk_sig[20]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.438 ns                ;
+; N/A                                     ; 122.76 MHz ( period = 8.146 ns )                    ; led8_24hour:inst4|led_sig_s[1]  ; led8_24hour:inst4|led_sig_hs[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.437 ns                ;
+; N/A                                     ; 123.12 MHz ( period = 8.122 ns )                    ; clock:inst|clk_sig[13]          ; clock:inst|clk_sig[11]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.413 ns                ;
+; N/A                                     ; 123.30 MHz ( period = 8.110 ns )                    ; clock:inst|clk_sig_1hz[3]       ; clock:inst|clk_sig_1hz[7]       ; clk_in     ; clk_in   ; None                        ; None                      ; 7.401 ns                ;
+; N/A                                     ; 123.32 MHz ( period = 8.109 ns )                    ; led8_24hour:inst4|led_sig_s[2]  ; led8_24hour:inst4|led_sig_ht[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 123.35 MHz ( period = 8.107 ns )                    ; clock:inst|clk_sig[12]          ; clock:inst|clk_sig[24]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.398 ns                ;
+; N/A                                     ; 123.37 MHz ( period = 8.106 ns )                    ; clock:inst|clk_sig[4]           ; clock:inst|clk_sig[19]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.397 ns                ;
+; N/A                                     ; 123.50 MHz ( period = 8.097 ns )                    ; clock:inst|clk_sig[8]           ; clock:inst|clk_sig[14]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.388 ns                ;
+; N/A                                     ; 123.59 MHz ( period = 8.091 ns )                    ; clock:inst|clk_sig[11]          ; clock:inst|clk_sig[17]          ; clk_in     ; clk_in   ; None                        ; None                      ; 7.382 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                 ;                                 ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+---------------------------------+---------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; tco                                                                                           ;
++-------+--------------+------------+---------------------------------+------------+------------+
+; Slack ; Required tco ; Actual tco ; From                            ; To         ; From Clock ;
++-------+--------------+------------+---------------------------------+------------+------------+
+; N/A   ; None         ; 22.630 ns  ; led8_24hour:inst4|led_sig[3]    ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 22.374 ns  ; led8_24hour:inst4|led_sig[3]    ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 22.313 ns  ; led8_24hour:inst4|led_sig[3]    ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 22.288 ns  ; led8_24hour:inst4|led_sig[1]    ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 22.284 ns  ; led8_24hour:inst4|led_sig[3]    ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 22.152 ns  ; led8_24hour:inst4|led_sig[0]    ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 22.032 ns  ; led8_24hour:inst4|led_sig[1]    ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 21.976 ns  ; led8_24hour:inst4|led_sig[3]    ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 21.971 ns  ; led8_24hour:inst4|led_sig[1]    ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 21.969 ns  ; led8_24hour:inst4|led_sig[3]    ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 21.942 ns  ; led8_24hour:inst4|led_sig[1]    ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 21.935 ns  ; led8_24hour:inst4|led_sig[2]    ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 21.900 ns  ; led8_24hour:inst4|led_sig_t[2]  ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 21.896 ns  ; led8_24hour:inst4|led_sig[0]    ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 21.835 ns  ; led8_24hour:inst4|led_sig[0]    ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 21.806 ns  ; led8_24hour:inst4|led_sig[0]    ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 21.798 ns  ; led8_24hour:inst4|led_sig_s[2]  ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 21.754 ns  ; led8_24hour:inst4|led_sig[3]    ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 21.679 ns  ; led8_24hour:inst4|led_sig[2]    ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 21.666 ns  ; led8_24hour:inst4|led_sig[3]    ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 21.644 ns  ; led8_24hour:inst4|led_sig_t[2]  ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 21.634 ns  ; led8_24hour:inst4|led_sig[1]    ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 21.627 ns  ; led8_24hour:inst4|led_sig[1]    ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 21.618 ns  ; led8_24hour:inst4|led_sig[2]    ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 21.589 ns  ; led8_24hour:inst4|led_sig[2]    ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 21.583 ns  ; led8_24hour:inst4|led_sig_t[2]  ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 21.554 ns  ; led8_24hour:inst4|led_sig_t[2]  ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 21.542 ns  ; led8_24hour:inst4|led_sig_s[2]  ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 21.498 ns  ; led8_24hour:inst4|led_sig[0]    ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 21.491 ns  ; led8_24hour:inst4|led_sig[0]    ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 21.481 ns  ; led8_24hour:inst4|led_sig_s[2]  ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 21.452 ns  ; led8_24hour:inst4|led_sig_s[2]  ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 21.412 ns  ; led8_24hour:inst4|led_sig[1]    ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 21.392 ns  ; led8_24hour:inst4|led_sig_t[0]  ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 21.328 ns  ; led8_24hour:inst4|led_sig_t[0]  ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 21.324 ns  ; led8_24hour:inst4|led_sig[1]    ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 21.300 ns  ; led8_24hour:inst4|led_sig_t[0]  ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 21.281 ns  ; led8_24hour:inst4|led_sig[2]    ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 21.276 ns  ; led8_24hour:inst4|led_sig[0]    ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 21.274 ns  ; led8_24hour:inst4|led_sig[2]    ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 21.246 ns  ; led8_24hour:inst4|led_sig_t[2]  ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 21.239 ns  ; led8_24hour:inst4|led_sig_t[2]  ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 21.214 ns  ; led8_24hour:inst4|led_sig[2]    ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 21.192 ns  ; led8_24hour:inst4|led_sig_t[0]  ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 21.188 ns  ; led8_24hour:inst4|led_sig[0]    ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 21.144 ns  ; led8_24hour:inst4|led_sig_s[2]  ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 21.137 ns  ; led8_24hour:inst4|led_sig_s[2]  ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 21.024 ns  ; led8_24hour:inst4|led_sig_t[2]  ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 20.997 ns  ; led8_24hour:inst4|led_sig_t[1]  ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 20.971 ns  ; led8_24hour:inst4|led_sig[2]    ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 20.954 ns  ; led8_24hour:inst4|led_sig_s[0]  ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 20.944 ns  ; led8_24hour:inst4|led_sig_hs[2] ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 20.943 ns  ; led8_24hour:inst4|led_sig_s[1]  ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 20.936 ns  ; led8_24hour:inst4|led_sig_t[2]  ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 20.935 ns  ; led8_24hour:inst4|led_sig_t[1]  ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 20.922 ns  ; led8_24hour:inst4|led_sig_s[2]  ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 20.919 ns  ; led8_24hour:inst4|led_sig_t[1]  ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 20.919 ns  ; led8_24hour:inst4|led_sig_t[0]  ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 20.910 ns  ; led8_24hour:inst4|led_sig_t[1]  ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 20.907 ns  ; led8_24hour:inst4|led_sig_t[1]  ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 20.890 ns  ; led8_24hour:inst4|led_sig_s[0]  ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 20.881 ns  ; led8_24hour:inst4|led_sig_s[1]  ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 20.865 ns  ; led8_24hour:inst4|led_sig_s[1]  ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 20.862 ns  ; led8_24hour:inst4|led_sig_s[0]  ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 20.856 ns  ; led8_24hour:inst4|led_sig_s[1]  ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 20.853 ns  ; led8_24hour:inst4|led_sig_s[1]  ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 20.840 ns  ; led8_24hour:inst4|led_sig_t[3]  ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 20.834 ns  ; led8_24hour:inst4|led_sig_s[2]  ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 20.765 ns  ; led8_24hour:inst4|led_sig_t[3]  ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 20.754 ns  ; led8_24hour:inst4|led_sig_s[0]  ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 20.750 ns  ; led8_24hour:inst4|led_sig_t[3]  ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 20.736 ns  ; led8_24hour:inst4|led_sig_t[3]  ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 20.688 ns  ; led8_24hour:inst4|led_sig_hs[2] ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 20.687 ns  ; led8_24hour:inst4|led_sig_t[0]  ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 20.639 ns  ; led8_24hour:inst4|led_sig_t[1]  ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 20.627 ns  ; led8_24hour:inst4|led_sig_hs[2] ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 20.598 ns  ; led8_24hour:inst4|led_sig_hs[2] ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 20.585 ns  ; led8_24hour:inst4|led_sig_s[1]  ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 20.539 ns  ; led8_24hour:inst4|led_sig_s[3]  ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 20.538 ns  ; led8_24hour:inst4|led_sig_t[0]  ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 20.481 ns  ; led8_24hour:inst4|led_sig_s[0]  ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 20.464 ns  ; led8_24hour:inst4|led_sig_s[3]  ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 20.449 ns  ; led8_24hour:inst4|led_sig_s[3]  ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 20.435 ns  ; led8_24hour:inst4|led_sig_s[3]  ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 20.406 ns  ; led8_24hour:inst4|led_sig_hs[3] ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 20.402 ns  ; led8_24hour:inst4|led_sig_t[3]  ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 20.371 ns  ; led8_24hour:inst4|led_sig_hs[0] ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 20.339 ns  ; led8_24hour:inst4|led_sig_ht[0] ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 20.331 ns  ; led8_24hour:inst4|led_sig_hs[3] ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 20.316 ns  ; led8_24hour:inst4|led_sig_hs[3] ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 20.307 ns  ; led8_24hour:inst4|led_sig_hs[0] ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 20.302 ns  ; led8_24hour:inst4|led_sig_hs[3] ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 20.290 ns  ; led8_24hour:inst4|led_sig_hs[2] ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 20.283 ns  ; led8_24hour:inst4|led_sig_hs[2] ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 20.279 ns  ; led8_24hour:inst4|led_sig_hs[0] ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 20.275 ns  ; led8_24hour:inst4|led_sig_ht[0] ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 20.249 ns  ; led8_24hour:inst4|led_sig_s[0]  ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 20.247 ns  ; led8_24hour:inst4|led_sig_ht[0] ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 20.192 ns  ; led8_24hour:inst4|led_sig_ht[3] ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 20.171 ns  ; led8_24hour:inst4|led_sig_hs[0] ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 20.144 ns  ; led8_24hour:inst4|led_sig_t[3]  ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 20.139 ns  ; led8_24hour:inst4|led_sig_ht[0] ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 20.121 ns  ; led8_24hour:inst4|led_sig_t[3]  ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 20.117 ns  ; led8_24hour:inst4|led_sig_ht[3] ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 20.102 ns  ; led8_24hour:inst4|led_sig_ht[3] ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 20.101 ns  ; led8_24hour:inst4|led_sig_s[3]  ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 20.100 ns  ; led8_24hour:inst4|led_sig_s[0]  ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 20.088 ns  ; led8_24hour:inst4|led_sig_ht[3] ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 20.085 ns  ; led8_24hour:inst4|led_sig_t[1]  ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 20.080 ns  ; led8_24hour:inst4|led_sig_ht[1] ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 20.068 ns  ; led8_24hour:inst4|led_sig_hs[2] ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 20.031 ns  ; led8_24hour:inst4|led_sig_s[1]  ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 20.018 ns  ; led8_24hour:inst4|led_sig_ht[1] ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 20.002 ns  ; led8_24hour:inst4|led_sig_ht[1] ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 19.993 ns  ; led8_24hour:inst4|led_sig_ht[1] ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 19.990 ns  ; led8_24hour:inst4|led_sig_ht[1] ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 19.980 ns  ; led8_24hour:inst4|led_sig_hs[2] ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 19.968 ns  ; led8_24hour:inst4|led_sig_hs[3] ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 19.898 ns  ; led8_24hour:inst4|led_sig_hs[0] ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 19.866 ns  ; led8_24hour:inst4|led_sig_ht[0] ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 19.843 ns  ; led8_24hour:inst4|led_sig_s[3]  ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 19.820 ns  ; led8_24hour:inst4|led_sig_s[3]  ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 19.754 ns  ; led8_24hour:inst4|led_sig_ht[3] ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 19.722 ns  ; led8_24hour:inst4|led_sig_ht[1] ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 19.710 ns  ; led8_24hour:inst4|led_sig_hs[3] ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 19.687 ns  ; led8_24hour:inst4|led_sig_hs[3] ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 19.666 ns  ; led8_24hour:inst4|led_sig_hs[0] ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 19.634 ns  ; led8_24hour:inst4|led_sig_ht[0] ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 19.569 ns  ; led8_24hour:inst4|led_sig_t[3]  ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 19.552 ns  ; led8_24hour:inst4|led_sig_ht[2] ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 19.517 ns  ; led8_24hour:inst4|led_sig_hs[0] ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 19.496 ns  ; led8_24hour:inst4|led_sig_ht[3] ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 19.485 ns  ; led8_24hour:inst4|led_sig_ht[0] ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 19.473 ns  ; led8_24hour:inst4|led_sig_ht[3] ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 19.322 ns  ; led8_24hour:inst4|led_sig_t[1]  ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 19.296 ns  ; led8_24hour:inst4|led_sig_ht[2] ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 19.268 ns  ; led8_24hour:inst4|led_sig_s[3]  ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 19.268 ns  ; led8_24hour:inst4|led_sig_s[1]  ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 19.235 ns  ; led8_24hour:inst4|led_sig_ht[2] ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 19.206 ns  ; led8_24hour:inst4|led_sig_ht[2] ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 19.168 ns  ; led8_24hour:inst4|led_sig_ht[1] ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 19.135 ns  ; led8_24hour:inst4|led_sig_hs[3] ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 18.921 ns  ; led8_24hour:inst4|led_sig_ht[3] ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 18.898 ns  ; led8_24hour:inst4|led_sig_ht[2] ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 18.891 ns  ; led8_24hour:inst4|led_sig_ht[2] ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 18.676 ns  ; led8_24hour:inst4|led_sig_ht[2] ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 18.588 ns  ; led8_24hour:inst4|led_sig_ht[2] ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 18.405 ns  ; led8_24hour:inst4|led_sig_ht[1] ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 17.895 ns  ; led8_24hour:inst4|led_sig_hs[1] ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 17.833 ns  ; led8_24hour:inst4|led_sig_hs[1] ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 17.817 ns  ; led8_24hour:inst4|led_sig_hs[1] ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 17.808 ns  ; led8_24hour:inst4|led_sig_hs[1] ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 17.805 ns  ; led8_24hour:inst4|led_sig_hs[1] ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 17.537 ns  ; led8_24hour:inst4|led_sig_hs[1] ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 16.983 ns  ; led8_24hour:inst4|led_sig_hs[1] ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 16.220 ns  ; led8_24hour:inst4|led_sig_hs[1] ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 14.237 ns  ; led8_24hour:inst4|led_sig[2]    ; led_com[2] ; clk_in     ;
+; N/A   ; None         ; 13.545 ns  ; led8_24hour:inst4|led_sig[3]    ; led_com[3] ; clk_in     ;
+; N/A   ; None         ; 13.433 ns  ; led8_24hour:inst4|led_sig[0]    ; led_com[0] ; clk_in     ;
+; N/A   ; None         ; 13.394 ns  ; led8_24hour:inst4|led_sig[1]    ; led_com[1] ; clk_in     ;
++-------+--------------+------------+---------------------------------+------------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Oct 05 14:34:44 2012
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off led8_24hour_bdf -c led8_24hour_bdf
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk_in" is an undefined clock
+Warning: Found 2 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "clock:inst|clk_out_sig" as buffer
+    Info: Detected ripple clock "clock:inst|clk_out_hi" as buffer
+Info: Clock "clk_in" has Internal fmax of 105.41 MHz between source register "clock:inst|clk_sig[9]" and destination register "clock:inst|clk_sig[12]" (period= 9.487 ns)
+    Info: + Longest register to register delay is 8.778 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X13_Y7_N2; Fanout = 4; REG Node = 'clock:inst|clk_sig[9]'
+        Info: 2: + IC(2.702 ns) + CELL(0.914 ns) = 3.616 ns; Loc. = LC_X14_Y5_N2; Fanout = 1; COMB Node = 'clock:inst|Equal0~2'
+        Info: 3: + IC(0.717 ns) + CELL(0.740 ns) = 5.073 ns; Loc. = LC_X14_Y5_N3; Fanout = 1; COMB Node = 'clock:inst|Equal0~4'
+        Info: 4: + IC(0.721 ns) + CELL(0.200 ns) = 5.994 ns; Loc. = LC_X14_Y5_N0; Fanout = 14; COMB Node = 'clock:inst|Equal0~7'
+        Info: 5: + IC(1.980 ns) + CELL(0.804 ns) = 8.778 ns; Loc. = LC_X14_Y6_N2; Fanout = 4; REG Node = 'clock:inst|clk_sig[12]'
+        Info: Total cell delay = 2.658 ns ( 30.28 % )
+        Info: Total interconnect delay = 6.120 ns ( 69.72 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk_in" to destination register is 3.819 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 44; CLK Node = 'clk_in'
+            Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X14_Y6_N2; Fanout = 4; REG Node = 'clock:inst|clk_sig[12]'
+            Info: Total cell delay = 2.081 ns ( 54.49 % )
+            Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+        Info: - Longest clock path from clock "clk_in" to source register is 3.819 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 44; CLK Node = 'clk_in'
+            Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X13_Y7_N2; Fanout = 4; REG Node = 'clock:inst|clk_sig[9]'
+            Info: Total cell delay = 2.081 ns ( 54.49 % )
+            Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Micro setup delay of destination is 0.333 ns
+Info: tco from clock "clk_in" to destination pin "led_out[0]" through register "led8_24hour:inst4|led_sig[3]" is 22.630 ns
+    Info: + Longest clock path from clock "clk_in" to source register is 8.149 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 44; CLK Node = 'clk_in'
+        Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X12_Y3_N5; Fanout = 5; REG Node = 'clock:inst|clk_out_hi'
+        Info: 3: + IC(3.036 ns) + CELL(0.918 ns) = 8.149 ns; Loc. = LC_X7_Y10_N0; Fanout = 11; REG Node = 'led8_24hour:inst4|led_sig[3]'
+        Info: Total cell delay = 3.375 ns ( 41.42 % )
+        Info: Total interconnect delay = 4.774 ns ( 58.58 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Longest register to pin delay is 14.105 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X7_Y10_N0; Fanout = 11; REG Node = 'led8_24hour:inst4|led_sig[3]'
+        Info: 2: + IC(1.970 ns) + CELL(0.200 ns) = 2.170 ns; Loc. = LC_X8_Y10_N4; Fanout = 4; COMB Node = 'led8_24hour:inst4|Mux3~1'
+        Info: 3: + IC(1.932 ns) + CELL(0.740 ns) = 4.842 ns; Loc. = LC_X6_Y10_N4; Fanout = 2; COMB Node = 'led8_24hour:inst4|Mux1~1'
+        Info: 4: + IC(0.786 ns) + CELL(0.511 ns) = 6.139 ns; Loc. = LC_X6_Y10_N2; Fanout = 1; COMB Node = 'led8_24hour:inst4|Mux1~2'
+        Info: 5: + IC(0.710 ns) + CELL(0.200 ns) = 7.049 ns; Loc. = LC_X6_Y10_N0; Fanout = 8; COMB Node = 'led8_24hour:inst4|Mux1~3'
+        Info: 6: + IC(1.322 ns) + CELL(0.914 ns) = 9.285 ns; Loc. = LC_X5_Y10_N6; Fanout = 1; COMB Node = 'led8_24hour:inst4|Mux11~0'
+        Info: 7: + IC(2.498 ns) + CELL(2.322 ns) = 14.105 ns; Loc. = PIN_6; Fanout = 0; PIN Node = 'led_out[0]'
+        Info: Total cell delay = 4.887 ns ( 34.65 % )
+        Info: Total interconnect delay = 9.218 ns ( 65.35 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 165 megabytes
+    Info: Processing ended: Fri Oct 05 14:34:44 2012
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

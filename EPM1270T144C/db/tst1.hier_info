@@ -1,0 +1,19 @@
+|tst1
+sw_in[0] => led_out[0].DATAIN
+sw_in[1] => led_out[1].DATAIN
+sw_in[2] => led_out[2].DATAIN
+sw_in[3] => led_out[3].DATAIN
+sw_in[4] => led_out[4].DATAIN
+sw_in[5] => led_out[5].DATAIN
+sw_in[6] => led_out[6].DATAIN
+sw_in[7] => led_out[7].DATAIN
+led_out[0] <= sw_in[0].DB_MAX_OUTPUT_PORT_TYPE
+led_out[1] <= sw_in[1].DB_MAX_OUTPUT_PORT_TYPE
+led_out[2] <= sw_in[2].DB_MAX_OUTPUT_PORT_TYPE
+led_out[3] <= sw_in[3].DB_MAX_OUTPUT_PORT_TYPE
+led_out[4] <= sw_in[4].DB_MAX_OUTPUT_PORT_TYPE
+led_out[5] <= sw_in[5].DB_MAX_OUTPUT_PORT_TYPE
+led_out[6] <= sw_in[6].DB_MAX_OUTPUT_PORT_TYPE
+led_out[7] <= sw_in[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

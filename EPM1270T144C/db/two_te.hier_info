@@ -1,0 +1,10 @@
+|Block1
+a[0] <= two_te:inst.a[0]
+a[1] <= two_te:inst.a[1]
+
+
+|Block1|two_te:inst
+a[0] <= <VCC>
+a[1] <= <GND>
+
+

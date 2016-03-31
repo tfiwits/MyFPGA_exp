@@ -1,0 +1,560 @@
+Simulator report for test
+Thu Nov 15 10:41:24 2012
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 183 nodes    ;
+; Simulation Coverage         ;      18.72 % ;
+; Total Number of Transitions ; 709          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C10E144C8 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      18.72 % ;
+; Total nodes checked                                 ; 183          ;
+; Total output ports checked                          ; 219          ;
+; Total output ports with complete 1/0-value coverage ; 41           ;
+; Total output ports with no 1/0-value coverage       ; 176          ;
+; Total output ports with no 1-value coverage         ; 176          ;
+; Total output ports with no 0-value coverage         ; 178          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                              ;
++---------------------------+---------------------------+------------------+
+; Node Name                 ; Output Port Name          ; Output Port Type ;
++---------------------------+---------------------------+------------------+
+; |test|Add3~0              ; |test|Add3~0              ; combout          ;
+; |test|Add3~0              ; |test|Add3~1              ; cout             ;
+; |test|Add3~2              ; |test|Add3~2              ; combout          ;
+; |test|Add3~2              ; |test|Add3~3              ; cout             ;
+; |test|Add3~4              ; |test|Add3~4              ; combout          ;
+; |test|Add3~4              ; |test|Add3~5              ; cout             ;
+; |test|Add3~6              ; |test|Add3~6              ; combout          ;
+; |test|Add3~6              ; |test|Add3~7              ; cout             ;
+; |test|Add3~8              ; |test|Add3~8              ; combout          ;
+; |test|Add3~8              ; |test|Add3~9              ; cout             ;
+; |test|Add3~10             ; |test|Add3~10             ; combout          ;
+; |test|Add2~0              ; |test|Add2~0              ; combout          ;
+; |test|Add2~0              ; |test|Add2~1              ; cout             ;
+; |test|Add2~2              ; |test|Add2~2              ; combout          ;
+; |test|Add2~2              ; |test|Add2~3              ; cout             ;
+; |test|Add2~4              ; |test|Add2~4              ; combout          ;
+; |test|Add2~4              ; |test|Add2~5              ; cout             ;
+; |test|Add2~6              ; |test|Add2~6              ; combout          ;
+; |test|Add2~6              ; |test|Add2~7              ; cout             ;
+; |test|Add2~8              ; |test|Add2~8              ; combout          ;
+; |test|Add2~8              ; |test|Add2~9              ; cout             ;
+; |test|Add2~10             ; |test|Add2~10             ; combout          ;
+; |test|clk_hz[2]           ; |test|clk_hz[2]           ; q                ;
+; |test|clk_hz[3]           ; |test|clk_hz[3]           ; q                ;
+; |test|Equal2~1            ; |test|Equal2~1            ; combout          ;
+; |test|clk_hz[1]           ; |test|clk_hz[1]           ; q                ;
+; |test|clk_hz[0]           ; |test|clk_hz[0]           ; q                ;
+; |test|Equal2~2            ; |test|Equal2~2            ; combout          ;
+; |test|clk_st[0]           ; |test|clk_st[0]           ; q                ;
+; |test|clk_st[1]           ; |test|clk_st[1]           ; q                ;
+; |test|clk_st[2]           ; |test|clk_st[2]           ; q                ;
+; |test|clk_st[3]           ; |test|clk_st[3]           ; q                ;
+; |test|Equal1~0            ; |test|Equal1~0            ; combout          ;
+; |test|clk_hz~2            ; |test|clk_hz~2            ; combout          ;
+; |test|clk_hz~3            ; |test|clk_hz~3            ; combout          ;
+; |test|clk_hz~4            ; |test|clk_hz~4            ; combout          ;
+; |test|clk_st~0            ; |test|clk_st~0            ; combout          ;
+; |test|clk_st~1            ; |test|clk_st~1            ; combout          ;
+; |test|clk_in~input        ; |test|clk_in~input        ; o                ;
+; |test|clk_in              ; |test|clk_in              ; padout           ;
+; |test|clk_in~inputclkctrl ; |test|clk_in~inputclkctrl ; outclk           ;
++---------------------------+---------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                 ;
++---------------------------+---------------------------+------------------+
+; Node Name                 ; Output Port Name          ; Output Port Type ;
++---------------------------+---------------------------+------------------+
+; |test|Add3~10             ; |test|Add3~11             ; cout             ;
+; |test|Add3~12             ; |test|Add3~12             ; combout          ;
+; |test|Add3~12             ; |test|Add3~13             ; cout             ;
+; |test|Add3~14             ; |test|Add3~14             ; combout          ;
+; |test|Add3~14             ; |test|Add3~15             ; cout             ;
+; |test|Add3~16             ; |test|Add3~16             ; combout          ;
+; |test|Add3~16             ; |test|Add3~17             ; cout             ;
+; |test|Add3~18             ; |test|Add3~18             ; combout          ;
+; |test|Add3~18             ; |test|Add3~19             ; cout             ;
+; |test|Add3~20             ; |test|Add3~20             ; combout          ;
+; |test|Add3~20             ; |test|Add3~21             ; cout             ;
+; |test|Add3~22             ; |test|Add3~22             ; combout          ;
+; |test|Add3~22             ; |test|Add3~23             ; cout             ;
+; |test|Add3~24             ; |test|Add3~24             ; combout          ;
+; |test|Add3~24             ; |test|Add3~25             ; cout             ;
+; |test|Add3~26             ; |test|Add3~26             ; combout          ;
+; |test|Add2~10             ; |test|Add2~11             ; cout             ;
+; |test|Add2~12             ; |test|Add2~12             ; combout          ;
+; |test|Add2~12             ; |test|Add2~13             ; cout             ;
+; |test|Add2~14             ; |test|Add2~14             ; combout          ;
+; |test|Add2~14             ; |test|Add2~15             ; cout             ;
+; |test|Add2~16             ; |test|Add2~16             ; combout          ;
+; |test|Add2~16             ; |test|Add2~17             ; cout             ;
+; |test|Add2~18             ; |test|Add2~18             ; combout          ;
+; |test|Add2~18             ; |test|Add2~19             ; cout             ;
+; |test|Add2~20             ; |test|Add2~20             ; combout          ;
+; |test|Add2~20             ; |test|Add2~21             ; cout             ;
+; |test|Add2~22             ; |test|Add2~22             ; combout          ;
+; |test|Add2~22             ; |test|Add2~23             ; cout             ;
+; |test|Add2~24             ; |test|Add2~24             ; combout          ;
+; |test|Add2~24             ; |test|Add2~25             ; cout             ;
+; |test|Add2~26             ; |test|Add2~26             ; combout          ;
+; |test|Add2~26             ; |test|Add2~27             ; cout             ;
+; |test|Add2~28             ; |test|Add2~28             ; combout          ;
+; |test|Add2~28             ; |test|Add2~29             ; cout             ;
+; |test|Add2~30             ; |test|Add2~30             ; combout          ;
+; |test|Add2~30             ; |test|Add2~31             ; cout             ;
+; |test|Add2~32             ; |test|Add2~32             ; combout          ;
+; |test|Add2~32             ; |test|Add2~33             ; cout             ;
+; |test|Add2~34             ; |test|Add2~34             ; combout          ;
+; |test|Add2~34             ; |test|Add2~35             ; cout             ;
+; |test|Add2~36             ; |test|Add2~36             ; combout          ;
+; |test|Add2~36             ; |test|Add2~37             ; cout             ;
+; |test|Add2~38             ; |test|Add2~38             ; combout          ;
+; |test|Add2~38             ; |test|Add2~39             ; cout             ;
+; |test|Add2~40             ; |test|Add2~40             ; combout          ;
+; |test|Add2~40             ; |test|Add2~41             ; cout             ;
+; |test|Add2~42             ; |test|Add2~42             ; combout          ;
+; |test|Add2~42             ; |test|Add2~43             ; cout             ;
+; |test|Add2~44             ; |test|Add2~44             ; combout          ;
+; |test|Add2~44             ; |test|Add2~45             ; cout             ;
+; |test|Add2~46             ; |test|Add2~46             ; combout          ;
+; |test|n[0]                ; |test|n[0]                ; q                ;
+; |test|n[1]                ; |test|n[1]                ; q                ;
+; |test|n[2]                ; |test|n[2]                ; q                ;
+; |test|img_sig~0           ; |test|img_sig~0           ; combout          ;
+; |test|img_sig~1           ; |test|img_sig~1           ; combout          ;
+; |test|img_sig~2           ; |test|img_sig~2           ; combout          ;
+; |test|com_u_sig[0]        ; |test|com_u_sig[0]        ; q                ;
+; |test|com_u_sig[1]        ; |test|com_u_sig[1]        ; q                ;
+; |test|com_u_sig[2]        ; |test|com_u_sig[2]        ; q                ;
+; |test|com_u_sig[3]        ; |test|com_u_sig[3]        ; q                ;
+; |test|com_u_sig[4]        ; |test|com_u_sig[4]        ; q                ;
+; |test|com_u_sig[5]        ; |test|com_u_sig[5]        ; q                ;
+; |test|com_u_sig[6]        ; |test|com_u_sig[6]        ; q                ;
+; |test|com_u_sig[7]        ; |test|com_u_sig[7]        ; q                ;
+; |test|s[0]                ; |test|s[0]                ; q                ;
+; |test|Equal0~0            ; |test|Equal0~0            ; combout          ;
+; |test|Equal0~1            ; |test|Equal0~1            ; combout          ;
+; |test|n~0                 ; |test|n~0                 ; combout          ;
+; |test|clk_hz_sig          ; |test|clk_hz_sig          ; q                ;
+; |test|s[1]                ; |test|s[1]                ; q                ;
+; |test|Add0~0              ; |test|Add0~0              ; combout          ;
+; |test|n~1                 ; |test|n~1                 ; combout          ;
+; |test|s[2]                ; |test|s[2]                ; q                ;
+; |test|Add0~1              ; |test|Add0~1              ; combout          ;
+; |test|n~2                 ; |test|n~2                 ; combout          ;
+; |test|clk_sig             ; |test|clk_sig             ; q                ;
+; |test|clk_hz[7]           ; |test|clk_hz[7]           ; q                ;
+; |test|clk_hz[6]           ; |test|clk_hz[6]           ; q                ;
+; |test|clk_hz[9]           ; |test|clk_hz[9]           ; q                ;
+; |test|clk_hz[8]           ; |test|clk_hz[8]           ; q                ;
+; |test|Equal2~0            ; |test|Equal2~0            ; combout          ;
+; |test|clk_hz[5]           ; |test|clk_hz[5]           ; q                ;
+; |test|clk_hz[10]          ; |test|clk_hz[10]          ; q                ;
+; |test|clk_hz[11]          ; |test|clk_hz[11]          ; q                ;
+; |test|clk_hz[12]          ; |test|clk_hz[12]          ; q                ;
+; |test|clk_hz[13]          ; |test|clk_hz[13]          ; q                ;
+; |test|Equal2~3            ; |test|Equal2~3            ; combout          ;
+; |test|Equal2~4            ; |test|Equal2~4            ; combout          ;
+; |test|clk_hz_sig~0        ; |test|clk_hz_sig~0        ; combout          ;
+; |test|s[1]~0              ; |test|s[1]~0              ; combout          ;
+; |test|s[2]~1              ; |test|s[2]~1              ; combout          ;
+; |test|clk_st[5]           ; |test|clk_st[5]           ; q                ;
+; |test|clk_st[6]           ; |test|clk_st[6]           ; q                ;
+; |test|clk_st[7]           ; |test|clk_st[7]           ; q                ;
+; |test|Equal1~1            ; |test|Equal1~1            ; combout          ;
+; |test|clk_st[10]          ; |test|clk_st[10]          ; q                ;
+; |test|clk_st[11]          ; |test|clk_st[11]          ; q                ;
+; |test|clk_st[8]           ; |test|clk_st[8]           ; q                ;
+; |test|clk_st[9]           ; |test|clk_st[9]           ; q                ;
+; |test|Equal1~2            ; |test|Equal1~2            ; combout          ;
+; |test|clk_st[12]          ; |test|clk_st[12]          ; q                ;
+; |test|clk_st[13]          ; |test|clk_st[13]          ; q                ;
+; |test|clk_st[15]          ; |test|clk_st[15]          ; q                ;
+; |test|clk_st[14]          ; |test|clk_st[14]          ; q                ;
+; |test|Equal1~3            ; |test|Equal1~3            ; combout          ;
+; |test|Equal1~4            ; |test|Equal1~4            ; combout          ;
+; |test|clk_st[17]          ; |test|clk_st[17]          ; q                ;
+; |test|clk_st[18]          ; |test|clk_st[18]          ; q                ;
+; |test|clk_st[19]          ; |test|clk_st[19]          ; q                ;
+; |test|clk_st[16]          ; |test|clk_st[16]          ; q                ;
+; |test|Equal1~5            ; |test|Equal1~5            ; combout          ;
+; |test|clk_st[20]          ; |test|clk_st[20]          ; q                ;
+; |test|clk_st[21]          ; |test|clk_st[21]          ; q                ;
+; |test|clk_st[23]          ; |test|clk_st[23]          ; q                ;
+; |test|clk_st[22]          ; |test|clk_st[22]          ; q                ;
+; |test|Equal1~6            ; |test|Equal1~6            ; combout          ;
+; |test|clk_sig~0           ; |test|clk_sig~0           ; combout          ;
+; |test|clk_hz~0            ; |test|clk_hz~0            ; combout          ;
+; |test|clk_hz~1            ; |test|clk_hz~1            ; combout          ;
+; |test|clk_hz~5            ; |test|clk_hz~5            ; combout          ;
+; |test|clk_hz~6            ; |test|clk_hz~6            ; combout          ;
+; |test|clk_st~2            ; |test|clk_st~2            ; combout          ;
+; |test|clk_st~3            ; |test|clk_st~3            ; combout          ;
+; |test|clk_st~4            ; |test|clk_st~4            ; combout          ;
+; |test|clk_st~5            ; |test|clk_st~5            ; combout          ;
+; |test|clk_st~6            ; |test|clk_st~6            ; combout          ;
+; |test|clk_st~7            ; |test|clk_st~7            ; combout          ;
+; |test|clk_st~8            ; |test|clk_st~8            ; combout          ;
+; |test|clk_st~9            ; |test|clk_st~9            ; combout          ;
+; |test|clk_st~10           ; |test|clk_st~10           ; combout          ;
+; |test|clk_st~11           ; |test|clk_st~11           ; combout          ;
+; |test|clk_st~12           ; |test|clk_st~12           ; combout          ;
+; |test|com_u_sig[0]~0      ; |test|com_u_sig[0]~0      ; combout          ;
+; |test|com_u_sig[1]~1      ; |test|com_u_sig[1]~1      ; combout          ;
+; |test|s[0]~2              ; |test|s[0]~2              ; combout          ;
+; |test|led_test[0]~output  ; |test|led_test[0]~output  ; o                ;
+; |test|led_test[0]         ; |test|led_test[0]         ; padout           ;
+; |test|led_test[1]~output  ; |test|led_test[1]~output  ; o                ;
+; |test|led_test[1]         ; |test|led_test[1]         ; padout           ;
+; |test|led_test[2]~output  ; |test|led_test[2]~output  ; o                ;
+; |test|led_test[2]         ; |test|led_test[2]         ; padout           ;
+; |test|led_test[3]~output  ; |test|led_test[3]~output  ; o                ;
+; |test|led_test[3]         ; |test|led_test[3]         ; padout           ;
+; |test|led_test[4]~output  ; |test|led_test[4]~output  ; o                ;
+; |test|led_test[4]         ; |test|led_test[4]         ; padout           ;
+; |test|led_test[5]~output  ; |test|led_test[5]~output  ; o                ;
+; |test|led_test[5]         ; |test|led_test[5]         ; padout           ;
+; |test|led_test[6]~output  ; |test|led_test[6]~output  ; o                ;
+; |test|led_test[6]         ; |test|led_test[6]         ; padout           ;
+; |test|led_test[7]~output  ; |test|led_test[7]~output  ; o                ;
+; |test|led_test[7]         ; |test|led_test[7]         ; padout           ;
+; |test|com[0]~output       ; |test|com[0]~output       ; o                ;
+; |test|com[0]              ; |test|com[0]              ; padout           ;
+; |test|com[1]~output       ; |test|com[1]~output       ; o                ;
+; |test|com[1]              ; |test|com[1]              ; padout           ;
+; |test|com[2]~output       ; |test|com[2]~output       ; o                ;
+; |test|com[2]              ; |test|com[2]              ; padout           ;
+; |test|com[3]~output       ; |test|com[3]~output       ; o                ;
+; |test|com[3]              ; |test|com[3]              ; padout           ;
+; |test|com[4]~output       ; |test|com[4]~output       ; o                ;
+; |test|com[4]              ; |test|com[4]              ; padout           ;
+; |test|com[5]~output       ; |test|com[5]~output       ; o                ;
+; |test|com[5]              ; |test|com[5]              ; padout           ;
+; |test|com[6]~output       ; |test|com[6]~output       ; o                ;
+; |test|com[6]              ; |test|com[6]              ; padout           ;
+; |test|com[7]~output       ; |test|com[7]~output       ; o                ;
+; |test|com[7]              ; |test|com[7]              ; padout           ;
+; |test|clk_hz_sig~clkctrl  ; |test|clk_hz_sig~clkctrl  ; outclk           ;
+; |test|clk_sig~clkctrl     ; |test|clk_sig~clkctrl     ; outclk           ;
+; |test|com_u_sig[3]~feeder ; |test|com_u_sig[3]~feeder ; combout          ;
+; |test|com_u_sig[4]~feeder ; |test|com_u_sig[4]~feeder ; combout          ;
+; |test|com_u_sig[6]~feeder ; |test|com_u_sig[6]~feeder ; combout          ;
+; |test|com_u_sig[7]~feeder ; |test|com_u_sig[7]~feeder ; combout          ;
+; |test|clk_sig~feeder      ; |test|clk_sig~feeder      ; combout          ;
++---------------------------+---------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                 ;
++---------------------------+---------------------------+------------------+
+; Node Name                 ; Output Port Name          ; Output Port Type ;
++---------------------------+---------------------------+------------------+
+; |test|Add3~10             ; |test|Add3~11             ; cout             ;
+; |test|Add3~12             ; |test|Add3~12             ; combout          ;
+; |test|Add3~12             ; |test|Add3~13             ; cout             ;
+; |test|Add3~14             ; |test|Add3~14             ; combout          ;
+; |test|Add3~14             ; |test|Add3~15             ; cout             ;
+; |test|Add3~16             ; |test|Add3~16             ; combout          ;
+; |test|Add3~16             ; |test|Add3~17             ; cout             ;
+; |test|Add3~18             ; |test|Add3~18             ; combout          ;
+; |test|Add3~18             ; |test|Add3~19             ; cout             ;
+; |test|Add3~20             ; |test|Add3~20             ; combout          ;
+; |test|Add3~20             ; |test|Add3~21             ; cout             ;
+; |test|Add3~22             ; |test|Add3~22             ; combout          ;
+; |test|Add3~22             ; |test|Add3~23             ; cout             ;
+; |test|Add3~24             ; |test|Add3~24             ; combout          ;
+; |test|Add3~24             ; |test|Add3~25             ; cout             ;
+; |test|Add3~26             ; |test|Add3~26             ; combout          ;
+; |test|Add2~10             ; |test|Add2~11             ; cout             ;
+; |test|Add2~12             ; |test|Add2~12             ; combout          ;
+; |test|Add2~12             ; |test|Add2~13             ; cout             ;
+; |test|Add2~14             ; |test|Add2~14             ; combout          ;
+; |test|Add2~14             ; |test|Add2~15             ; cout             ;
+; |test|Add2~16             ; |test|Add2~16             ; combout          ;
+; |test|Add2~16             ; |test|Add2~17             ; cout             ;
+; |test|Add2~18             ; |test|Add2~18             ; combout          ;
+; |test|Add2~18             ; |test|Add2~19             ; cout             ;
+; |test|Add2~20             ; |test|Add2~20             ; combout          ;
+; |test|Add2~20             ; |test|Add2~21             ; cout             ;
+; |test|Add2~22             ; |test|Add2~22             ; combout          ;
+; |test|Add2~22             ; |test|Add2~23             ; cout             ;
+; |test|Add2~24             ; |test|Add2~24             ; combout          ;
+; |test|Add2~24             ; |test|Add2~25             ; cout             ;
+; |test|Add2~26             ; |test|Add2~26             ; combout          ;
+; |test|Add2~26             ; |test|Add2~27             ; cout             ;
+; |test|Add2~28             ; |test|Add2~28             ; combout          ;
+; |test|Add2~28             ; |test|Add2~29             ; cout             ;
+; |test|Add2~30             ; |test|Add2~30             ; combout          ;
+; |test|Add2~30             ; |test|Add2~31             ; cout             ;
+; |test|Add2~32             ; |test|Add2~32             ; combout          ;
+; |test|Add2~32             ; |test|Add2~33             ; cout             ;
+; |test|Add2~34             ; |test|Add2~34             ; combout          ;
+; |test|Add2~34             ; |test|Add2~35             ; cout             ;
+; |test|Add2~36             ; |test|Add2~36             ; combout          ;
+; |test|Add2~36             ; |test|Add2~37             ; cout             ;
+; |test|Add2~38             ; |test|Add2~38             ; combout          ;
+; |test|Add2~38             ; |test|Add2~39             ; cout             ;
+; |test|Add2~40             ; |test|Add2~40             ; combout          ;
+; |test|Add2~40             ; |test|Add2~41             ; cout             ;
+; |test|Add2~42             ; |test|Add2~42             ; combout          ;
+; |test|Add2~42             ; |test|Add2~43             ; cout             ;
+; |test|Add2~44             ; |test|Add2~44             ; combout          ;
+; |test|Add2~44             ; |test|Add2~45             ; cout             ;
+; |test|Add2~46             ; |test|Add2~46             ; combout          ;
+; |test|n[0]                ; |test|n[0]                ; q                ;
+; |test|n[1]                ; |test|n[1]                ; q                ;
+; |test|n[2]                ; |test|n[2]                ; q                ;
+; |test|img_sig~0           ; |test|img_sig~0           ; combout          ;
+; |test|img_sig~1           ; |test|img_sig~1           ; combout          ;
+; |test|img_sig~2           ; |test|img_sig~2           ; combout          ;
+; |test|com_u_sig[0]        ; |test|com_u_sig[0]        ; q                ;
+; |test|com_u_sig[1]        ; |test|com_u_sig[1]        ; q                ;
+; |test|com_u_sig[2]        ; |test|com_u_sig[2]        ; q                ;
+; |test|com_u_sig[3]        ; |test|com_u_sig[3]        ; q                ;
+; |test|com_u_sig[4]        ; |test|com_u_sig[4]        ; q                ;
+; |test|com_u_sig[5]        ; |test|com_u_sig[5]        ; q                ;
+; |test|com_u_sig[6]        ; |test|com_u_sig[6]        ; q                ;
+; |test|com_u_sig[7]        ; |test|com_u_sig[7]        ; q                ;
+; |test|s[0]                ; |test|s[0]                ; q                ;
+; |test|Equal0~0            ; |test|Equal0~0            ; combout          ;
+; |test|Equal0~1            ; |test|Equal0~1            ; combout          ;
+; |test|n~0                 ; |test|n~0                 ; combout          ;
+; |test|clk_hz_sig          ; |test|clk_hz_sig          ; q                ;
+; |test|s[1]                ; |test|s[1]                ; q                ;
+; |test|Add0~0              ; |test|Add0~0              ; combout          ;
+; |test|n~1                 ; |test|n~1                 ; combout          ;
+; |test|s[2]                ; |test|s[2]                ; q                ;
+; |test|Add0~1              ; |test|Add0~1              ; combout          ;
+; |test|n~2                 ; |test|n~2                 ; combout          ;
+; |test|clk_sig             ; |test|clk_sig             ; q                ;
+; |test|clk_hz[7]           ; |test|clk_hz[7]           ; q                ;
+; |test|clk_hz[6]           ; |test|clk_hz[6]           ; q                ;
+; |test|clk_hz[9]           ; |test|clk_hz[9]           ; q                ;
+; |test|clk_hz[8]           ; |test|clk_hz[8]           ; q                ;
+; |test|Equal2~0            ; |test|Equal2~0            ; combout          ;
+; |test|clk_hz[4]           ; |test|clk_hz[4]           ; q                ;
+; |test|clk_hz[5]           ; |test|clk_hz[5]           ; q                ;
+; |test|clk_hz[10]          ; |test|clk_hz[10]          ; q                ;
+; |test|clk_hz[11]          ; |test|clk_hz[11]          ; q                ;
+; |test|clk_hz[12]          ; |test|clk_hz[12]          ; q                ;
+; |test|clk_hz[13]          ; |test|clk_hz[13]          ; q                ;
+; |test|Equal2~3            ; |test|Equal2~3            ; combout          ;
+; |test|Equal2~4            ; |test|Equal2~4            ; combout          ;
+; |test|clk_hz_sig~0        ; |test|clk_hz_sig~0        ; combout          ;
+; |test|s[1]~0              ; |test|s[1]~0              ; combout          ;
+; |test|s[2]~1              ; |test|s[2]~1              ; combout          ;
+; |test|clk_st[5]           ; |test|clk_st[5]           ; q                ;
+; |test|clk_st[4]           ; |test|clk_st[4]           ; q                ;
+; |test|clk_st[6]           ; |test|clk_st[6]           ; q                ;
+; |test|clk_st[7]           ; |test|clk_st[7]           ; q                ;
+; |test|Equal1~1            ; |test|Equal1~1            ; combout          ;
+; |test|clk_st[10]          ; |test|clk_st[10]          ; q                ;
+; |test|clk_st[11]          ; |test|clk_st[11]          ; q                ;
+; |test|clk_st[8]           ; |test|clk_st[8]           ; q                ;
+; |test|clk_st[9]           ; |test|clk_st[9]           ; q                ;
+; |test|Equal1~2            ; |test|Equal1~2            ; combout          ;
+; |test|clk_st[12]          ; |test|clk_st[12]          ; q                ;
+; |test|clk_st[13]          ; |test|clk_st[13]          ; q                ;
+; |test|clk_st[15]          ; |test|clk_st[15]          ; q                ;
+; |test|clk_st[14]          ; |test|clk_st[14]          ; q                ;
+; |test|Equal1~3            ; |test|Equal1~3            ; combout          ;
+; |test|Equal1~4            ; |test|Equal1~4            ; combout          ;
+; |test|clk_st[17]          ; |test|clk_st[17]          ; q                ;
+; |test|clk_st[18]          ; |test|clk_st[18]          ; q                ;
+; |test|clk_st[19]          ; |test|clk_st[19]          ; q                ;
+; |test|clk_st[16]          ; |test|clk_st[16]          ; q                ;
+; |test|Equal1~5            ; |test|Equal1~5            ; combout          ;
+; |test|clk_st[20]          ; |test|clk_st[20]          ; q                ;
+; |test|clk_st[21]          ; |test|clk_st[21]          ; q                ;
+; |test|clk_st[23]          ; |test|clk_st[23]          ; q                ;
+; |test|clk_st[22]          ; |test|clk_st[22]          ; q                ;
+; |test|Equal1~6            ; |test|Equal1~6            ; combout          ;
+; |test|clk_sig~0           ; |test|clk_sig~0           ; combout          ;
+; |test|clk_hz~0            ; |test|clk_hz~0            ; combout          ;
+; |test|clk_hz~1            ; |test|clk_hz~1            ; combout          ;
+; |test|clk_hz~5            ; |test|clk_hz~5            ; combout          ;
+; |test|clk_hz~6            ; |test|clk_hz~6            ; combout          ;
+; |test|clk_st~2            ; |test|clk_st~2            ; combout          ;
+; |test|clk_st~3            ; |test|clk_st~3            ; combout          ;
+; |test|clk_st~4            ; |test|clk_st~4            ; combout          ;
+; |test|clk_st~5            ; |test|clk_st~5            ; combout          ;
+; |test|clk_st~6            ; |test|clk_st~6            ; combout          ;
+; |test|clk_st~7            ; |test|clk_st~7            ; combout          ;
+; |test|clk_st~8            ; |test|clk_st~8            ; combout          ;
+; |test|clk_st~9            ; |test|clk_st~9            ; combout          ;
+; |test|clk_st~10           ; |test|clk_st~10           ; combout          ;
+; |test|clk_st~11           ; |test|clk_st~11           ; combout          ;
+; |test|clk_st~12           ; |test|clk_st~12           ; combout          ;
+; |test|com_u_sig[0]~0      ; |test|com_u_sig[0]~0      ; combout          ;
+; |test|com_u_sig[1]~1      ; |test|com_u_sig[1]~1      ; combout          ;
+; |test|s[0]~2              ; |test|s[0]~2              ; combout          ;
+; |test|led_test[0]~output  ; |test|led_test[0]~output  ; o                ;
+; |test|led_test[0]         ; |test|led_test[0]         ; padout           ;
+; |test|led_test[1]~output  ; |test|led_test[1]~output  ; o                ;
+; |test|led_test[1]         ; |test|led_test[1]         ; padout           ;
+; |test|led_test[2]~output  ; |test|led_test[2]~output  ; o                ;
+; |test|led_test[2]         ; |test|led_test[2]         ; padout           ;
+; |test|led_test[3]~output  ; |test|led_test[3]~output  ; o                ;
+; |test|led_test[3]         ; |test|led_test[3]         ; padout           ;
+; |test|led_test[4]~output  ; |test|led_test[4]~output  ; o                ;
+; |test|led_test[4]         ; |test|led_test[4]         ; padout           ;
+; |test|led_test[5]~output  ; |test|led_test[5]~output  ; o                ;
+; |test|led_test[5]         ; |test|led_test[5]         ; padout           ;
+; |test|led_test[6]~output  ; |test|led_test[6]~output  ; o                ;
+; |test|led_test[6]         ; |test|led_test[6]         ; padout           ;
+; |test|led_test[7]~output  ; |test|led_test[7]~output  ; o                ;
+; |test|led_test[7]         ; |test|led_test[7]         ; padout           ;
+; |test|com[0]~output       ; |test|com[0]~output       ; o                ;
+; |test|com[0]              ; |test|com[0]              ; padout           ;
+; |test|com[1]~output       ; |test|com[1]~output       ; o                ;
+; |test|com[1]              ; |test|com[1]              ; padout           ;
+; |test|com[2]~output       ; |test|com[2]~output       ; o                ;
+; |test|com[2]              ; |test|com[2]              ; padout           ;
+; |test|com[3]~output       ; |test|com[3]~output       ; o                ;
+; |test|com[3]              ; |test|com[3]              ; padout           ;
+; |test|com[4]~output       ; |test|com[4]~output       ; o                ;
+; |test|com[4]              ; |test|com[4]              ; padout           ;
+; |test|com[5]~output       ; |test|com[5]~output       ; o                ;
+; |test|com[5]              ; |test|com[5]              ; padout           ;
+; |test|com[6]~output       ; |test|com[6]~output       ; o                ;
+; |test|com[6]              ; |test|com[6]              ; padout           ;
+; |test|com[7]~output       ; |test|com[7]~output       ; o                ;
+; |test|com[7]              ; |test|com[7]              ; padout           ;
+; |test|clk_hz_sig~clkctrl  ; |test|clk_hz_sig~clkctrl  ; outclk           ;
+; |test|clk_sig~clkctrl     ; |test|clk_sig~clkctrl     ; outclk           ;
+; |test|com_u_sig[3]~feeder ; |test|com_u_sig[3]~feeder ; combout          ;
+; |test|com_u_sig[4]~feeder ; |test|com_u_sig[4]~feeder ; combout          ;
+; |test|com_u_sig[6]~feeder ; |test|com_u_sig[6]~feeder ; combout          ;
+; |test|com_u_sig[7]~feeder ; |test|com_u_sig[7]~feeder ; combout          ;
+; |test|clk_sig~feeder      ; |test|clk_sig~feeder      ; combout          ;
++---------------------------+---------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Nov 15 10:41:23 2012
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off test -c test
+Info: Using vector source file "C:/Users/Administrator/Desktop/3c10/test.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |test|com_u_sig[0]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      18.72 %
+Info: Number of transitions in simulation is 709
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 155 megabytes
+    Info: Processing ended: Thu Nov 15 10:41:24 2012
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,15 @@
+|led_8
+clk_in => led_sig[0].CLK
+clk_in => led_sig[1].CLK
+clk_in => led_sig[2].CLK
+clk_in => led_sig[3].CLK
+led_out[0] <= led_sig[0].DB_MAX_OUTPUT_PORT_TYPE
+led_out[1] <= led_sig[1].DB_MAX_OUTPUT_PORT_TYPE
+led_out[2] <= led_sig[2].DB_MAX_OUTPUT_PORT_TYPE
+led_out[3] <= led_sig[3].DB_MAX_OUTPUT_PORT_TYPE
+led_com[0] <= <VCC>
+led_com[1] <= <GND>
+led_com[2] <= <GND>
+led_com[3] <= <GND>
+
+

@@ -1,0 +1,7 @@
+|dc_ck
+dc_out[0] <= sw_ck_in.DB_MAX_OUTPUT_PORT_TYPE
+dc_out[1] <= sw_ck_in.DB_MAX_OUTPUT_PORT_TYPE
+sw_ck_in => dc_out[0].DATAIN
+sw_ck_in => dc_out[1].DATAIN
+
+

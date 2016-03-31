@@ -1,0 +1,11 @@
+|pw
+clk_in => pw_out[0]~reg0.CLK
+clk_in => pw_out[1]~reg0.CLK
+clk_in => pw_out[2]~reg0.CLK
+clk_in => pw_out[3]~reg0.CLK
+pw_out[0] <= pw_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pw_out[1] <= pw_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pw_out[2] <= pw_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pw_out[3] <= pw_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

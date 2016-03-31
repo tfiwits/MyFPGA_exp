@@ -1,0 +1,20 @@
+|led8_24hour
+clk_in => ~NO_FANOUT~
+clk_in_hi => led_sig[0].CLK
+clk_in_hi => led_sig[1].CLK
+clk_in_hi => led_sig[2].CLK
+clk_in_hi => led_sig[3].CLK
+led_com[0] <= led_sig[0].DB_MAX_OUTPUT_PORT_TYPE
+led_com[1] <= led_sig[1].DB_MAX_OUTPUT_PORT_TYPE
+led_com[2] <= led_sig[2].DB_MAX_OUTPUT_PORT_TYPE
+led_com[3] <= led_sig[3].DB_MAX_OUTPUT_PORT_TYPE
+led_out[0] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+led_out[1] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+led_out[2] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+led_out[3] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+led_out[4] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+led_out[5] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+led_out[6] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+led_out[7] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+
+

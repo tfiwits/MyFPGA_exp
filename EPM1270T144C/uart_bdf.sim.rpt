@@ -1,0 +1,298 @@
+Simulator report for uart_bdf
+Mon Aug 20 11:20:34 2012
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 1.0 us        ;
+; Simulation Netlist Size     ; 78 nodes      ;
+; Simulation Coverage         ;      33.73 %  ;
+; Total Number of Transitions ; 1589          ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270T144C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      33.73 % ;
+; Total nodes checked                                 ; 78           ;
+; Total output ports checked                          ; 83           ;
+; Total output ports with complete 1/0-value coverage ; 28           ;
+; Total output ports with no 1/0-value coverage       ; 52           ;
+; Total output ports with no 1-value coverage         ; 52           ;
+; Total output ports with no 0-value coverage         ; 55           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                   ;
++-------------------------------------+--------------------------------------+------------------+
+; Node Name                           ; Output Port Name                     ; Output Port Type ;
++-------------------------------------+--------------------------------------+------------------+
+; |uart_bdf|clock:inst|Add0~0         ; |uart_bdf|clock:inst|Add0~0          ; combout          ;
+; |uart_bdf|clock:inst|Add0~0         ; |uart_bdf|clock:inst|Add0~2          ; cout0            ;
+; |uart_bdf|clock:inst|Add0~0         ; |uart_bdf|clock:inst|Add0~2COUT1_54  ; cout1            ;
+; |uart_bdf|clock:inst|Add0~5         ; |uart_bdf|clock:inst|Add0~5          ; combout          ;
+; |uart_bdf|clock:inst|Add0~5         ; |uart_bdf|clock:inst|Add0~7          ; cout0            ;
+; |uart_bdf|clock:inst|Add0~5         ; |uart_bdf|clock:inst|Add0~7COUT1_58  ; cout1            ;
+; |uart_bdf|clock:inst|Add0~10        ; |uart_bdf|clock:inst|Add0~10         ; combout          ;
+; |uart_bdf|clock:inst|Add0~10        ; |uart_bdf|clock:inst|Add0~12         ; cout0            ;
+; |uart_bdf|clock:inst|Add0~10        ; |uart_bdf|clock:inst|Add0~12COUT1_56 ; cout1            ;
+; |uart_bdf|clock:inst|Add0~15        ; |uart_bdf|clock:inst|Add0~15         ; combout          ;
+; |uart_bdf|clock:inst|Add0~15        ; |uart_bdf|clock:inst|Add0~17         ; cout0            ;
+; |uart_bdf|clock:inst|Add0~15        ; |uart_bdf|clock:inst|Add0~17COUT1_60 ; cout1            ;
+; |uart_bdf|clock:inst|Equal4~0       ; |uart_bdf|clock:inst|Equal4~0        ; combout          ;
+; |uart_bdf|clock:inst|Add0~25        ; |uart_bdf|clock:inst|Add0~25         ; combout          ;
+; |uart_bdf|clock:inst|Add0~30        ; |uart_bdf|clock:inst|Add0~30         ; combout          ;
+; |uart_bdf|clock:inst|Add0~30        ; |uart_bdf|clock:inst|Add0~32         ; cout             ;
+; |uart_bdf|clock:inst|Add0~35        ; |uart_bdf|clock:inst|Add0~35         ; combout          ;
+; |uart_bdf|clock:inst|Add0~35        ; |uart_bdf|clock:inst|Add0~37COUT1_62 ; cout1            ;
+; |uart_bdf|clock:inst|Add0~40        ; |uart_bdf|clock:inst|Add0~40         ; combout          ;
+; |uart_bdf|clock:inst|Equal4~1       ; |uart_bdf|clock:inst|Equal4~1        ; combout          ;
+; |uart_bdf|clock:inst|clk_sig_rxd[0] ; |uart_bdf|clock:inst|clk_sig_rxd[0]  ; regout           ;
+; |uart_bdf|clock:inst|clk_sig_rxd[2] ; |uart_bdf|clock:inst|clk_sig_rxd[2]  ; regout           ;
+; |uart_bdf|clock:inst|clk_sig_rxd[1] ; |uart_bdf|clock:inst|clk_sig_rxd[1]  ; regout           ;
+; |uart_bdf|clock:inst|clk_sig_rxd[3] ; |uart_bdf|clock:inst|clk_sig_rxd[3]  ; regout           ;
+; |uart_bdf|clock:inst|clk_sig_rxd[4] ; |uart_bdf|clock:inst|clk_sig_rxd[4]  ; regout           ;
+; |uart_bdf|clock:inst|clk_sig_rxd[5] ; |uart_bdf|clock:inst|clk_sig_rxd[5]  ; regout           ;
+; |uart_bdf|rxd_in                    ; |uart_bdf|rxd_in~corein              ; combout          ;
+; |uart_bdf|clk_in                    ; |uart_bdf|clk_in~corein              ; combout          ;
++-------------------------------------+--------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                             ;
++-----------------------------------------+-----------------------------------------+------------------+
+; Node Name                               ; Output Port Name                        ; Output Port Type ;
++-----------------------------------------+-----------------------------------------+------------------+
+; |uart_bdf|uart:inst1|rec_sig[7]         ; |uart_bdf|uart:inst1|rec_sig[7]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_ck_re_r[1]     ; |uart_bdf|uart:inst1|rec_ck_re_r[1]     ; regout           ;
+; |uart_bdf|uart:inst1|Mux9~0             ; |uart_bdf|uart:inst1|Mux9~0             ; combout          ;
+; |uart_bdf|uart:inst1|rec_sig[6]         ; |uart_bdf|uart:inst1|rec_sig[6]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[5]         ; |uart_bdf|uart:inst1|rec_sig[5]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[4]         ; |uart_bdf|uart:inst1|rec_sig[4]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[3]         ; |uart_bdf|uart:inst1|rec_sig[3]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[2]         ; |uart_bdf|uart:inst1|rec_sig[2]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[1]         ; |uart_bdf|uart:inst1|rec_sig[1]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[0]         ; |uart_bdf|uart:inst1|rec_sig[0]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[8]         ; |uart_bdf|uart:inst1|rec_sig[8]         ; regout           ;
+; |uart_bdf|clock:inst|clk_rxd            ; |uart_bdf|clock:inst|clk_rxd            ; regout           ;
+; |uart_bdf|uart:inst1|rec_ck_r[2]        ; |uart_bdf|uart:inst1|rec_ck_r[2]        ; regout           ;
+; |uart_bdf|uart:inst1|rec_ck_r[1]        ; |uart_bdf|uart:inst1|rec_ck_r[1]        ; regout           ;
+; |uart_bdf|uart:inst1|rec_ck_r[0]        ; |uart_bdf|uart:inst1|rec_ck_r[0]        ; regout           ;
+; |uart_bdf|uart:inst1|Equal5~0           ; |uart_bdf|uart:inst1|Equal5~0           ; combout          ;
+; |uart_bdf|uart:inst1|rec_sig[7]~0       ; |uart_bdf|uart:inst1|rec_sig[7]~0       ; combout          ;
+; |uart_bdf|uart:inst1|check_ck_re_r[0]   ; |uart_bdf|uart:inst1|check_ck_re_r[0]   ; regout           ;
+; |uart_bdf|uart:inst1|check_ck_re_r[1]   ; |uart_bdf|uart:inst1|Mux0~0             ; combout          ;
+; |uart_bdf|uart:inst1|check_ck_re_r[1]   ; |uart_bdf|uart:inst1|check_ck_re_r[1]   ; regout           ;
+; |uart_bdf|uart:inst1|rec_ck_re_r[0]     ; |uart_bdf|uart:inst1|sta[0]~0           ; combout          ;
+; |uart_bdf|uart:inst1|rec_ck_re_r[0]     ; |uart_bdf|uart:inst1|rec_ck_re_r[0]     ; regout           ;
+; |uart_bdf|uart:inst1|check_ck[2]        ; |uart_bdf|uart:inst1|check_ck[2]        ; regout           ;
+; |uart_bdf|uart:inst1|Equal1~0           ; |uart_bdf|uart:inst1|Equal1~0           ; combout          ;
+; |uart_bdf|uart:inst1|check_ck[0]        ; |uart_bdf|uart:inst1|check_ck[0]        ; regout           ;
+; |uart_bdf|uart:inst1|sta[0]~1           ; |uart_bdf|uart:inst1|sta[0]~1           ; combout          ;
+; |uart_bdf|uart:inst1|Mux15~0            ; |uart_bdf|uart:inst1|Mux15~0            ; combout          ;
+; |uart_bdf|uart:inst1|rec_ck_re_r[0]~0   ; |uart_bdf|uart:inst1|rec_ck_re_r[0]~0   ; combout          ;
+; |uart_bdf|clock:inst|Add0~20            ; |uart_bdf|clock:inst|Add0~20            ; combout          ;
+; |uart_bdf|clock:inst|Add0~25            ; |uart_bdf|clock:inst|Add0~27            ; cout0            ;
+; |uart_bdf|clock:inst|Add0~35            ; |uart_bdf|clock:inst|Add0~37            ; cout0            ;
+; |uart_bdf|clock:inst|Add0~40            ; |uart_bdf|clock:inst|Add0~42            ; cout0            ;
+; |uart_bdf|clock:inst|Add0~40            ; |uart_bdf|clock:inst|Add0~42COUT1_66    ; cout1            ;
+; |uart_bdf|uart:inst1|Mux9~1             ; |uart_bdf|uart:inst1|Mux9~1             ; combout          ;
+; |uart_bdf|uart:inst1|rxd_ck             ; |uart_bdf|uart:inst1|rxd_ck             ; regout           ;
+; |uart_bdf|uart:inst1|check_ck_re_r[0]~0 ; |uart_bdf|uart:inst1|check_ck_re_r[0]~0 ; combout          ;
+; |uart_bdf|uart:inst1|Add0~0             ; |uart_bdf|uart:inst1|Add0~0             ; combout          ;
+; |uart_bdf|clock:inst|clk_sig_rxd[8]     ; |uart_bdf|clock:inst|clk_sig_rxd[8]     ; regout           ;
+; |uart_bdf|clock:inst|clk_sig_rxd[7]     ; |uart_bdf|clock:inst|clk_sig_rxd[7]     ; regout           ;
+; |uart_bdf|uart:inst1|Mux13~0            ; |uart_bdf|uart:inst1|Mux13~0            ; combout          ;
+; |uart_bdf|uart:inst1|sta[1]             ; |uart_bdf|uart:inst1|sta[1]             ; combout          ;
+; |uart_bdf|uart:inst1|sta[0]             ; |uart_bdf|uart:inst1|sta[0]             ; combout          ;
+; |uart_bdf|uart:inst1|rec_ck             ; |uart_bdf|uart:inst1|rec_ck             ; combout          ;
+; |uart_bdf|uart:inst1|check_ck_re        ; |uart_bdf|uart:inst1|check_ck_re        ; combout          ;
+; |uart_bdf|rxd_out[7]                    ; |uart_bdf|rxd_out[7]                    ; padio            ;
+; |uart_bdf|rxd_out[6]                    ; |uart_bdf|rxd_out[6]                    ; padio            ;
+; |uart_bdf|rxd_out[5]                    ; |uart_bdf|rxd_out[5]                    ; padio            ;
+; |uart_bdf|rxd_out[4]                    ; |uart_bdf|rxd_out[4]                    ; padio            ;
+; |uart_bdf|rxd_out[3]                    ; |uart_bdf|rxd_out[3]                    ; padio            ;
+; |uart_bdf|rxd_out[2]                    ; |uart_bdf|rxd_out[2]                    ; padio            ;
+; |uart_bdf|rxd_out[1]                    ; |uart_bdf|rxd_out[1]                    ; padio            ;
+; |uart_bdf|rxd_out[0]                    ; |uart_bdf|rxd_out[0]                    ; padio            ;
++-----------------------------------------+-----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                             ;
++-----------------------------------------+-----------------------------------------+------------------+
+; Node Name                               ; Output Port Name                        ; Output Port Type ;
++-----------------------------------------+-----------------------------------------+------------------+
+; |uart_bdf|uart:inst1|rec_sig[7]         ; |uart_bdf|uart:inst1|rec_sig[7]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_ck_re_r[1]     ; |uart_bdf|uart:inst1|rec_ck_re_r[1]     ; regout           ;
+; |uart_bdf|uart:inst1|Mux9~0             ; |uart_bdf|uart:inst1|Mux9~0             ; combout          ;
+; |uart_bdf|uart:inst1|rec_sig[6]         ; |uart_bdf|uart:inst1|rec_sig[6]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[5]         ; |uart_bdf|uart:inst1|rec_sig[5]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[4]         ; |uart_bdf|uart:inst1|rec_sig[4]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[3]         ; |uart_bdf|uart:inst1|rec_sig[3]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[2]         ; |uart_bdf|uart:inst1|rec_sig[2]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[1]         ; |uart_bdf|uart:inst1|rec_sig[1]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[0]         ; |uart_bdf|uart:inst1|rec_sig[0]         ; regout           ;
+; |uart_bdf|uart:inst1|rec_sig[8]         ; |uart_bdf|uart:inst1|rec_sig[8]         ; regout           ;
+; |uart_bdf|clock:inst|clk_rxd            ; |uart_bdf|clock:inst|clk_rxd            ; regout           ;
+; |uart_bdf|uart:inst1|rec_ck_r[2]        ; |uart_bdf|uart:inst1|rec_ck_r[2]        ; regout           ;
+; |uart_bdf|uart:inst1|rec_ck_r[1]        ; |uart_bdf|uart:inst1|rec_ck_r[1]        ; regout           ;
+; |uart_bdf|uart:inst1|rec_ck_r[0]        ; |uart_bdf|uart:inst1|rec_ck_r[0]        ; regout           ;
+; |uart_bdf|uart:inst1|Equal5~0           ; |uart_bdf|uart:inst1|Equal5~0           ; combout          ;
+; |uart_bdf|uart:inst1|rec_sig[7]~0       ; |uart_bdf|uart:inst1|rec_sig[7]~0       ; combout          ;
+; |uart_bdf|uart:inst1|check_ck_re_r[0]   ; |uart_bdf|uart:inst1|check_ck_re_r[0]   ; regout           ;
+; |uart_bdf|uart:inst1|check_ck_re_r[1]   ; |uart_bdf|uart:inst1|Mux0~0             ; combout          ;
+; |uart_bdf|uart:inst1|check_ck_re_r[1]   ; |uart_bdf|uart:inst1|check_ck_re_r[1]   ; regout           ;
+; |uart_bdf|uart:inst1|rec_ck_re_r[0]     ; |uart_bdf|uart:inst1|sta[0]~0           ; combout          ;
+; |uart_bdf|uart:inst1|rec_ck_re_r[0]     ; |uart_bdf|uart:inst1|rec_ck_re_r[0]     ; regout           ;
+; |uart_bdf|uart:inst1|check_ck[2]        ; |uart_bdf|uart:inst1|check_ck[2]        ; regout           ;
+; |uart_bdf|uart:inst1|Equal1~0           ; |uart_bdf|uart:inst1|Equal1~0           ; combout          ;
+; |uart_bdf|uart:inst1|check_ck[0]        ; |uart_bdf|uart:inst1|check_ck[0]        ; regout           ;
+; |uart_bdf|uart:inst1|sta[0]~1           ; |uart_bdf|uart:inst1|sta[0]~1           ; combout          ;
+; |uart_bdf|uart:inst1|Mux15~0            ; |uart_bdf|uart:inst1|Mux15~0            ; combout          ;
+; |uart_bdf|uart:inst1|rec_ck_re_r[0]~0   ; |uart_bdf|uart:inst1|rec_ck_re_r[0]~0   ; combout          ;
+; |uart_bdf|uart:inst1|Mux14~0            ; |uart_bdf|uart:inst1|Mux14~0            ; combout          ;
+; |uart_bdf|clock:inst|Add0~20            ; |uart_bdf|clock:inst|Add0~20            ; combout          ;
+; |uart_bdf|clock:inst|Add0~25            ; |uart_bdf|clock:inst|Add0~27            ; cout0            ;
+; |uart_bdf|clock:inst|Add0~25            ; |uart_bdf|clock:inst|Add0~27COUT1_64    ; cout1            ;
+; |uart_bdf|clock:inst|Add0~35            ; |uart_bdf|clock:inst|Add0~37            ; cout0            ;
+; |uart_bdf|clock:inst|Add0~40            ; |uart_bdf|clock:inst|Add0~42            ; cout0            ;
+; |uart_bdf|clock:inst|Add0~40            ; |uart_bdf|clock:inst|Add0~42COUT1_66    ; cout1            ;
+; |uart_bdf|uart:inst1|Mux9~1             ; |uart_bdf|uart:inst1|Mux9~1             ; combout          ;
+; |uart_bdf|uart:inst1|rxd_ck             ; |uart_bdf|uart:inst1|rxd_ck             ; regout           ;
+; |uart_bdf|uart:inst1|check_ck_re_r[0]~0 ; |uart_bdf|uart:inst1|check_ck_re_r[0]~0 ; combout          ;
+; |uart_bdf|uart:inst1|Add0~0             ; |uart_bdf|uart:inst1|Add0~0             ; combout          ;
+; |uart_bdf|clock:inst|clk_sig_rxd[8]     ; |uart_bdf|clock:inst|clk_sig_rxd[8]     ; regout           ;
+; |uart_bdf|clock:inst|clk_sig_rxd[6]     ; |uart_bdf|clock:inst|clk_sig_rxd[6]     ; regout           ;
+; |uart_bdf|clock:inst|clk_sig_rxd[7]     ; |uart_bdf|clock:inst|clk_sig_rxd[7]     ; regout           ;
+; |uart_bdf|uart:inst1|Mux13~0            ; |uart_bdf|uart:inst1|Mux13~0            ; combout          ;
+; |uart_bdf|uart:inst1|sta[1]             ; |uart_bdf|uart:inst1|sta[1]             ; combout          ;
+; |uart_bdf|uart:inst1|sta[0]             ; |uart_bdf|uart:inst1|sta[0]             ; combout          ;
+; |uart_bdf|uart:inst1|rec_ck             ; |uart_bdf|uart:inst1|rec_ck             ; combout          ;
+; |uart_bdf|uart:inst1|check_ck_re        ; |uart_bdf|uart:inst1|check_ck_re        ; combout          ;
+; |uart_bdf|rxd_out[7]                    ; |uart_bdf|rxd_out[7]                    ; padio            ;
+; |uart_bdf|rxd_out[6]                    ; |uart_bdf|rxd_out[6]                    ; padio            ;
+; |uart_bdf|rxd_out[5]                    ; |uart_bdf|rxd_out[5]                    ; padio            ;
+; |uart_bdf|rxd_out[4]                    ; |uart_bdf|rxd_out[4]                    ; padio            ;
+; |uart_bdf|rxd_out[3]                    ; |uart_bdf|rxd_out[3]                    ; padio            ;
+; |uart_bdf|rxd_out[2]                    ; |uart_bdf|rxd_out[2]                    ; padio            ;
+; |uart_bdf|rxd_out[1]                    ; |uart_bdf|rxd_out[1]                    ; padio            ;
+; |uart_bdf|rxd_out[0]                    ; |uart_bdf|rxd_out[0]                    ; padio            ;
++-----------------------------------------+-----------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Aug 20 11:20:34 2012
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off uart_bdf -c uart_bdf
+Info: Using vector source file "C:/Users/Administrator/Desktop/EPM1270T144C/uart_bdf.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |uart_bdf|uart:inst1|rxd_ck
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      33.73 %
+Info: Number of transitions in simulation is 1589
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 151 megabytes
+    Info: Processing ended: Mon Aug 20 11:20:34 2012
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,8 @@
+
+State Machine - |bb|state
+Name state.x_stop state.x_shift state.x_wait state.x_start state.x_idle 
+state.x_idle 0 0 0 0 0 
+state.x_start 0 0 0 1 1 
+state.x_wait 0 0 1 0 1 
+state.x_shift 0 1 0 0 1 
+state.x_stop 1 0 0 0 1 

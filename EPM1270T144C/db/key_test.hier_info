@@ -1,0 +1,64 @@
+|key_test
+led_out[0] <= key_de:inst1.led_out[0]
+led_out[1] <= key_de:inst1.led_out[1]
+led_out[2] <= key_de:inst1.led_out[2]
+led_out[3] <= key_de:inst1.led_out[3]
+led_out[4] <= key_de:inst1.led_out[4]
+led_out[5] <= key_de:inst1.led_out[5]
+led_out[6] <= key_de:inst1.led_out[6]
+led_out[7] <= key_de:inst1.led_out[7]
+clk_in => key:inst.clk_in
+col[0] => key:inst.col[0]
+col[1] => key:inst.col[1]
+row[0] <= key:inst.row[0]
+row[1] <= key:inst.row[1]
+
+
+|key_test|key_de:inst1
+key_in => led_sun[0].CLK
+key_in => led_sun[1].CLK
+key_in => led_sun[2].CLK
+key_in => led_sun[3].CLK
+key_in => led_sun[4].CLK
+key_in => led_sun[5].CLK
+key_in => led_sun[6].CLK
+key_in => led_sun[7].CLK
+led_out[0] <= led_sun[0].DB_MAX_OUTPUT_PORT_TYPE
+led_out[1] <= led_sun[1].DB_MAX_OUTPUT_PORT_TYPE
+led_out[2] <= led_sun[2].DB_MAX_OUTPUT_PORT_TYPE
+led_out[3] <= led_sun[3].DB_MAX_OUTPUT_PORT_TYPE
+led_out[4] <= led_sun[4].DB_MAX_OUTPUT_PORT_TYPE
+led_out[5] <= led_sun[5].DB_MAX_OUTPUT_PORT_TYPE
+led_out[6] <= led_sun[6].DB_MAX_OUTPUT_PORT_TYPE
+led_out[7] <= led_sun[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|key_test|key:inst
+clk_in => row_sig[0].CLK
+clk_in => row_sig[1].CLK
+clk_in_s => key_stt[0].CLK
+clk_in_s => key_stt[1].CLK
+clk_in_s => key_stt[2].CLK
+clk_in_s => key_stt[3].CLK
+clk_in_s => key_stt[4].CLK
+clk_in_s => key_st[0].CLK
+clk_in_s => key_st[1].CLK
+clk_in_s => key_st[2].CLK
+clk_in_s => key_code[0].CLK
+clk_in_s => key_code[1].CLK
+clk_in_s => col_tmp[0].CLK
+clk_in_s => col_tmp[1].CLK
+clk_in_s => A_SIG.CLK
+row[0] <= row_sig[0].DB_MAX_OUTPUT_PORT_TYPE
+row[1] <= row_sig[1].DB_MAX_OUTPUT_PORT_TYPE
+col[0] => Equal0.IN3
+col[0] => col_tmp.DATAB
+col[0] => Equal2.IN1
+col[0] => Mux1.IN3
+col[1] => Equal0.IN2
+col[1] => col_tmp.DATAB
+col[1] => Equal2.IN0
+col[1] => Mux1.IN2
+A_out <= A_SIG.DB_MAX_OUTPUT_PORT_TYPE
+
+

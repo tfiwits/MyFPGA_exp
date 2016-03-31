@@ -1,0 +1,38 @@
+|sw_bdf
+out[0] <= sw:inst.sw_out[0]
+out[1] <= sw:inst.sw_out[1]
+out[2] <= sw:inst.sw_out[2]
+out[3] <= sw:inst.sw_out[3]
+out[4] <= sw:inst.sw_out[4]
+out[5] <= sw:inst.sw_out[5]
+out[6] <= sw:inst.sw_out[6]
+out[7] <= sw:inst.sw_out[7]
+in[0] => sw:inst.sw_in[0]
+in[1] => sw:inst.sw_in[1]
+in[2] => sw:inst.sw_in[2]
+in[3] => sw:inst.sw_in[3]
+in[4] => sw:inst.sw_in[4]
+in[5] => sw:inst.sw_in[5]
+in[6] => sw:inst.sw_in[6]
+in[7] => sw:inst.sw_in[7]
+
+
+|sw_bdf|sw:inst
+sw_in[0] => sw_out[0].DATAIN
+sw_in[1] => sw_out[1].DATAIN
+sw_in[2] => sw_out[2].DATAIN
+sw_in[3] => sw_out[3].DATAIN
+sw_in[4] => sw_out[4].DATAIN
+sw_in[5] => sw_out[5].DATAIN
+sw_in[6] => sw_out[6].DATAIN
+sw_in[7] => sw_out[7].DATAIN
+sw_out[0] <= sw_in[0].DB_MAX_OUTPUT_PORT_TYPE
+sw_out[1] <= sw_in[1].DB_MAX_OUTPUT_PORT_TYPE
+sw_out[2] <= sw_in[2].DB_MAX_OUTPUT_PORT_TYPE
+sw_out[3] <= sw_in[3].DB_MAX_OUTPUT_PORT_TYPE
+sw_out[4] <= sw_in[4].DB_MAX_OUTPUT_PORT_TYPE
+sw_out[5] <= sw_in[5].DB_MAX_OUTPUT_PORT_TYPE
+sw_out[6] <= sw_in[6].DB_MAX_OUTPUT_PORT_TYPE
+sw_out[7] <= sw_in[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

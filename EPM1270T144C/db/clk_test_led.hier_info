@@ -1,0 +1,35 @@
+|clk_test_led
+clk_in => clk_test:a1.clk_in
+led_out <= led_sig.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clk_test_led|clk_test:a1
+clk_in => clk_out_sig.CLK
+clk_in => clk_sig[0].CLK
+clk_in => clk_sig[1].CLK
+clk_in => clk_sig[2].CLK
+clk_in => clk_sig[3].CLK
+clk_in => clk_sig[4].CLK
+clk_in => clk_sig[5].CLK
+clk_in => clk_sig[6].CLK
+clk_in => clk_sig[7].CLK
+clk_in => clk_sig[8].CLK
+clk_in => clk_sig[9].CLK
+clk_in => clk_sig[10].CLK
+clk_in => clk_sig[11].CLK
+clk_in => clk_sig[12].CLK
+clk_in => clk_sig[13].CLK
+clk_in => clk_sig[14].CLK
+clk_in => clk_sig[15].CLK
+clk_in => clk_sig[16].CLK
+clk_in => clk_sig[17].CLK
+clk_in => clk_sig[18].CLK
+clk_in => clk_sig[19].CLK
+clk_in => clk_sig[20].CLK
+clk_in => clk_sig[21].CLK
+clk_in => clk_sig[22].CLK
+clk_in => clk_sig[23].CLK
+clk_in => clk_sig[24].CLK
+clk_out_1hz <= clk_out_sig.DB_MAX_OUTPUT_PORT_TYPE
+
+

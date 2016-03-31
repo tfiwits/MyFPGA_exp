@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.767 ns
+From           : INTR
+To             : sta[1]
+From Clock     : --
+To Clock       : sw
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 20.555 ns
+From           : CS$latch
+To             : CS
+From Clock     : INTR
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.656 ns
+From           : Data_in[6]
+To             : Data_out[6]$latch
+From Clock     : --
+To Clock       : INTR
+Failed Paths   : 0
+
+Type           : Clock Setup: 'sw'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 186.57 MHz ( period = 5.360 ns )
+From           : sta[1]
+To             : sta[1]
+From Clock     : sw
+To Clock       : sw
+Failed Paths   : 0
+
+Type           : Clock Setup: 'INTR'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 186.67 MHz ( period = 5.357 ns )
+From           : sta[1]
+To             : sta[1]
+From Clock     : INTR
+To Clock       : INTR
+Failed Paths   : 0
+
+Type           : Clock Hold: 'sw'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : sta[1]
+To             : WR$latch
+From Clock     : sw
+To Clock       : sw
+Failed Paths   : 3
+
+Type           : Clock Hold: 'INTR'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : sta[1]
+To             : WR$latch
+From Clock     : INTR
+To Clock       : INTR
+Failed Paths   : 3
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 6
+
+--------------------------------------------------------------------------------------
+

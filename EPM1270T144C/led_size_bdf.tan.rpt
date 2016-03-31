@@ -1,0 +1,329 @@
+Classic Timing Analyzer report for led_size_bdf
+Fri Oct 05 14:29:15 2012
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk_in'
+  7. tco
+  8. tpd
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                ;
++------------------------------+-------+---------------+----------------------------------+---------------------------+---------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                      ; To                        ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------------+---------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 23.413 ns                        ; led_size:inst6|led_sig[1] ; led_out[7]                ; clk_in     ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 15.602 ns                        ; sw_l[1]                   ; led_out[7]                ; --         ; --       ; 0            ;
+; Clock Setup: 'clk_in'        ; N/A   ; None          ; 284.50 MHz ( period = 3.515 ns ) ; led_size:inst6|led_sig[1] ; led_size:inst6|led_sig[2] ; clk_in     ; clk_in   ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                           ;                           ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------------+---------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EPM1270T144C5      ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk_in          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk_in'                                                                                                                                                                                                      ;
++-------+------------------------------------------------+---------------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                      ; To                        ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+---------------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 284.50 MHz ( period = 3.515 ns )               ; led_size:inst6|led_sig[1] ; led_size:inst6|led_sig[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.806 ns                ;
+; N/A   ; 287.77 MHz ( period = 3.475 ns )               ; clock:inst|clk_sig_pwm[0] ; clock:inst|clk_ll_pwm     ; clk_in     ; clk_in   ; None                        ; None                      ; 2.766 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[1] ; clock:inst|clk_ll_pwm     ; clk_in     ; clk_in   ; None                        ; None                      ; 2.576 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[3] ; clock:inst|clk_sig_pwm[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.476 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[3] ; clock:inst|clk_ll_pwm     ; clk_in     ; clk_in   ; None                        ; None                      ; 2.385 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[0] ; clock:inst|clk_sig_pwm[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.353 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[1] ; clock:inst|clk_sig_pwm[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.254 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[1] ; clock:inst|clk_sig_pwm[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.252 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[1] ; clock:inst|clk_sig_pwm[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.250 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[1] ; clock:inst|clk_sig_pwm[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.249 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; led_size:inst6|led_sig[0] ; led_size:inst6|led_sig[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.185 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; led_size:inst6|led_sig[1] ; led_size:inst6|led_sig[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.157 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[0] ; clock:inst|clk_sig_pwm[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.136 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[0] ; clock:inst|clk_sig_pwm[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.134 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[0] ; clock:inst|clk_sig_pwm[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.133 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; led_size:inst6|led_sig[2] ; led_size:inst6|led_sig[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.132 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[2] ; clock:inst|clk_ll_pwm     ; clk_in     ; clk_in   ; None                        ; None                      ; 2.085 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; led_size:inst6|led_sig[3] ; led_size:inst6|led_sig[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.029 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; led_size:inst6|led_sig[3] ; led_size:inst6|led_sig[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 2.021 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[3] ; clock:inst|clk_sig_pwm[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 1.997 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[3] ; clock:inst|clk_sig_pwm[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 1.994 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; led_size:inst6|led_sig[2] ; led_size:inst6|led_sig[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 1.803 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_ll_pwm     ; clock:inst|clk_ll_pwm     ; clk_in     ; clk_in   ; None                        ; None                      ; 1.780 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; led_size:inst6|led_sig[0] ; led_size:inst6|led_sig[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 1.595 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; led_size:inst6|led_sig[0] ; led_size:inst6|led_sig[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 1.594 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; led_size:inst6|led_sig[1] ; led_size:inst6|led_sig[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 1.586 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[2] ; clock:inst|clk_sig_pwm[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 1.579 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[2] ; clock:inst|clk_sig_pwm[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 1.577 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[2] ; clock:inst|clk_sig_pwm[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 1.573 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; clock:inst|clk_sig_pwm[2] ; clock:inst|clk_sig_pwm[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 1.564 ns                ;
++-------+------------------------------------------------+---------------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; tco                                                                                     ;
++-------+--------------+------------+---------------------------+------------+------------+
+; Slack ; Required tco ; Actual tco ; From                      ; To         ; From Clock ;
++-------+--------------+------------+---------------------------+------------+------------+
+; N/A   ; None         ; 23.413 ns  ; led_size:inst6|led_sig[1] ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 22.727 ns  ; led_size:inst6|led_sig[3] ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 22.395 ns  ; led_size:inst6|led_sig[1] ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 22.226 ns  ; led_size:inst6|led_sig[1] ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 22.102 ns  ; led_size:inst6|led_sig[1] ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 22.089 ns  ; led_size:inst6|led_sig[1] ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 21.845 ns  ; led_size:inst6|led_sig[0] ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 21.540 ns  ; led_size:inst6|led_sig[2] ; led_out[7] ; clk_in     ;
+; N/A   ; None         ; 21.278 ns  ; led_size:inst6|led_sig[3] ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 21.231 ns  ; led_size:inst6|led_sig[3] ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 21.157 ns  ; led_size:inst6|led_sig[3] ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 21.147 ns  ; led_size:inst6|led_sig[3] ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 21.071 ns  ; led_size:inst6|led_sig[1] ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 21.063 ns  ; led_size:inst6|led_sig[1] ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 21.060 ns  ; led_size:inst6|led_sig[1] ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 20.439 ns  ; led_size:inst6|led_sig[0] ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 20.379 ns  ; led_size:inst6|led_sig[0] ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 20.258 ns  ; led_size:inst6|led_sig[0] ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 20.248 ns  ; led_size:inst6|led_sig[0] ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 20.091 ns  ; led_size:inst6|led_sig[2] ; led_out[6] ; clk_in     ;
+; N/A   ; None         ; 20.044 ns  ; led_size:inst6|led_sig[2] ; led_out[3] ; clk_in     ;
+; N/A   ; None         ; 19.970 ns  ; led_size:inst6|led_sig[2] ; led_out[2] ; clk_in     ;
+; N/A   ; None         ; 19.960 ns  ; led_size:inst6|led_sig[2] ; led_out[5] ; clk_in     ;
+; N/A   ; None         ; 19.936 ns  ; led_size:inst6|led_sig[3] ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 19.929 ns  ; led_size:inst6|led_sig[3] ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 19.925 ns  ; led_size:inst6|led_sig[3] ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 19.115 ns  ; led_size:inst6|led_sig[0] ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 19.109 ns  ; led_size:inst6|led_sig[0] ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 19.107 ns  ; led_size:inst6|led_sig[0] ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 18.749 ns  ; led_size:inst6|led_sig[2] ; led_out[1] ; clk_in     ;
+; N/A   ; None         ; 18.742 ns  ; led_size:inst6|led_sig[2] ; led_out[4] ; clk_in     ;
+; N/A   ; None         ; 18.738 ns  ; led_size:inst6|led_sig[2] ; led_out[0] ; clk_in     ;
+; N/A   ; None         ; 14.762 ns  ; led_size:inst6|led_sig[1] ; led_com[1] ; clk_in     ;
+; N/A   ; None         ; 14.694 ns  ; led_size:inst6|led_sig[3] ; led_com[3] ; clk_in     ;
+; N/A   ; None         ; 14.282 ns  ; led_size:inst6|led_sig[2] ; led_com[2] ; clk_in     ;
+; N/A   ; None         ; 13.750 ns  ; led_size:inst6|led_sig[0] ; led_com[0] ; clk_in     ;
++-------+--------------+------------+---------------------------+------------+------------+
+
+
++--------------------------------------------------------------------+
+; tpd                                                                ;
++-------+-------------------+-----------------+---------+------------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From    ; To         ;
++-------+-------------------+-----------------+---------+------------+
+; N/A   ; None              ; 15.602 ns       ; sw_l[1] ; led_out[7] ;
+; N/A   ; None              ; 15.405 ns       ; sw_l[2] ; led_out[7] ;
+; N/A   ; None              ; 15.329 ns       ; sw_l[0] ; led_out[7] ;
+; N/A   ; None              ; 15.000 ns       ; sw_l[3] ; led_out[7] ;
+; N/A   ; None              ; 14.429 ns       ; sw_l[0] ; led_out[3] ;
+; N/A   ; None              ; 14.411 ns       ; sw_r[1] ; led_out[7] ;
+; N/A   ; None              ; 14.280 ns       ; sw_r[3] ; led_out[7] ;
+; N/A   ; None              ; 14.260 ns       ; sw_l[0] ; led_out[6] ;
+; N/A   ; None              ; 14.247 ns       ; sw_r[2] ; led_out[7] ;
+; N/A   ; None              ; 14.181 ns       ; sw_l[2] ; led_out[6] ;
+; N/A   ; None              ; 14.153 ns       ; sw_l[1] ; led_out[6] ;
+; N/A   ; None              ; 14.136 ns       ; sw_l[0] ; led_out[2] ;
+; N/A   ; None              ; 14.123 ns       ; sw_l[0] ; led_out[5] ;
+; N/A   ; None              ; 14.106 ns       ; sw_l[1] ; led_out[3] ;
+; N/A   ; None              ; 14.067 ns       ; sw_l[2] ; led_out[2] ;
+; N/A   ; None              ; 14.055 ns       ; sw_l[2] ; led_out[5] ;
+; N/A   ; None              ; 14.032 ns       ; sw_l[1] ; led_out[2] ;
+; N/A   ; None              ; 14.022 ns       ; sw_l[1] ; led_out[5] ;
+; N/A   ; None              ; 13.637 ns       ; sw_l[2] ; led_out[3] ;
+; N/A   ; None              ; 13.594 ns       ; sw_l[3] ; led_out[3] ;
+; N/A   ; None              ; 13.356 ns       ; sw_l[3] ; led_out[6] ;
+; N/A   ; None              ; 13.297 ns       ; sw_r[0] ; led_out[7] ;
+; N/A   ; None              ; 13.232 ns       ; sw_l[3] ; led_out[2] ;
+; N/A   ; None              ; 13.221 ns       ; sw_l[3] ; led_out[5] ;
+; N/A   ; None              ; 13.105 ns       ; sw_l[0] ; led_out[0] ;
+; N/A   ; None              ; 13.097 ns       ; sw_l[0] ; led_out[4] ;
+; N/A   ; None              ; 13.094 ns       ; sw_l[0] ; led_out[1] ;
+; N/A   ; None              ; 13.023 ns       ; sw_r[2] ; led_out[6] ;
+; N/A   ; None              ; 12.962 ns       ; sw_r[1] ; led_out[6] ;
+; N/A   ; None              ; 12.915 ns       ; sw_r[1] ; led_out[3] ;
+; N/A   ; None              ; 12.909 ns       ; sw_r[2] ; led_out[2] ;
+; N/A   ; None              ; 12.897 ns       ; sw_r[2] ; led_out[5] ;
+; N/A   ; None              ; 12.874 ns       ; sw_r[3] ; led_out[3] ;
+; N/A   ; None              ; 12.841 ns       ; sw_r[1] ; led_out[2] ;
+; N/A   ; None              ; 12.831 ns       ; sw_r[1] ; led_out[5] ;
+; N/A   ; None              ; 12.811 ns       ; sw_l[1] ; led_out[1] ;
+; N/A   ; None              ; 12.804 ns       ; sw_l[1] ; led_out[4] ;
+; N/A   ; None              ; 12.800 ns       ; sw_l[1] ; led_out[0] ;
+; N/A   ; None              ; 12.636 ns       ; sw_r[3] ; led_out[6] ;
+; N/A   ; None              ; 12.512 ns       ; sw_r[3] ; led_out[2] ;
+; N/A   ; None              ; 12.501 ns       ; sw_r[3] ; led_out[5] ;
+; N/A   ; None              ; 12.479 ns       ; sw_r[2] ; led_out[3] ;
+; N/A   ; None              ; 12.397 ns       ; sw_r[0] ; led_out[3] ;
+; N/A   ; None              ; 12.330 ns       ; sw_l[2] ; led_out[1] ;
+; N/A   ; None              ; 12.323 ns       ; sw_l[2] ; led_out[4] ;
+; N/A   ; None              ; 12.319 ns       ; sw_l[2] ; led_out[0] ;
+; N/A   ; None              ; 12.270 ns       ; sw_l[3] ; led_out[0] ;
+; N/A   ; None              ; 12.264 ns       ; sw_l[3] ; led_out[4] ;
+; N/A   ; None              ; 12.262 ns       ; sw_l[3] ; led_out[1] ;
+; N/A   ; None              ; 12.228 ns       ; sw_r[0] ; led_out[6] ;
+; N/A   ; None              ; 12.104 ns       ; sw_r[0] ; led_out[2] ;
+; N/A   ; None              ; 12.091 ns       ; sw_r[0] ; led_out[5] ;
+; N/A   ; None              ; 11.620 ns       ; sw_r[1] ; led_out[1] ;
+; N/A   ; None              ; 11.613 ns       ; sw_r[1] ; led_out[4] ;
+; N/A   ; None              ; 11.609 ns       ; sw_r[1] ; led_out[0] ;
+; N/A   ; None              ; 11.550 ns       ; sw_r[3] ; led_out[0] ;
+; N/A   ; None              ; 11.544 ns       ; sw_r[3] ; led_out[4] ;
+; N/A   ; None              ; 11.542 ns       ; sw_r[3] ; led_out[1] ;
+; N/A   ; None              ; 11.172 ns       ; sw_r[2] ; led_out[1] ;
+; N/A   ; None              ; 11.165 ns       ; sw_r[2] ; led_out[4] ;
+; N/A   ; None              ; 11.161 ns       ; sw_r[2] ; led_out[0] ;
+; N/A   ; None              ; 11.073 ns       ; sw_r[0] ; led_out[0] ;
+; N/A   ; None              ; 11.065 ns       ; sw_r[0] ; led_out[4] ;
+; N/A   ; None              ; 11.062 ns       ; sw_r[0] ; led_out[1] ;
++-------+-------------------+-----------------+---------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Oct 05 14:29:15 2012
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off led_size_bdf -c led_size_bdf
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "led_size:inst6|sw_size[0]" is a latch
+    Warning: Node "led_size:inst6|sw_size[1]" is a latch
+    Warning: Node "led_size:inst6|sw_size[2]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk_in" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "clock:inst|clk_ll_pwm" as buffer
+Info: Clock "clk_in" has Internal fmax of 284.5 MHz between source register "led_size:inst6|led_sig[1]" and destination register "led_size:inst6|led_sig[2]" (period= 3.515 ns)
+    Info: + Longest register to register delay is 2.806 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X5_Y10_N8; Fanout = 10; REG Node = 'led_size:inst6|led_sig[1]'
+        Info: 2: + IC(2.526 ns) + CELL(0.280 ns) = 2.806 ns; Loc. = LC_X5_Y10_N6; Fanout = 6; REG Node = 'led_size:inst6|led_sig[2]'
+        Info: Total cell delay = 0.280 ns ( 9.98 % )
+        Info: Total interconnect delay = 2.526 ns ( 90.02 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk_in" to destination register is 9.040 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 5; CLK Node = 'clk_in'
+            Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X11_Y4_N6; Fanout = 5; REG Node = 'clock:inst|clk_ll_pwm'
+            Info: 3: + IC(3.927 ns) + CELL(0.918 ns) = 9.040 ns; Loc. = LC_X5_Y10_N6; Fanout = 6; REG Node = 'led_size:inst6|led_sig[2]'
+            Info: Total cell delay = 3.375 ns ( 37.33 % )
+            Info: Total interconnect delay = 5.665 ns ( 62.67 % )
+        Info: - Longest clock path from clock "clk_in" to source register is 9.040 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 5; CLK Node = 'clk_in'
+            Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X11_Y4_N6; Fanout = 5; REG Node = 'clock:inst|clk_ll_pwm'
+            Info: 3: + IC(3.927 ns) + CELL(0.918 ns) = 9.040 ns; Loc. = LC_X5_Y10_N8; Fanout = 10; REG Node = 'led_size:inst6|led_sig[1]'
+            Info: Total cell delay = 3.375 ns ( 37.33 % )
+            Info: Total interconnect delay = 5.665 ns ( 62.67 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Micro setup delay of destination is 0.333 ns
+Info: tco from clock "clk_in" to destination pin "led_out[7]" through register "led_size:inst6|led_sig[1]" is 23.413 ns
+    Info: + Longest clock path from clock "clk_in" to source register is 9.040 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 5; CLK Node = 'clk_in'
+        Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X11_Y4_N6; Fanout = 5; REG Node = 'clock:inst|clk_ll_pwm'
+        Info: 3: + IC(3.927 ns) + CELL(0.918 ns) = 9.040 ns; Loc. = LC_X5_Y10_N8; Fanout = 10; REG Node = 'led_size:inst6|led_sig[1]'
+        Info: Total cell delay = 3.375 ns ( 37.33 % )
+        Info: Total interconnect delay = 5.665 ns ( 62.67 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Longest register to pin delay is 13.997 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X5_Y10_N8; Fanout = 10; REG Node = 'led_size:inst6|led_sig[1]'
+        Info: 2: + IC(2.652 ns) + CELL(0.200 ns) = 2.852 ns; Loc. = LC_X6_Y9_N4; Fanout = 1; COMB Node = 'led_size:inst6|Mux2~0'
+        Info: 3: + IC(1.659 ns) + CELL(0.200 ns) = 4.711 ns; Loc. = LC_X5_Y10_N5; Fanout = 8; COMB Node = 'led_size:inst6|Mux2~1'
+        Info: 4: + IC(2.634 ns) + CELL(0.740 ns) = 8.085 ns; Loc. = LC_X1_Y9_N3; Fanout = 1; COMB Node = 'led_size_8:inst8|Mux0~0'
+        Info: 5: + IC(3.590 ns) + CELL(2.322 ns) = 13.997 ns; Loc. = PIN_51; Fanout = 0; PIN Node = 'led_out[7]'
+        Info: Total cell delay = 3.462 ns ( 24.73 % )
+        Info: Total interconnect delay = 10.535 ns ( 75.27 % )
+Info: Longest tpd from source pin "sw_l[1]" to destination pin "led_out[7]" is 15.602 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_121; Fanout = 4; PIN Node = 'sw_l[1]'
+    Info: 2: + IC(2.814 ns) + CELL(0.511 ns) = 4.457 ns; Loc. = LC_X6_Y9_N4; Fanout = 1; COMB Node = 'led_size:inst6|Mux2~0'
+    Info: 3: + IC(1.659 ns) + CELL(0.200 ns) = 6.316 ns; Loc. = LC_X5_Y10_N5; Fanout = 8; COMB Node = 'led_size:inst6|Mux2~1'
+    Info: 4: + IC(2.634 ns) + CELL(0.740 ns) = 9.690 ns; Loc. = LC_X1_Y9_N3; Fanout = 1; COMB Node = 'led_size_8:inst8|Mux0~0'
+    Info: 5: + IC(3.590 ns) + CELL(2.322 ns) = 15.602 ns; Loc. = PIN_51; Fanout = 0; PIN Node = 'led_out[7]'
+    Info: Total cell delay = 4.905 ns ( 31.44 % )
+    Info: Total interconnect delay = 10.697 ns ( 68.56 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 165 megabytes
+    Info: Processing ended: Fri Oct 05 14:29:15 2012
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

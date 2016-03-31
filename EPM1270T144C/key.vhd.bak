@@ -1,0 +1,92 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity key is
+port(
+		clk_in,clk_in_s: in std_logic;
+		row : out std_logic_vector(1 downto 0);
+		col : in std_logic_vector(1 downto 0);
+		A_out: out std_logic;
+		eep:out std_logic_vector(3 downto 0);
+		x8_out: out std_logic_vector(1 downto 0)
+);
+end key;
+
+architecture a of key is
+signal col_tmp : std_logic_vector(1 downto 0):="00";
+signal key_st : std_logic_vector(2 downto 0):="000";
+signal key_stt : std_logic_vector(4 downto 0):="00000";
+signal key_code : std_logic_vector(1 downto 0):="00";
+SIGNAL A_SIG : std_logic:='0';
+SIGNAL x8_SIG : std_logic_vector(1 downto 0):="00";
+signal eep_sig: std_logic_vector(3 downto 0);
+signal row_sig : std_logic_vector(1 downto 0):="01";
+	begin
+		process(clk_in,row_sig)
+			begin
+				if clk_in'event and clk_in='1' then 
+						row_sig<=row_sig(0) & row_sig(1);
+				end if;
+		end process;
+		process(clk_in_s,a_sig)
+			begin
+				if clk_in_s'event and clk_in_s='1' then 
+					case key_code is 
+						when "00"=>
+							a_sig<='0';
+							eep_sig<="1000";
+							if col/="11" then
+								col_tmp<=col;
+								key_code<="01";
+							else
+								key_code<="00";
+							end if;
+						when "01"=>
+							if key_st=5 then 
+								if col=col_tmp then
+									col_tmp<="00"; 
+									key_code<="10";
+								else
+									col_tmp<="00"; 
+									key_code<="00";
+								end if;
+							else
+								key_st<=key_st+1;
+							end if;
+						when "10"=>
+							case col is
+								when "01"=>
+									case row_sig is
+										when "01"=>
+											eep_sig<="0011";
+										when "10"=>	
+											eep_sig<="0000";
+										when others=>null;
+									end case;
+								when "10"=>
+									case row_sig is
+										when "01"=>
+											eep_sig<="0010";
+										when "10"=>	
+											a_sig<='1';
+										when others=>null;
+									end case;
+								when others=>null;
+							end case;
+							key_code<="11";
+						when "11"=>
+							if key_stt="11111" then 
+								key_stt<="00000";
+								key_code<="00";
+							else 
+								key_stt<=key_stt+1;
+							end if;
+					end case;
+				end if;	
+		end process;
+		eep<=eep_sig;
+		row<=row_sig;
+		A_out<=A_SIG;
+		x8_out<=x8_sig;
+end a;

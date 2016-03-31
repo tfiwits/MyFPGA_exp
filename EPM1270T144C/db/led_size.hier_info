@@ -1,0 +1,39 @@
+|led_size
+clk_in => led_sig[0].CLK
+clk_in => led_sig[1].CLK
+clk_in => led_sig[2].CLK
+clk_in => led_sig[3].CLK
+sw_r[0] => LessThan0.IN4
+sw_r[0] => LessThan1.IN4
+sw_r[0] => Mux3.IN13
+sw_r[1] => LessThan0.IN3
+sw_r[1] => LessThan1.IN3
+sw_r[1] => Mux2.IN13
+sw_r[2] => LessThan0.IN2
+sw_r[2] => LessThan1.IN2
+sw_r[2] => Mux1.IN13
+sw_r[3] => LessThan0.IN1
+sw_r[3] => LessThan1.IN1
+sw_r[3] => Mux0.IN14
+sw_l[0] => LessThan0.IN8
+sw_l[0] => LessThan1.IN8
+sw_l[0] => Mux3.IN14
+sw_l[1] => LessThan0.IN7
+sw_l[1] => LessThan1.IN7
+sw_l[1] => Mux2.IN14
+sw_l[2] => LessThan0.IN6
+sw_l[2] => LessThan1.IN6
+sw_l[2] => Mux1.IN14
+sw_l[3] => LessThan0.IN5
+sw_l[3] => LessThan1.IN5
+sw_l[3] => Mux0.IN15
+led_in[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+led_in[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+led_in[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+led_in[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+led_sig_in[0] <= led_sig[0].DB_MAX_OUTPUT_PORT_TYPE
+led_sig_in[1] <= led_sig[1].DB_MAX_OUTPUT_PORT_TYPE
+led_sig_in[2] <= led_sig[2].DB_MAX_OUTPUT_PORT_TYPE
+led_sig_in[3] <= led_sig[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

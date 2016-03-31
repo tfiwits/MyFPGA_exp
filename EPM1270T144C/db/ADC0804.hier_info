@@ -1,0 +1,26 @@
+|ADC0804
+clk_in => ~NO_FANOUT~
+sw => Mux10.IN3
+CS <= CS$latch.DB_MAX_OUTPUT_PORT_TYPE
+WR <= WR$latch.DB_MAX_OUTPUT_PORT_TYPE
+RD <= RD$latch.DB_MAX_OUTPUT_PORT_TYPE
+INTR => Mux10.IN2
+INTR => Mux15.IN3
+Data_in[0] => Mux0.IN3
+Data_in[1] => Mux1.IN3
+Data_in[2] => Mux2.IN3
+Data_in[3] => Mux3.IN3
+Data_in[4] => Mux4.IN3
+Data_in[5] => Mux5.IN3
+Data_in[6] => Mux6.IN3
+Data_in[7] => Mux7.IN3
+Data_out[0] <= Data_out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Data_out[1] <= Data_out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Data_out[2] <= Data_out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Data_out[3] <= Data_out[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Data_out[4] <= Data_out[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Data_out[5] <= Data_out[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Data_out[6] <= Data_out[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Data_out[7] <= Data_out[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

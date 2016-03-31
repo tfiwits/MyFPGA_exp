@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.904 ns
+From           : rxd_in
+To             : rxd_ck
+From Clock     : --
+To Clock       : clk_in_325hz
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.285 ns
+From           : recv[8]
+To             : rxd_out[8]
+From Clock     : clk_in_325hz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.338 ns
+From           : rxd_in
+To             : recv[8]
+From Clock     : --
+To Clock       : clk_in_325hz
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk_in_325hz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 184.98 MHz ( period = 5.406 ns )
+From           : rxd_ck
+To             : rec_st[0]
+From Clock     : clk_in_325hz
+To Clock       : clk_in_325hz
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

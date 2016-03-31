@@ -1,0 +1,503 @@
+Classic Timing Analyzer report for eeprom_spi_bdf
+Wed Oct 24 08:52:54 2012
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk_in'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                ;
++------------------------------+-------+---------------+----------------------------------+-------------------------+-----------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                    ; To                          ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-------------------------+-----------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 1.291 ns                         ; do                      ; eeprom_spi:inst1|data_in[5] ; --         ; clk_in   ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 14.932 ns                        ; key:inst4|row_sig[0]    ; row[0]                      ; clk_in     ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 3.043 ns                         ; col[1]                  ; key:inst4|col_tmp[1]        ; --         ; clk_in   ; 0            ;
+; Clock Setup: 'clk_in'        ; N/A   ; None          ; 68.15 MHz ( period = 14.674 ns ) ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_in[3] ; clk_in     ; clk_in   ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                         ;                             ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-------------------------+-----------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EPM1270T144C5      ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk_in          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk_in'                                                                                                                                                                                                                                              ;
++-----------------------------------------+-----------------------------------------------------+-------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                    ; To                           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 68.15 MHz ( period = 14.674 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.965 ns               ;
+; N/A                                     ; 68.20 MHz ( period = 14.663 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.954 ns               ;
+; N/A                                     ; 68.98 MHz ( period = 14.498 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.789 ns               ;
+; N/A                                     ; 69.03 MHz ( period = 14.487 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.778 ns               ;
+; N/A                                     ; 69.06 MHz ( period = 14.480 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.771 ns               ;
+; N/A                                     ; 69.11 MHz ( period = 14.469 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.760 ns               ;
+; N/A                                     ; 69.15 MHz ( period = 14.461 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.752 ns               ;
+; N/A                                     ; 69.20 MHz ( period = 14.450 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.741 ns               ;
+; N/A                                     ; 69.42 MHz ( period = 14.406 ns )                    ; eeprom_spi:inst1|st[30] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.697 ns               ;
+; N/A                                     ; 69.47 MHz ( period = 14.395 ns )                    ; eeprom_spi:inst1|st[30] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.686 ns               ;
+; N/A                                     ; 69.68 MHz ( period = 14.351 ns )                    ; eeprom_spi:inst1|st[19] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.642 ns               ;
+; N/A                                     ; 69.70 MHz ( period = 14.348 ns )                    ; eeprom_spi:inst1|st[14] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.639 ns               ;
+; N/A                                     ; 69.74 MHz ( period = 14.340 ns )                    ; eeprom_spi:inst1|st[19] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.631 ns               ;
+; N/A                                     ; 69.75 MHz ( period = 14.337 ns )                    ; eeprom_spi:inst1|st[14] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.628 ns               ;
+; N/A                                     ; 70.01 MHz ( period = 14.284 ns )                    ; eeprom_spi:inst1|st[9]  ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.575 ns               ;
+; N/A                                     ; 70.06 MHz ( period = 14.273 ns )                    ; eeprom_spi:inst1|st[9]  ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.564 ns               ;
+; N/A                                     ; 70.35 MHz ( period = 14.214 ns )                    ; eeprom_spi:inst1|st[27] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.505 ns               ;
+; N/A                                     ; 70.41 MHz ( period = 14.203 ns )                    ; eeprom_spi:inst1|st[27] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.494 ns               ;
+; N/A                                     ; 70.69 MHz ( period = 14.147 ns )                    ; eeprom_spi:inst1|st[22] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.438 ns               ;
+; N/A                                     ; 70.69 MHz ( period = 14.146 ns )                    ; eeprom_spi:inst1|st[21] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.437 ns               ;
+; N/A                                     ; 70.70 MHz ( period = 14.145 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.436 ns               ;
+; N/A                                     ; 70.71 MHz ( period = 14.143 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.434 ns               ;
+; N/A                                     ; 70.73 MHz ( period = 14.138 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.429 ns               ;
+; N/A                                     ; 70.74 MHz ( period = 14.136 ns )                    ; eeprom_spi:inst1|st[22] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.427 ns               ;
+; N/A                                     ; 70.75 MHz ( period = 14.135 ns )                    ; eeprom_spi:inst1|st[21] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.426 ns               ;
+; N/A                                     ; 70.75 MHz ( period = 14.135 ns )                    ; eeprom_spi:inst1|st[24] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.426 ns               ;
+; N/A                                     ; 70.76 MHz ( period = 14.133 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.424 ns               ;
+; N/A                                     ; 70.77 MHz ( period = 14.131 ns )                    ; eeprom_spi:inst1|st[18] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.422 ns               ;
+; N/A                                     ; 70.80 MHz ( period = 14.124 ns )                    ; eeprom_spi:inst1|st[24] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.415 ns               ;
+; N/A                                     ; 70.82 MHz ( period = 14.120 ns )                    ; eeprom_spi:inst1|st[18] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.411 ns               ;
+; N/A                                     ; 70.83 MHz ( period = 14.119 ns )                    ; eeprom_spi:inst1|st[12] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.410 ns               ;
+; N/A                                     ; 70.84 MHz ( period = 14.117 ns )                    ; eeprom_spi:inst1|st[13] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.408 ns               ;
+; N/A                                     ; 70.88 MHz ( period = 14.108 ns )                    ; eeprom_spi:inst1|st[12] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.399 ns               ;
+; N/A                                     ; 70.89 MHz ( period = 14.106 ns )                    ; eeprom_spi:inst1|st[13] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.397 ns               ;
+; N/A                                     ; 70.91 MHz ( period = 14.103 ns )                    ; eeprom_spi:inst1|st[10] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.394 ns               ;
+; N/A                                     ; 70.96 MHz ( period = 14.092 ns )                    ; eeprom_spi:inst1|st[10] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.383 ns               ;
+; N/A                                     ; 71.12 MHz ( period = 14.060 ns )                    ; eeprom_spi:inst1|st[2]  ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.351 ns               ;
+; N/A                                     ; 71.18 MHz ( period = 14.049 ns )                    ; eeprom_spi:inst1|st[2]  ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.340 ns               ;
+; N/A                                     ; 71.51 MHz ( period = 13.984 ns )                    ; eeprom_spi:inst1|st[25] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.275 ns               ;
+; N/A                                     ; 71.57 MHz ( period = 13.973 ns )                    ; eeprom_spi:inst1|st[25] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.264 ns               ;
+; N/A                                     ; 71.59 MHz ( period = 13.969 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.260 ns               ;
+; N/A                                     ; 71.60 MHz ( period = 13.967 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.258 ns               ;
+; N/A                                     ; 71.62 MHz ( period = 13.962 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.253 ns               ;
+; N/A                                     ; 71.65 MHz ( period = 13.957 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.248 ns               ;
+; N/A                                     ; 71.68 MHz ( period = 13.951 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.242 ns               ;
+; N/A                                     ; 71.69 MHz ( period = 13.949 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.240 ns               ;
+; N/A                                     ; 71.72 MHz ( period = 13.944 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.235 ns               ;
+; N/A                                     ; 71.74 MHz ( period = 13.939 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.230 ns               ;
+; N/A                                     ; 71.78 MHz ( period = 13.932 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.223 ns               ;
+; N/A                                     ; 71.78 MHz ( period = 13.932 ns )                    ; eeprom_spi:inst1|st[17] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.223 ns               ;
+; N/A                                     ; 71.79 MHz ( period = 13.930 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.221 ns               ;
+; N/A                                     ; 71.81 MHz ( period = 13.925 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.216 ns               ;
+; N/A                                     ; 71.83 MHz ( period = 13.921 ns )                    ; eeprom_spi:inst1|st[17] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.212 ns               ;
+; N/A                                     ; 71.84 MHz ( period = 13.920 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.211 ns               ;
+; N/A                                     ; 72.06 MHz ( period = 13.877 ns )                    ; eeprom_spi:inst1|st[30] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.168 ns               ;
+; N/A                                     ; 72.07 MHz ( period = 13.875 ns )                    ; eeprom_spi:inst1|st[30] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.166 ns               ;
+; N/A                                     ; 72.10 MHz ( period = 13.870 ns )                    ; eeprom_spi:inst1|st[30] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.161 ns               ;
+; N/A                                     ; 72.12 MHz ( period = 13.865 ns )                    ; eeprom_spi:inst1|st[30] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.156 ns               ;
+; N/A                                     ; 72.35 MHz ( period = 13.822 ns )                    ; eeprom_spi:inst1|st[19] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.113 ns               ;
+; N/A                                     ; 72.36 MHz ( period = 13.820 ns )                    ; eeprom_spi:inst1|st[19] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.111 ns               ;
+; N/A                                     ; 72.36 MHz ( period = 13.819 ns )                    ; eeprom_spi:inst1|st[14] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.110 ns               ;
+; N/A                                     ; 72.37 MHz ( period = 13.817 ns )                    ; eeprom_spi:inst1|st[14] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.108 ns               ;
+; N/A                                     ; 72.39 MHz ( period = 13.815 ns )                    ; eeprom_spi:inst1|st[19] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.106 ns               ;
+; N/A                                     ; 72.40 MHz ( period = 13.812 ns )                    ; eeprom_spi:inst1|st[14] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.103 ns               ;
+; N/A                                     ; 72.41 MHz ( period = 13.810 ns )                    ; eeprom_spi:inst1|st[19] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.101 ns               ;
+; N/A                                     ; 72.43 MHz ( period = 13.807 ns )                    ; eeprom_spi:inst1|st[14] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.098 ns               ;
+; N/A                                     ; 72.47 MHz ( period = 13.798 ns )                    ; eeprom_spi:inst1|st[4]  ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.089 ns               ;
+; N/A                                     ; 72.53 MHz ( period = 13.787 ns )                    ; eeprom_spi:inst1|st[4]  ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.078 ns               ;
+; N/A                                     ; 72.70 MHz ( period = 13.755 ns )                    ; eeprom_spi:inst1|st[9]  ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.046 ns               ;
+; N/A                                     ; 72.71 MHz ( period = 13.753 ns )                    ; eeprom_spi:inst1|st[9]  ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.044 ns               ;
+; N/A                                     ; 72.74 MHz ( period = 13.748 ns )                    ; eeprom_spi:inst1|st[9]  ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.039 ns               ;
+; N/A                                     ; 72.75 MHz ( period = 13.746 ns )                    ; eeprom_spi:inst1|st[8]  ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.037 ns               ;
+; N/A                                     ; 72.76 MHz ( period = 13.743 ns )                    ; eeprom_spi:inst1|st[9]  ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.034 ns               ;
+; N/A                                     ; 72.78 MHz ( period = 13.740 ns )                    ; eeprom_spi:inst1|st[3]  ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.031 ns               ;
+; N/A                                     ; 72.81 MHz ( period = 13.735 ns )                    ; eeprom_spi:inst1|st[8]  ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.026 ns               ;
+; N/A                                     ; 72.84 MHz ( period = 13.729 ns )                    ; eeprom_spi:inst1|st[3]  ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.020 ns               ;
+; N/A                                     ; 72.87 MHz ( period = 13.724 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_in[0]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.015 ns               ;
+; N/A                                     ; 72.89 MHz ( period = 13.720 ns )                    ; eeprom_spi:inst1|st[28] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.011 ns               ;
+; N/A                                     ; 72.89 MHz ( period = 13.719 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_in[1]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.010 ns               ;
+; N/A                                     ; 72.94 MHz ( period = 13.709 ns )                    ; eeprom_spi:inst1|st[28] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 13.000 ns               ;
+; N/A                                     ; 73.07 MHz ( period = 13.685 ns )                    ; eeprom_spi:inst1|st[27] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.976 ns               ;
+; N/A                                     ; 73.08 MHz ( period = 13.683 ns )                    ; eeprom_spi:inst1|st[27] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.974 ns               ;
+; N/A                                     ; 73.11 MHz ( period = 13.678 ns )                    ; eeprom_spi:inst1|st[27] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.969 ns               ;
+; N/A                                     ; 73.14 MHz ( period = 13.673 ns )                    ; eeprom_spi:inst1|st[27] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.964 ns               ;
+; N/A                                     ; 73.31 MHz ( period = 13.640 ns )                    ; eeprom_spi:inst1|st[16] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.931 ns               ;
+; N/A                                     ; 73.37 MHz ( period = 13.629 ns )                    ; eeprom_spi:inst1|st[16] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.920 ns               ;
+; N/A                                     ; 73.43 MHz ( period = 13.618 ns )                    ; eeprom_spi:inst1|st[22] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.909 ns               ;
+; N/A                                     ; 73.44 MHz ( period = 13.617 ns )                    ; eeprom_spi:inst1|st[21] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.908 ns               ;
+; N/A                                     ; 73.44 MHz ( period = 13.616 ns )                    ; eeprom_spi:inst1|st[22] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.907 ns               ;
+; N/A                                     ; 73.45 MHz ( period = 13.615 ns )                    ; eeprom_spi:inst1|st[21] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.906 ns               ;
+; N/A                                     ; 73.47 MHz ( period = 13.611 ns )                    ; eeprom_spi:inst1|st[22] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.902 ns               ;
+; N/A                                     ; 73.48 MHz ( period = 13.610 ns )                    ; eeprom_spi:inst1|st[21] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.901 ns               ;
+; N/A                                     ; 73.50 MHz ( period = 13.606 ns )                    ; eeprom_spi:inst1|st[24] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.897 ns               ;
+; N/A                                     ; 73.50 MHz ( period = 13.606 ns )                    ; eeprom_spi:inst1|st[22] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.897 ns               ;
+; N/A                                     ; 73.50 MHz ( period = 13.605 ns )                    ; eeprom_spi:inst1|st[21] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.896 ns               ;
+; N/A                                     ; 73.51 MHz ( period = 13.604 ns )                    ; eeprom_spi:inst1|st[24] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.895 ns               ;
+; N/A                                     ; 73.52 MHz ( period = 13.602 ns )                    ; eeprom_spi:inst1|st[18] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.893 ns               ;
+; N/A                                     ; 73.53 MHz ( period = 13.600 ns )                    ; eeprom_spi:inst1|st[18] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.891 ns               ;
+; N/A                                     ; 73.53 MHz ( period = 13.599 ns )                    ; eeprom_spi:inst1|st[24] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.890 ns               ;
+; N/A                                     ; 73.56 MHz ( period = 13.595 ns )                    ; eeprom_spi:inst1|st[18] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.886 ns               ;
+; N/A                                     ; 73.56 MHz ( period = 13.594 ns )                    ; eeprom_spi:inst1|st[24] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.885 ns               ;
+; N/A                                     ; 73.58 MHz ( period = 13.590 ns )                    ; eeprom_spi:inst1|st[12] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.881 ns               ;
+; N/A                                     ; 73.58 MHz ( period = 13.590 ns )                    ; eeprom_spi:inst1|st[18] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.881 ns               ;
+; N/A                                     ; 73.59 MHz ( period = 13.588 ns )                    ; eeprom_spi:inst1|st[13] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.879 ns               ;
+; N/A                                     ; 73.59 MHz ( period = 13.588 ns )                    ; eeprom_spi:inst1|st[12] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.879 ns               ;
+; N/A                                     ; 73.61 MHz ( period = 13.586 ns )                    ; eeprom_spi:inst1|st[13] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.877 ns               ;
+; N/A                                     ; 73.62 MHz ( period = 13.583 ns )                    ; eeprom_spi:inst1|st[12] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.874 ns               ;
+; N/A                                     ; 73.63 MHz ( period = 13.581 ns )                    ; eeprom_spi:inst1|st[13] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.872 ns               ;
+; N/A                                     ; 73.65 MHz ( period = 13.578 ns )                    ; eeprom_spi:inst1|st[12] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.869 ns               ;
+; N/A                                     ; 73.66 MHz ( period = 13.576 ns )                    ; eeprom_spi:inst1|st[13] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.867 ns               ;
+; N/A                                     ; 73.67 MHz ( period = 13.574 ns )                    ; eeprom_spi:inst1|st[10] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.865 ns               ;
+; N/A                                     ; 73.68 MHz ( period = 13.572 ns )                    ; eeprom_spi:inst1|st[10] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.863 ns               ;
+; N/A                                     ; 73.71 MHz ( period = 13.567 ns )                    ; eeprom_spi:inst1|st[10] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.858 ns               ;
+; N/A                                     ; 73.74 MHz ( period = 13.562 ns )                    ; eeprom_spi:inst1|st[10] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.853 ns               ;
+; N/A                                     ; 73.81 MHz ( period = 13.548 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_in[0]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.839 ns               ;
+; N/A                                     ; 73.84 MHz ( period = 13.543 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_in[1]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.834 ns               ;
+; N/A                                     ; 73.90 MHz ( period = 13.531 ns )                    ; eeprom_spi:inst1|st[2]  ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.822 ns               ;
+; N/A                                     ; 73.91 MHz ( period = 13.530 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_in[0]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.821 ns               ;
+; N/A                                     ; 73.92 MHz ( period = 13.529 ns )                    ; eeprom_spi:inst1|st[2]  ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.820 ns               ;
+; N/A                                     ; 73.94 MHz ( period = 13.525 ns )                    ; eeprom_spi:inst1|st[15] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.816 ns               ;
+; N/A                                     ; 73.94 MHz ( period = 13.525 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_in[1]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.816 ns               ;
+; N/A                                     ; 73.94 MHz ( period = 13.524 ns )                    ; eeprom_spi:inst1|st[2]  ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.815 ns               ;
+; N/A                                     ; 73.97 MHz ( period = 13.519 ns )                    ; eeprom_spi:inst1|st[2]  ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.810 ns               ;
+; N/A                                     ; 74.00 MHz ( period = 13.514 ns )                    ; eeprom_spi:inst1|st[15] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.805 ns               ;
+; N/A                                     ; 74.01 MHz ( period = 13.511 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_in[0]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.802 ns               ;
+; N/A                                     ; 74.04 MHz ( period = 13.506 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_in[1]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.797 ns               ;
+; N/A                                     ; 74.23 MHz ( period = 13.472 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|st[28]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.763 ns               ;
+; N/A                                     ; 74.23 MHz ( period = 13.472 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|st[29]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.763 ns               ;
+; N/A                                     ; 74.23 MHz ( period = 13.472 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|st[30]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.763 ns               ;
+; N/A                                     ; 74.27 MHz ( period = 13.465 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_out[7] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.756 ns               ;
+; N/A                                     ; 74.27 MHz ( period = 13.465 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_out[6] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.756 ns               ;
+; N/A                                     ; 74.27 MHz ( period = 13.465 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_out[5] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.756 ns               ;
+; N/A                                     ; 74.27 MHz ( period = 13.465 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_out[4] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.756 ns               ;
+; N/A                                     ; 74.27 MHz ( period = 13.465 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|data_out[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.756 ns               ;
+; N/A                                     ; 74.32 MHz ( period = 13.456 ns )                    ; eeprom_spi:inst1|st[30] ; eeprom_spi:inst1|data_in[0]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.747 ns               ;
+; N/A                                     ; 74.32 MHz ( period = 13.455 ns )                    ; eeprom_spi:inst1|st[25] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.746 ns               ;
+; N/A                                     ; 74.33 MHz ( period = 13.453 ns )                    ; eeprom_spi:inst1|st[25] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.744 ns               ;
+; N/A                                     ; 74.34 MHz ( period = 13.451 ns )                    ; eeprom_spi:inst1|st[30] ; eeprom_spi:inst1|data_in[1]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.742 ns               ;
+; N/A                                     ; 74.36 MHz ( period = 13.448 ns )                    ; eeprom_spi:inst1|st[25] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.739 ns               ;
+; N/A                                     ; 74.39 MHz ( period = 13.443 ns )                    ; eeprom_spi:inst1|st[25] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.734 ns               ;
+; N/A                                     ; 74.39 MHz ( period = 13.443 ns )                    ; eeprom_spi:inst1|st[26] ; eeprom_spi:inst1|data_in[3]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.734 ns               ;
+; N/A                                     ; 74.45 MHz ( period = 13.432 ns )                    ; eeprom_spi:inst1|st[26] ; eeprom_spi:inst1|data_in[7]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.723 ns               ;
+; N/A                                     ; 74.59 MHz ( period = 13.406 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|st[20]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.697 ns               ;
+; N/A                                     ; 74.59 MHz ( period = 13.406 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|st[22]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.697 ns               ;
+; N/A                                     ; 74.59 MHz ( period = 13.406 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|st[24]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.697 ns               ;
+; N/A                                     ; 74.59 MHz ( period = 13.406 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|st[25]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.697 ns               ;
+; N/A                                     ; 74.59 MHz ( period = 13.406 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|st[26]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.697 ns               ;
+; N/A                                     ; 74.59 MHz ( period = 13.406 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|st[27]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.697 ns               ;
+; N/A                                     ; 74.61 MHz ( period = 13.403 ns )                    ; eeprom_spi:inst1|st[17] ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.694 ns               ;
+; N/A                                     ; 74.62 MHz ( period = 13.401 ns )                    ; eeprom_spi:inst1|st[17] ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.692 ns               ;
+; N/A                                     ; 74.62 MHz ( period = 13.401 ns )                    ; eeprom_spi:inst1|st[19] ; eeprom_spi:inst1|data_in[0]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.692 ns               ;
+; N/A                                     ; 74.64 MHz ( period = 13.398 ns )                    ; eeprom_spi:inst1|st[14] ; eeprom_spi:inst1|data_in[0]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.689 ns               ;
+; N/A                                     ; 74.65 MHz ( period = 13.396 ns )                    ; eeprom_spi:inst1|st[17] ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.687 ns               ;
+; N/A                                     ; 74.65 MHz ( period = 13.396 ns )                    ; eeprom_spi:inst1|st[19] ; eeprom_spi:inst1|data_in[1]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.687 ns               ;
+; N/A                                     ; 74.67 MHz ( period = 13.393 ns )                    ; eeprom_spi:inst1|st[14] ; eeprom_spi:inst1|data_in[1]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.684 ns               ;
+; N/A                                     ; 74.68 MHz ( period = 13.391 ns )                    ; eeprom_spi:inst1|st[17] ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.682 ns               ;
+; N/A                                     ; 74.99 MHz ( period = 13.336 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|do_st[2]    ; clk_in     ; clk_in   ; None                        ; None                      ; 12.627 ns               ;
+; N/A                                     ; 74.99 MHz ( period = 13.336 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|do_st[1]    ; clk_in     ; clk_in   ; None                        ; None                      ; 12.627 ns               ;
+; N/A                                     ; 74.99 MHz ( period = 13.336 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|do_st[3]    ; clk_in     ; clk_in   ; None                        ; None                      ; 12.627 ns               ;
+; N/A                                     ; 74.99 MHz ( period = 13.336 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|do_st[0]    ; clk_in     ; clk_in   ; None                        ; None                      ; 12.627 ns               ;
+; N/A                                     ; 75.00 MHz ( period = 13.334 ns )                    ; eeprom_spi:inst1|st[9]  ; eeprom_spi:inst1|data_in[0]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.625 ns               ;
+; N/A                                     ; 75.02 MHz ( period = 13.329 ns )                    ; eeprom_spi:inst1|st[9]  ; eeprom_spi:inst1|data_in[1]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.620 ns               ;
+; N/A                                     ; 75.21 MHz ( period = 13.296 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|st[28]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.587 ns               ;
+; N/A                                     ; 75.21 MHz ( period = 13.296 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|st[29]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.587 ns               ;
+; N/A                                     ; 75.21 MHz ( period = 13.296 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|st[30]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.587 ns               ;
+; N/A                                     ; 75.25 MHz ( period = 13.289 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_out[7] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.580 ns               ;
+; N/A                                     ; 75.25 MHz ( period = 13.289 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_out[6] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.580 ns               ;
+; N/A                                     ; 75.25 MHz ( period = 13.289 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_out[5] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.580 ns               ;
+; N/A                                     ; 75.25 MHz ( period = 13.289 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_out[4] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.580 ns               ;
+; N/A                                     ; 75.25 MHz ( period = 13.289 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|data_out[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.580 ns               ;
+; N/A                                     ; 75.31 MHz ( period = 13.278 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|st[28]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.569 ns               ;
+; N/A                                     ; 75.31 MHz ( period = 13.278 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|st[29]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.569 ns               ;
+; N/A                                     ; 75.31 MHz ( period = 13.278 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|st[30]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.569 ns               ;
+; N/A                                     ; 75.35 MHz ( period = 13.271 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_out[7] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.562 ns               ;
+; N/A                                     ; 75.35 MHz ( period = 13.271 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_out[6] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.562 ns               ;
+; N/A                                     ; 75.35 MHz ( period = 13.271 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_out[5] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.562 ns               ;
+; N/A                                     ; 75.35 MHz ( period = 13.271 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_out[4] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.562 ns               ;
+; N/A                                     ; 75.35 MHz ( period = 13.271 ns )                    ; eeprom_spi:inst1|st[11] ; eeprom_spi:inst1|data_out[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.562 ns               ;
+; N/A                                     ; 75.36 MHz ( period = 13.269 ns )                    ; eeprom_spi:inst1|st[4]  ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.560 ns               ;
+; N/A                                     ; 75.37 MHz ( period = 13.267 ns )                    ; eeprom_spi:inst1|st[4]  ; eeprom_spi:inst1|data_in[2]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.558 ns               ;
+; N/A                                     ; 75.39 MHz ( period = 13.264 ns )                    ; eeprom_spi:inst1|st[27] ; eeprom_spi:inst1|data_in[0]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.555 ns               ;
+; N/A                                     ; 75.40 MHz ( period = 13.262 ns )                    ; eeprom_spi:inst1|st[4]  ; eeprom_spi:inst1|data_in[4]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.553 ns               ;
+; N/A                                     ; 75.42 MHz ( period = 13.259 ns )                    ; eeprom_spi:inst1|st[27] ; eeprom_spi:inst1|data_in[1]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.550 ns               ;
+; N/A                                     ; 75.42 MHz ( period = 13.259 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|st[28]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.550 ns               ;
+; N/A                                     ; 75.42 MHz ( period = 13.259 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|st[29]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.550 ns               ;
+; N/A                                     ; 75.42 MHz ( period = 13.259 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|st[30]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.550 ns               ;
+; N/A                                     ; 75.43 MHz ( period = 13.257 ns )                    ; eeprom_spi:inst1|st[4]  ; eeprom_spi:inst1|data_in[5]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.548 ns               ;
+; N/A                                     ; 75.46 MHz ( period = 13.252 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_out[7] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.543 ns               ;
+; N/A                                     ; 75.46 MHz ( period = 13.252 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_out[6] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.543 ns               ;
+; N/A                                     ; 75.46 MHz ( period = 13.252 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_out[5] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.543 ns               ;
+; N/A                                     ; 75.46 MHz ( period = 13.252 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_out[4] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.543 ns               ;
+; N/A                                     ; 75.46 MHz ( period = 13.252 ns )                    ; eeprom_spi:inst1|st[20] ; eeprom_spi:inst1|data_out[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 12.543 ns               ;
+; N/A                                     ; 75.59 MHz ( period = 13.230 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|st[20]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.521 ns               ;
+; N/A                                     ; 75.59 MHz ( period = 13.230 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|st[22]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.521 ns               ;
+; N/A                                     ; 75.59 MHz ( period = 13.230 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|st[24]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.521 ns               ;
+; N/A                                     ; 75.59 MHz ( period = 13.230 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|st[25]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.521 ns               ;
+; N/A                                     ; 75.59 MHz ( period = 13.230 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|st[26]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.521 ns               ;
+; N/A                                     ; 75.59 MHz ( period = 13.230 ns )                    ; eeprom_spi:inst1|st[29] ; eeprom_spi:inst1|st[27]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.521 ns               ;
+; N/A                                     ; 75.64 MHz ( period = 13.221 ns )                    ; eeprom_spi:inst1|st[23] ; eeprom_spi:inst1|sta[2]      ; clk_in     ; clk_in   ; None                        ; None                      ; 12.512 ns               ;
+; N/A                                     ; 75.66 MHz ( period = 13.217 ns )                    ; eeprom_spi:inst1|st[8]  ; eeprom_spi:inst1|data_in[6]  ; clk_in     ; clk_in   ; None                        ; None                      ; 12.508 ns               ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                         ;                              ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; tsu                                                                                  ;
++-------+--------------+------------+---------+-----------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To                          ; To Clock ;
++-------+--------------+------------+---------+-----------------------------+----------+
+; N/A   ; None         ; 1.291 ns   ; do      ; eeprom_spi:inst1|data_in[5] ; clk_in   ;
+; N/A   ; None         ; 1.281 ns   ; do      ; eeprom_spi:inst1|data_in[3] ; clk_in   ;
+; N/A   ; None         ; 1.100 ns   ; col[0]  ; key:inst4|eep_sig[0]        ; clk_in   ;
+; N/A   ; None         ; 1.100 ns   ; col[0]  ; key:inst4|eep_sig[2]        ; clk_in   ;
+; N/A   ; None         ; 0.985 ns   ; do      ; eeprom_spi:inst1|data_in[7] ; clk_in   ;
+; N/A   ; None         ; 0.981 ns   ; do      ; eeprom_spi:inst1|data_in[1] ; clk_in   ;
+; N/A   ; None         ; 0.975 ns   ; do      ; eeprom_spi:inst1|data_in[0] ; clk_in   ;
+; N/A   ; None         ; 0.973 ns   ; do      ; eeprom_spi:inst1|data_in[4] ; clk_in   ;
+; N/A   ; None         ; 0.619 ns   ; col[1]  ; key:inst4|eep_sig[0]        ; clk_in   ;
+; N/A   ; None         ; 0.619 ns   ; col[1]  ; key:inst4|eep_sig[2]        ; clk_in   ;
+; N/A   ; None         ; 0.319 ns   ; do      ; eeprom_spi:inst1|data_in[2] ; clk_in   ;
+; N/A   ; None         ; 0.314 ns   ; do      ; eeprom_spi:inst1|data_in[6] ; clk_in   ;
+; N/A   ; None         ; 0.215 ns   ; col[1]  ; key:inst4|eep_sig[1]        ; clk_in   ;
+; N/A   ; None         ; 0.215 ns   ; col[1]  ; key:inst4|eep_sig[3]        ; clk_in   ;
+; N/A   ; None         ; -0.125 ns  ; col[0]  ; key:inst4|eep_sig[1]        ; clk_in   ;
+; N/A   ; None         ; -0.125 ns  ; col[0]  ; key:inst4|eep_sig[3]        ; clk_in   ;
+; N/A   ; None         ; -0.359 ns  ; col[1]  ; key:inst4|col_tmp[0]        ; clk_in   ;
+; N/A   ; None         ; -0.359 ns  ; col[1]  ; key:inst4|col_tmp[1]        ; clk_in   ;
+; N/A   ; None         ; -0.698 ns  ; col[0]  ; key:inst4|col_tmp[0]        ; clk_in   ;
+; N/A   ; None         ; -0.698 ns  ; col[0]  ; key:inst4|col_tmp[1]        ; clk_in   ;
+; N/A   ; None         ; -0.905 ns  ; addr[3] ; eeprom_spi:inst1|di_tmp[15] ; clk_in   ;
+; N/A   ; None         ; -0.925 ns  ; addr[4] ; eeprom_spi:inst1|di_tmp[16] ; clk_in   ;
+; N/A   ; None         ; -0.973 ns  ; col[1]  ; key:inst4|key_code[1]       ; clk_in   ;
+; N/A   ; None         ; -1.218 ns  ; col[1]  ; key:inst4|key_code[0]       ; clk_in   ;
+; N/A   ; None         ; -1.312 ns  ; col[0]  ; key:inst4|key_code[1]       ; clk_in   ;
+; N/A   ; None         ; -1.553 ns  ; col[0]  ; key:inst4|key_code[0]       ; clk_in   ;
+; N/A   ; None         ; -1.558 ns  ; addr[0] ; eeprom_spi:inst1|di_tmp[12] ; clk_in   ;
+; N/A   ; None         ; -1.638 ns  ; addr[1] ; eeprom_spi:inst1|di_tmp[13] ; clk_in   ;
+; N/A   ; None         ; -2.106 ns  ; addr[2] ; eeprom_spi:inst1|di_tmp[14] ; clk_in   ;
+; N/A   ; None         ; -2.118 ns  ; addr[5] ; eeprom_spi:inst1|di_tmp[17] ; clk_in   ;
+; N/A   ; None         ; -2.127 ns  ; addr[6] ; eeprom_spi:inst1|di_tmp[18] ; clk_in   ;
++-------+--------------+------------+---------+-----------------------------+----------+
+
+
++---------------------------------------------------------------------------------------------+
+; tco                                                                                         ;
++-------+--------------+------------+------------------------------+-------------+------------+
+; Slack ; Required tco ; Actual tco ; From                         ; To          ; From Clock ;
++-------+--------------+------------+------------------------------+-------------+------------+
+; N/A   ; None         ; 14.932 ns  ; key:inst4|row_sig[0]         ; row[0]      ; clk_in     ;
+; N/A   ; None         ; 14.809 ns  ; key:inst4|row_sig[1]         ; row[1]      ; clk_in     ;
+; N/A   ; None         ; 14.792 ns  ; eeprom_spi:inst1|cs          ; cs          ; clk_in     ;
+; N/A   ; None         ; 13.862 ns  ; eeprom_spi:inst1|di_tmp_s    ; di          ; clk_in     ;
+; N/A   ; None         ; 13.727 ns  ; eeprom_spi:inst1|data_out[0] ; data_out[0] ; clk_in     ;
+; N/A   ; None         ; 13.542 ns  ; eeprom_spi:inst1|data_out[1] ; data_out[1] ; clk_in     ;
+; N/A   ; None         ; 13.539 ns  ; eeprom_spi:inst1|data_out[3] ; data_out[3] ; clk_in     ;
+; N/A   ; None         ; 13.008 ns  ; eeprom_spi:inst1|data_out[6] ; data_out[6] ; clk_in     ;
+; N/A   ; None         ; 12.941 ns  ; eeprom_spi:inst1|data_out[7] ; data_out[7] ; clk_in     ;
+; N/A   ; None         ; 12.893 ns  ; eeprom_spi:inst1|data_out[2] ; data_out[2] ; clk_in     ;
+; N/A   ; None         ; 11.623 ns  ; eeprom_spi:inst1|data_out[4] ; data_out[4] ; clk_in     ;
+; N/A   ; None         ; 11.616 ns  ; eeprom_spi:inst1|data_out[5] ; data_out[5] ; clk_in     ;
+; N/A   ; None         ; 10.573 ns  ; clock:inst|clk_txd_sig       ; sk          ; clk_in     ;
++-------+--------------+------------+------------------------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------+
+; th                                                                                         ;
++---------------+-------------+-----------+---------+-----------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To                          ; To Clock ;
++---------------+-------------+-----------+---------+-----------------------------+----------+
+; N/A           ; None        ; 3.043 ns  ; col[1]  ; key:inst4|col_tmp[1]        ; clk_in   ;
+; N/A           ; None        ; 2.720 ns  ; col[0]  ; key:inst4|col_tmp[0]        ; clk_in   ;
+; N/A           ; None        ; 2.688 ns  ; col[0]  ; key:inst4|eep_sig[1]        ; clk_in   ;
+; N/A           ; None        ; 2.681 ns  ; addr[6] ; eeprom_spi:inst1|di_tmp[18] ; clk_in   ;
+; N/A           ; None        ; 2.672 ns  ; addr[5] ; eeprom_spi:inst1|di_tmp[17] ; clk_in   ;
+; N/A           ; None        ; 2.660 ns  ; addr[2] ; eeprom_spi:inst1|di_tmp[14] ; clk_in   ;
+; N/A           ; None        ; 2.238 ns  ; col[1]  ; key:inst4|eep_sig[1]        ; clk_in   ;
+; N/A           ; None        ; 2.192 ns  ; addr[1] ; eeprom_spi:inst1|di_tmp[13] ; clk_in   ;
+; N/A           ; None        ; 2.112 ns  ; addr[0] ; eeprom_spi:inst1|di_tmp[12] ; clk_in   ;
+; N/A           ; None        ; 2.107 ns  ; col[0]  ; key:inst4|key_code[0]       ; clk_in   ;
+; N/A           ; None        ; 2.058 ns  ; col[0]  ; key:inst4|eep_sig[2]        ; clk_in   ;
+; N/A           ; None        ; 1.866 ns  ; col[0]  ; key:inst4|key_code[1]       ; clk_in   ;
+; N/A           ; None        ; 1.772 ns  ; col[1]  ; key:inst4|key_code[0]       ; clk_in   ;
+; N/A           ; None        ; 1.731 ns  ; col[1]  ; key:inst4|eep_sig[2]        ; clk_in   ;
+; N/A           ; None        ; 1.641 ns  ; col[0]  ; key:inst4|eep_sig[0]        ; clk_in   ;
+; N/A           ; None        ; 1.527 ns  ; col[1]  ; key:inst4|key_code[1]       ; clk_in   ;
+; N/A           ; None        ; 1.479 ns  ; addr[4] ; eeprom_spi:inst1|di_tmp[16] ; clk_in   ;
+; N/A           ; None        ; 1.459 ns  ; addr[3] ; eeprom_spi:inst1|di_tmp[15] ; clk_in   ;
+; N/A           ; None        ; 1.314 ns  ; col[1]  ; key:inst4|eep_sig[0]        ; clk_in   ;
+; N/A           ; None        ; 1.252 ns  ; col[0]  ; key:inst4|col_tmp[1]        ; clk_in   ;
+; N/A           ; None        ; 0.913 ns  ; col[1]  ; key:inst4|col_tmp[0]        ; clk_in   ;
+; N/A           ; None        ; 0.679 ns  ; col[0]  ; key:inst4|eep_sig[3]        ; clk_in   ;
+; N/A           ; None        ; 0.339 ns  ; col[1]  ; key:inst4|eep_sig[3]        ; clk_in   ;
+; N/A           ; None        ; 0.240 ns  ; do      ; eeprom_spi:inst1|data_in[6] ; clk_in   ;
+; N/A           ; None        ; 0.235 ns  ; do      ; eeprom_spi:inst1|data_in[2] ; clk_in   ;
+; N/A           ; None        ; -0.419 ns ; do      ; eeprom_spi:inst1|data_in[4] ; clk_in   ;
+; N/A           ; None        ; -0.421 ns ; do      ; eeprom_spi:inst1|data_in[0] ; clk_in   ;
+; N/A           ; None        ; -0.427 ns ; do      ; eeprom_spi:inst1|data_in[1] ; clk_in   ;
+; N/A           ; None        ; -0.431 ns ; do      ; eeprom_spi:inst1|data_in[7] ; clk_in   ;
+; N/A           ; None        ; -0.727 ns ; do      ; eeprom_spi:inst1|data_in[3] ; clk_in   ;
+; N/A           ; None        ; -0.737 ns ; do      ; eeprom_spi:inst1|data_in[5] ; clk_in   ;
++---------------+-------------+-----------+---------+-----------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Oct 24 08:52:54 2012
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off eeprom_spi_bdf -c eeprom_spi_bdf
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk_in" is an undefined clock
+Warning: Found 3 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "clock:inst|clk_key_2ms" as buffer
+    Info: Detected ripple clock "clock:inst|clk_key_20ms" as buffer
+    Info: Detected ripple clock "clock:inst|clk_txd_sig" as buffer
+Info: Clock "clk_in" has Internal fmax of 68.15 MHz between source register "eeprom_spi:inst1|st[23]" and destination register "eeprom_spi:inst1|data_in[3]" (period= 14.674 ns)
+    Info: + Longest register to register delay is 13.965 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X13_Y8_N2; Fanout = 4; REG Node = 'eeprom_spi:inst1|st[23]'
+        Info: 2: + IC(1.304 ns) + CELL(0.740 ns) = 2.044 ns; Loc. = LC_X14_Y8_N5; Fanout = 1; COMB Node = 'eeprom_spi:inst1|LessThan1~8'
+        Info: 3: + IC(0.705 ns) + CELL(0.914 ns) = 3.663 ns; Loc. = LC_X14_Y8_N4; Fanout = 3; COMB Node = 'eeprom_spi:inst1|LessThan1~11'
+        Info: 4: + IC(1.842 ns) + CELL(0.740 ns) = 6.245 ns; Loc. = LC_X11_Y8_N6; Fanout = 11; COMB Node = 'eeprom_spi:inst1|LessThan1~12'
+        Info: 5: + IC(1.957 ns) + CELL(0.200 ns) = 8.402 ns; Loc. = LC_X10_Y6_N9; Fanout = 36; COMB Node = 'eeprom_spi:inst1|Mux64~3'
+        Info: 6: + IC(2.967 ns) + CELL(0.200 ns) = 11.569 ns; Loc. = LC_X16_Y3_N6; Fanout = 2; COMB Node = 'eeprom_spi:inst1|Decoder0~9'
+        Info: 7: + IC(1.805 ns) + CELL(0.591 ns) = 13.965 ns; Loc. = LC_X15_Y2_N1; Fanout = 2; REG Node = 'eeprom_spi:inst1|data_in[3]'
+        Info: Total cell delay = 3.385 ns ( 24.24 % )
+        Info: Total interconnect delay = 10.580 ns ( 75.76 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk_in" to destination register is 8.151 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 52; CLK Node = 'clk_in'
+            Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X12_Y3_N4; Fanout = 107; REG Node = 'clock:inst|clk_txd_sig'
+            Info: 3: + IC(3.038 ns) + CELL(0.918 ns) = 8.151 ns; Loc. = LC_X15_Y2_N1; Fanout = 2; REG Node = 'eeprom_spi:inst1|data_in[3]'
+            Info: Total cell delay = 3.375 ns ( 41.41 % )
+            Info: Total interconnect delay = 4.776 ns ( 58.59 % )
+        Info: - Longest clock path from clock "clk_in" to source register is 8.151 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 52; CLK Node = 'clk_in'
+            Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X12_Y3_N4; Fanout = 107; REG Node = 'clock:inst|clk_txd_sig'
+            Info: 3: + IC(3.038 ns) + CELL(0.918 ns) = 8.151 ns; Loc. = LC_X13_Y8_N2; Fanout = 4; REG Node = 'eeprom_spi:inst1|st[23]'
+            Info: Total cell delay = 3.375 ns ( 41.41 % )
+            Info: Total interconnect delay = 4.776 ns ( 58.59 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Micro setup delay of destination is 0.333 ns
+Info: tsu for register "eeprom_spi:inst1|data_in[5]" (data pin = "do", clock pin = "clk_in") is 1.291 ns
+    Info: + Longest pin to register delay is 9.109 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_16; Fanout = 8; PIN Node = 'do'
+        Info: 2: + IC(6.794 ns) + CELL(1.183 ns) = 9.109 ns; Loc. = LC_X15_Y2_N7; Fanout = 2; REG Node = 'eeprom_spi:inst1|data_in[5]'
+        Info: Total cell delay = 2.315 ns ( 25.41 % )
+        Info: Total interconnect delay = 6.794 ns ( 74.59 % )
+    Info: + Micro setup delay of destination is 0.333 ns
+    Info: - Shortest clock path from clock "clk_in" to destination register is 8.151 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 52; CLK Node = 'clk_in'
+        Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X12_Y3_N4; Fanout = 107; REG Node = 'clock:inst|clk_txd_sig'
+        Info: 3: + IC(3.038 ns) + CELL(0.918 ns) = 8.151 ns; Loc. = LC_X15_Y2_N7; Fanout = 2; REG Node = 'eeprom_spi:inst1|data_in[5]'
+        Info: Total cell delay = 3.375 ns ( 41.41 % )
+        Info: Total interconnect delay = 4.776 ns ( 58.59 % )
+Info: tco from clock "clk_in" to destination pin "row[0]" through register "key:inst4|row_sig[0]" is 14.932 ns
+    Info: + Longest clock path from clock "clk_in" to source register is 9.586 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 52; CLK Node = 'clk_in'
+        Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X14_Y6_N4; Fanout = 3; REG Node = 'clock:inst|clk_key_20ms'
+        Info: 3: + IC(4.473 ns) + CELL(0.918 ns) = 9.586 ns; Loc. = LC_X8_Y5_N2; Fanout = 7; REG Node = 'key:inst4|row_sig[0]'
+        Info: Total cell delay = 3.375 ns ( 35.21 % )
+        Info: Total interconnect delay = 6.211 ns ( 64.79 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Longest register to pin delay is 4.970 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X8_Y5_N2; Fanout = 7; REG Node = 'key:inst4|row_sig[0]'
+        Info: 2: + IC(2.648 ns) + CELL(2.322 ns) = 4.970 ns; Loc. = PIN_44; Fanout = 0; PIN Node = 'row[0]'
+        Info: Total cell delay = 2.322 ns ( 46.72 % )
+        Info: Total interconnect delay = 2.648 ns ( 53.28 % )
+Info: th for register "key:inst4|col_tmp[1]" (data pin = "col[1]", clock pin = "clk_in") is 3.043 ns
+    Info: + Longest clock path from clock "clk_in" to destination register is 9.498 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 52; CLK Node = 'clk_in'
+        Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X10_Y4_N0; Fanout = 17; REG Node = 'clock:inst|clk_key_2ms'
+        Info: 3: + IC(4.385 ns) + CELL(0.918 ns) = 9.498 ns; Loc. = LC_X6_Y6_N8; Fanout = 1; REG Node = 'key:inst4|col_tmp[1]'
+        Info: Total cell delay = 3.375 ns ( 35.53 % )
+        Info: Total interconnect delay = 6.123 ns ( 64.47 % )
+    Info: + Micro hold delay of destination is 0.221 ns
+    Info: - Shortest pin to register delay is 6.676 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_38; Fanout = 9; PIN Node = 'col[1]'
+        Info: 2: + IC(4.740 ns) + CELL(0.804 ns) = 6.676 ns; Loc. = LC_X6_Y6_N8; Fanout = 1; REG Node = 'key:inst4|col_tmp[1]'
+        Info: Total cell delay = 1.936 ns ( 29.00 % )
+        Info: Total interconnect delay = 4.740 ns ( 71.00 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 166 megabytes
+    Info: Processing ended: Wed Oct 24 08:52:54 2012
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,483 @@
+Classic Timing Analyzer report for uart_bdf
+Thu Oct 04 16:32:31 2012
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk_in'
+  7. Clock Hold: 'clk_in'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                           ;
++------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------+-----------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                  ; To                    ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------+-----------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 1.825 ns                         ; rxd_in                ; uart:inst1|j          ; --         ; clk_in   ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 14.735 ns                        ; uart:inst1|rxd_out[0] ; rxd_out[0]            ; clk_in     ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 4.444 ns                         ; rxd_in                ; uart:inst1|d          ; --         ; clk_in   ; 0            ;
+; Clock Setup: 'clk_in'        ; N/A                                      ; None          ; 103.08 MHz ( period = 9.701 ns ) ; uart:inst1|g[0]       ; uart:inst1|rxd_out[0] ; clk_in     ; clk_in   ; 0            ;
+; Clock Hold: 'clk_in'         ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; uart:inst1|e          ; uart:inst1|g[1]       ; clk_in     ; clk_in   ; 16           ;
+; Total number of failed paths ;                                          ;               ;                                  ;                       ;                       ;            ;          ; 16           ;
++------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------+-----------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EPM1270T144C5      ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk_in          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk_in'                                                                                                                                                                                                                                             ;
++-----------------------------------------+-----------------------------------------------------+---------------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                      ; To                        ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+---------------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 103.08 MHz ( period = 9.701 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rxd_out[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.992 ns                ;
+; N/A                                     ; 103.08 MHz ( period = 9.701 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rxd_out[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.992 ns                ;
+; N/A                                     ; 103.08 MHz ( period = 9.701 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rxd_out[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.992 ns                ;
+; N/A                                     ; 103.08 MHz ( period = 9.701 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rxd_out[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.992 ns                ;
+; N/A                                     ; 104.37 MHz ( period = 9.581 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rec_sig[7]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.872 ns                ;
+; N/A                                     ; 104.37 MHz ( period = 9.581 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rec_sig[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.872 ns                ;
+; N/A                                     ; 104.37 MHz ( period = 9.581 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rec_sig[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.872 ns                ;
+; N/A                                     ; 104.37 MHz ( period = 9.581 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rec_sig[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.872 ns                ;
+; N/A                                     ; 104.37 MHz ( period = 9.581 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rec_sig[1]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.872 ns                ;
+; N/A                                     ; 104.37 MHz ( period = 9.581 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rec_sig[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.872 ns                ;
+; N/A                                     ; 107.94 MHz ( period = 9.264 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rxd_out[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.555 ns                ;
+; N/A                                     ; 107.94 MHz ( period = 9.264 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rxd_out[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.555 ns                ;
+; N/A                                     ; 107.94 MHz ( period = 9.264 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rxd_out[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.555 ns                ;
+; N/A                                     ; 107.94 MHz ( period = 9.264 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rxd_out[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.555 ns                ;
+; N/A                                     ; 109.36 MHz ( period = 9.144 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rec_sig[7]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.435 ns                ;
+; N/A                                     ; 109.36 MHz ( period = 9.144 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rec_sig[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.435 ns                ;
+; N/A                                     ; 109.36 MHz ( period = 9.144 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rec_sig[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.435 ns                ;
+; N/A                                     ; 109.36 MHz ( period = 9.144 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rec_sig[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.435 ns                ;
+; N/A                                     ; 109.36 MHz ( period = 9.144 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rec_sig[1]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.435 ns                ;
+; N/A                                     ; 109.36 MHz ( period = 9.144 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rec_sig[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.435 ns                ;
+; N/A                                     ; 111.31 MHz ( period = 8.984 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rxd_out[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.275 ns                ;
+; N/A                                     ; 111.31 MHz ( period = 8.984 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rxd_out[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.275 ns                ;
+; N/A                                     ; 111.31 MHz ( period = 8.984 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rxd_out[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.275 ns                ;
+; N/A                                     ; 111.31 MHz ( period = 8.984 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rxd_out[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.275 ns                ;
+; N/A                                     ; 112.06 MHz ( period = 8.924 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rxd_out[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.215 ns                ;
+; N/A                                     ; 112.82 MHz ( period = 8.864 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rec_sig[7]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.155 ns                ;
+; N/A                                     ; 112.82 MHz ( period = 8.864 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rec_sig[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.155 ns                ;
+; N/A                                     ; 112.82 MHz ( period = 8.864 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rec_sig[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.155 ns                ;
+; N/A                                     ; 112.82 MHz ( period = 8.864 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rec_sig[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.155 ns                ;
+; N/A                                     ; 112.82 MHz ( period = 8.864 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rec_sig[1]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.155 ns                ;
+; N/A                                     ; 112.82 MHz ( period = 8.864 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rec_sig[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.155 ns                ;
+; N/A                                     ; 113.80 MHz ( period = 8.787 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rxd_out[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.078 ns                ;
+; N/A                                     ; 113.80 MHz ( period = 8.787 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rxd_out[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.078 ns                ;
+; N/A                                     ; 113.80 MHz ( period = 8.787 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rxd_out[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.078 ns                ;
+; N/A                                     ; 113.80 MHz ( period = 8.787 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rxd_out[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.078 ns                ;
+; N/A                                     ; 113.90 MHz ( period = 8.780 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rec_sig[6]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.071 ns                ;
+; N/A                                     ; 113.90 MHz ( period = 8.780 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rec_sig[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 8.071 ns                ;
+; N/A                                     ; 115.38 MHz ( period = 8.667 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rec_sig[7]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.958 ns                ;
+; N/A                                     ; 115.38 MHz ( period = 8.667 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rec_sig[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.958 ns                ;
+; N/A                                     ; 115.38 MHz ( period = 8.667 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rec_sig[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.958 ns                ;
+; N/A                                     ; 115.38 MHz ( period = 8.667 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rec_sig[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.958 ns                ;
+; N/A                                     ; 115.38 MHz ( period = 8.667 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rec_sig[1]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.958 ns                ;
+; N/A                                     ; 115.38 MHz ( period = 8.667 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rec_sig[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.958 ns                ;
+; N/A                                     ; 116.43 MHz ( period = 8.589 ns )                    ; uart:inst1|c              ; uart:inst1|e              ; clk_in     ; clk_in   ; None                        ; None                      ; 2.637 ns                ;
+; N/A                                     ; 116.55 MHz ( period = 8.580 ns )                    ; uart:inst1|c              ; uart:inst1|b              ; clk_in     ; clk_in   ; None                        ; None                      ; 2.628 ns                ;
+; N/A                                     ; 117.83 MHz ( period = 8.487 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rxd_out[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.778 ns                ;
+; N/A                                     ; 119.53 MHz ( period = 8.366 ns )                    ; uart:inst1|h[2]           ; uart:inst1|rxd_out[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.657 ns                ;
+; N/A                                     ; 119.53 MHz ( period = 8.366 ns )                    ; uart:inst1|h[2]           ; uart:inst1|rxd_out[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.657 ns                ;
+; N/A                                     ; 119.53 MHz ( period = 8.366 ns )                    ; uart:inst1|h[2]           ; uart:inst1|rxd_out[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.657 ns                ;
+; N/A                                     ; 119.53 MHz ( period = 8.366 ns )                    ; uart:inst1|h[2]           ; uart:inst1|rxd_out[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.657 ns                ;
+; N/A                                     ; 119.86 MHz ( period = 8.343 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rec_sig[6]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.634 ns                ;
+; N/A                                     ; 119.86 MHz ( period = 8.343 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rec_sig[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.634 ns                ;
+; N/A                                     ; 121.85 MHz ( period = 8.207 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rxd_out[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.498 ns                ;
+; N/A                                     ; 122.09 MHz ( period = 8.191 ns )                    ; uart:inst1|g[0]           ; uart:inst1|h[2]           ; clk_in     ; clk_in   ; None                        ; None                      ; 7.482 ns                ;
+; N/A                                     ; 124.02 MHz ( period = 8.063 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rec_sig[6]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.354 ns                ;
+; N/A                                     ; 124.02 MHz ( period = 8.063 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rec_sig[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.354 ns                ;
+; N/A                                     ; 124.84 MHz ( period = 8.010 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rxd_out[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.301 ns                ;
+; N/A                                     ; 127.13 MHz ( period = 7.866 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rec_sig[6]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.157 ns                ;
+; N/A                                     ; 127.13 MHz ( period = 7.866 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rec_sig[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.157 ns                ;
+; N/A                                     ; 127.71 MHz ( period = 7.830 ns )                    ; uart:inst1|g[0]           ; uart:inst1|i              ; clk_in     ; clk_in   ; None                        ; None                      ; 7.121 ns                ;
+; N/A                                     ; 127.78 MHz ( period = 7.826 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rxd_out[7]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.117 ns                ;
+; N/A                                     ; 127.78 MHz ( period = 7.826 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rxd_out[6]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.117 ns                ;
+; N/A                                     ; 127.78 MHz ( period = 7.826 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rxd_out[1]     ; clk_in     ; clk_in   ; None                        ; None                      ; 7.117 ns                ;
+; N/A                                     ; 128.97 MHz ( period = 7.754 ns )                    ; uart:inst1|g[2]           ; uart:inst1|h[2]           ; clk_in     ; clk_in   ; None                        ; None                      ; 7.045 ns                ;
+; N/A                                     ; 130.60 MHz ( period = 7.657 ns )                    ; uart:inst1|g[0]           ; uart:inst1|rec_sig[8]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.948 ns                ;
+; N/A                                     ; 130.60 MHz ( period = 7.657 ns )                    ; uart:inst1|g[0]           ; uart:inst1|h[3]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.948 ns                ;
+; N/A                                     ; 130.60 MHz ( period = 7.657 ns )                    ; uart:inst1|g[0]           ; uart:inst1|h[1]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.948 ns                ;
+; N/A                                     ; 130.60 MHz ( period = 7.657 ns )                    ; uart:inst1|g[0]           ; uart:inst1|h[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.948 ns                ;
+; N/A                                     ; 131.77 MHz ( period = 7.589 ns )                    ; uart:inst1|h[2]           ; uart:inst1|rxd_out[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.880 ns                ;
+; N/A                                     ; 133.80 MHz ( period = 7.474 ns )                    ; uart:inst1|g[3]           ; uart:inst1|h[2]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.765 ns                ;
+; N/A                                     ; 135.26 MHz ( period = 7.393 ns )                    ; uart:inst1|g[2]           ; uart:inst1|i              ; clk_in     ; clk_in   ; None                        ; None                      ; 6.684 ns                ;
+; N/A                                     ; 135.34 MHz ( period = 7.389 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rxd_out[7]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.680 ns                ;
+; N/A                                     ; 135.34 MHz ( period = 7.389 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rxd_out[6]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.680 ns                ;
+; N/A                                     ; 135.34 MHz ( period = 7.389 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rxd_out[1]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.680 ns                ;
+; N/A                                     ; 137.42 MHz ( period = 7.277 ns )                    ; uart:inst1|g[1]           ; uart:inst1|h[2]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.568 ns                ;
+; N/A                                     ; 138.50 MHz ( period = 7.220 ns )                    ; uart:inst1|g[2]           ; uart:inst1|rec_sig[8]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.511 ns                ;
+; N/A                                     ; 138.50 MHz ( period = 7.220 ns )                    ; uart:inst1|g[2]           ; uart:inst1|h[3]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.511 ns                ;
+; N/A                                     ; 138.50 MHz ( period = 7.220 ns )                    ; uart:inst1|g[2]           ; uart:inst1|h[1]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.511 ns                ;
+; N/A                                     ; 138.50 MHz ( period = 7.220 ns )                    ; uart:inst1|g[2]           ; uart:inst1|h[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.511 ns                ;
+; N/A                                     ; 138.64 MHz ( period = 7.213 ns )                    ; uart:inst1|h[1]           ; uart:inst1|rxd_out[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.504 ns                ;
+; N/A                                     ; 138.64 MHz ( period = 7.213 ns )                    ; uart:inst1|h[1]           ; uart:inst1|rxd_out[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.504 ns                ;
+; N/A                                     ; 138.64 MHz ( period = 7.213 ns )                    ; uart:inst1|h[1]           ; uart:inst1|rxd_out[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.504 ns                ;
+; N/A                                     ; 138.64 MHz ( period = 7.213 ns )                    ; uart:inst1|h[1]           ; uart:inst1|rxd_out[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.504 ns                ;
+; N/A                                     ; 140.59 MHz ( period = 7.113 ns )                    ; uart:inst1|g[3]           ; uart:inst1|i              ; clk_in     ; clk_in   ; None                        ; None                      ; 6.404 ns                ;
+; N/A                                     ; 140.67 MHz ( period = 7.109 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rxd_out[7]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.400 ns                ;
+; N/A                                     ; 140.67 MHz ( period = 7.109 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rxd_out[6]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.400 ns                ;
+; N/A                                     ; 140.67 MHz ( period = 7.109 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rxd_out[1]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.400 ns                ;
+; N/A                                     ; 141.74 MHz ( period = 7.055 ns )                    ; uart:inst1|h[0]           ; uart:inst1|rxd_out[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.346 ns                ;
+; N/A                                     ; 141.74 MHz ( period = 7.055 ns )                    ; uart:inst1|h[0]           ; uart:inst1|rxd_out[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.346 ns                ;
+; N/A                                     ; 141.74 MHz ( period = 7.055 ns )                    ; uart:inst1|h[0]           ; uart:inst1|rxd_out[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.346 ns                ;
+; N/A                                     ; 141.74 MHz ( period = 7.055 ns )                    ; uart:inst1|h[0]           ; uart:inst1|rxd_out[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.346 ns                ;
+; N/A                                     ; 144.09 MHz ( period = 6.940 ns )                    ; uart:inst1|g[3]           ; uart:inst1|rec_sig[8]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.231 ns                ;
+; N/A                                     ; 144.09 MHz ( period = 6.940 ns )                    ; uart:inst1|g[3]           ; uart:inst1|h[3]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.231 ns                ;
+; N/A                                     ; 144.09 MHz ( period = 6.940 ns )                    ; uart:inst1|g[3]           ; uart:inst1|h[1]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.231 ns                ;
+; N/A                                     ; 144.09 MHz ( period = 6.940 ns )                    ; uart:inst1|g[3]           ; uart:inst1|h[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.231 ns                ;
+; N/A                                     ; 144.59 MHz ( period = 6.916 ns )                    ; uart:inst1|g[1]           ; uart:inst1|i              ; clk_in     ; clk_in   ; None                        ; None                      ; 6.207 ns                ;
+; N/A                                     ; 144.68 MHz ( period = 6.912 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rxd_out[7]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.203 ns                ;
+; N/A                                     ; 144.68 MHz ( period = 6.912 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rxd_out[6]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.203 ns                ;
+; N/A                                     ; 144.68 MHz ( period = 6.912 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rxd_out[1]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.203 ns                ;
+; N/A                                     ; 145.07 MHz ( period = 6.893 ns )                    ; uart:inst1|h[3]           ; uart:inst1|rxd_out[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.184 ns                ;
+; N/A                                     ; 145.07 MHz ( period = 6.893 ns )                    ; uart:inst1|h[3]           ; uart:inst1|rxd_out[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.184 ns                ;
+; N/A                                     ; 145.07 MHz ( period = 6.893 ns )                    ; uart:inst1|h[3]           ; uart:inst1|rxd_out[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.184 ns                ;
+; N/A                                     ; 145.07 MHz ( period = 6.893 ns )                    ; uart:inst1|h[3]           ; uart:inst1|rxd_out[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.184 ns                ;
+; N/A                                     ; 145.39 MHz ( period = 6.878 ns )                    ; uart:inst1|h[2]           ; uart:inst1|i              ; clk_in     ; clk_in   ; None                        ; None                      ; 6.169 ns                ;
+; N/A                                     ; 148.30 MHz ( period = 6.743 ns )                    ; uart:inst1|g[1]           ; uart:inst1|rec_sig[8]     ; clk_in     ; clk_in   ; None                        ; None                      ; 6.034 ns                ;
+; N/A                                     ; 148.30 MHz ( period = 6.743 ns )                    ; uart:inst1|g[1]           ; uart:inst1|h[3]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.034 ns                ;
+; N/A                                     ; 148.30 MHz ( period = 6.743 ns )                    ; uart:inst1|g[1]           ; uart:inst1|h[1]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.034 ns                ;
+; N/A                                     ; 148.30 MHz ( period = 6.743 ns )                    ; uart:inst1|g[1]           ; uart:inst1|h[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 6.034 ns                ;
+; N/A                                     ; 154.06 MHz ( period = 6.491 ns )                    ; uart:inst1|h[2]           ; uart:inst1|rxd_out[7]     ; clk_in     ; clk_in   ; None                        ; None                      ; 5.782 ns                ;
+; N/A                                     ; 154.06 MHz ( period = 6.491 ns )                    ; uart:inst1|h[2]           ; uart:inst1|rxd_out[6]     ; clk_in     ; clk_in   ; None                        ; None                      ; 5.782 ns                ;
+; N/A                                     ; 154.06 MHz ( period = 6.491 ns )                    ; uart:inst1|h[2]           ; uart:inst1|rxd_out[1]     ; clk_in     ; clk_in   ; None                        ; None                      ; 5.782 ns                ;
+; N/A                                     ; 155.38 MHz ( period = 6.436 ns )                    ; uart:inst1|h[1]           ; uart:inst1|rxd_out[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 5.727 ns                ;
+; N/A                                     ; 159.29 MHz ( period = 6.278 ns )                    ; uart:inst1|h[0]           ; uart:inst1|rxd_out[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 5.569 ns                ;
+; N/A                                     ; 162.58 MHz ( period = 6.151 ns )                    ; clock:inst|clk_sig_rxd[0] ; clock:inst|clk_sig_rxd[5] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.442 ns                ;
+; N/A                                     ; 163.05 MHz ( period = 6.133 ns )                    ; clock:inst|clk_sig_rxd[0] ; clock:inst|clk_sig_rxd[7] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.424 ns                ;
+; N/A                                     ; 163.21 MHz ( period = 6.127 ns )                    ; clock:inst|clk_sig_rxd[0] ; clock:inst|clk_sig_rxd[4] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.418 ns                ;
+; N/A                                     ; 163.51 MHz ( period = 6.116 ns )                    ; uart:inst1|h[3]           ; uart:inst1|rxd_out[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 5.407 ns                ;
+; N/A                                     ; 165.43 MHz ( period = 6.045 ns )                    ; uart:inst1|a[2]           ; uart:inst1|c              ; clk_in     ; clk_in   ; None                        ; None                      ; 5.336 ns                ;
+; N/A                                     ; 166.39 MHz ( period = 6.010 ns )                    ; clock:inst|clk_sig_rxd[1] ; clock:inst|clk_sig_rxd[5] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.301 ns                ;
+; N/A                                     ; 166.89 MHz ( period = 5.992 ns )                    ; clock:inst|clk_sig_rxd[1] ; clock:inst|clk_sig_rxd[7] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.283 ns                ;
+; N/A                                     ; 167.06 MHz ( period = 5.986 ns )                    ; clock:inst|clk_sig_rxd[1] ; clock:inst|clk_sig_rxd[4] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.277 ns                ;
+; N/A                                     ; 167.31 MHz ( period = 5.977 ns )                    ; uart:inst1|h[0]           ; uart:inst1|h[2]           ; clk_in     ; clk_in   ; None                        ; None                      ; 5.268 ns                ;
+; N/A                                     ; 168.98 MHz ( period = 5.918 ns )                    ; clock:inst|clk_sig_rxd[2] ; clock:inst|clk_sig_rxd[5] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.209 ns                ;
+; N/A                                     ; 169.49 MHz ( period = 5.900 ns )                    ; clock:inst|clk_sig_rxd[2] ; clock:inst|clk_sig_rxd[7] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 169.66 MHz ( period = 5.894 ns )                    ; uart:inst1|a[0]           ; uart:inst1|c              ; clk_in     ; clk_in   ; None                        ; None                      ; 5.185 ns                ;
+; N/A                                     ; 169.66 MHz ( period = 5.894 ns )                    ; clock:inst|clk_sig_rxd[2] ; clock:inst|clk_sig_rxd[4] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.185 ns                ;
+; N/A                                     ; 169.78 MHz ( period = 5.890 ns )                    ; clock:inst|clk_sig_rxd[0] ; clock:inst|clk_sig_rxd[6] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.181 ns                ;
+; N/A                                     ; 171.26 MHz ( period = 5.839 ns )                    ; clock:inst|clk_sig_rxd[4] ; clock:inst|clk_sig_rxd[5] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.130 ns                ;
+; N/A                                     ; 171.79 MHz ( period = 5.821 ns )                    ; clock:inst|clk_sig_rxd[4] ; clock:inst|clk_sig_rxd[7] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.112 ns                ;
+; N/A                                     ; 172.74 MHz ( period = 5.789 ns )                    ; clock:inst|clk_sig_rxd[3] ; clock:inst|clk_sig_rxd[8] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.080 ns                ;
+; N/A                                     ; 173.01 MHz ( period = 5.780 ns )                    ; clock:inst|clk_sig_rxd[3] ; clock:inst|clk_sig_rxd[5] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.071 ns                ;
+; N/A                                     ; 173.55 MHz ( period = 5.762 ns )                    ; clock:inst|clk_sig_rxd[3] ; clock:inst|clk_sig_rxd[7] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.053 ns                ;
+; N/A                                     ; 173.73 MHz ( period = 5.756 ns )                    ; clock:inst|clk_sig_rxd[3] ; clock:inst|clk_sig_rxd[4] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.047 ns                ;
+; N/A                                     ; 173.94 MHz ( period = 5.749 ns )                    ; clock:inst|clk_sig_rxd[1] ; clock:inst|clk_sig_rxd[6] ; clk_in     ; clk_in   ; None                        ; None                      ; 5.040 ns                ;
+; N/A                                     ; 174.67 MHz ( period = 5.725 ns )                    ; uart:inst1|h[1]           ; uart:inst1|i              ; clk_in     ; clk_in   ; None                        ; None                      ; 5.016 ns                ;
+; N/A                                     ; 176.77 MHz ( period = 5.657 ns )                    ; clock:inst|clk_sig_rxd[2] ; clock:inst|clk_sig_rxd[6] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.948 ns                ;
+; N/A                                     ; 179.28 MHz ( period = 5.578 ns )                    ; clock:inst|clk_sig_rxd[4] ; clock:inst|clk_sig_rxd[6] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.869 ns                ;
+; N/A                                     ; 179.47 MHz ( period = 5.572 ns )                    ; clock:inst|clk_sig_rxd[0] ; clock:inst|clk_sig_rxd[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.863 ns                ;
+; N/A                                     ; 179.50 MHz ( period = 5.571 ns )                    ; clock:inst|clk_sig_rxd[2] ; clock:inst|clk_sig_rxd[8] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.862 ns                ;
+; N/A                                     ; 179.63 MHz ( period = 5.567 ns )                    ; uart:inst1|h[0]           ; uart:inst1|i              ; clk_in     ; clk_in   ; None                        ; None                      ; 4.858 ns                ;
+; N/A                                     ; 179.79 MHz ( period = 5.562 ns )                    ; clock:inst|clk_sig_rxd[6] ; clock:inst|clk_sig_rxd[7] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.853 ns                ;
+; N/A                                     ; 181.19 MHz ( period = 5.519 ns )                    ; clock:inst|clk_sig_rxd[3] ; clock:inst|clk_sig_rxd[6] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.810 ns                ;
+; N/A                                     ; 181.82 MHz ( period = 5.500 ns )                    ; clock:inst|clk_sig_rxd[0] ; clock:inst|clk_sig_rxd[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.791 ns                ;
+; N/A                                     ; 182.65 MHz ( period = 5.475 ns )                    ; clock:inst|clk_sig_rxd[5] ; clock:inst|clk_sig_rxd[7] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.766 ns                ;
+; N/A                                     ; 184.13 MHz ( period = 5.431 ns )                    ; clock:inst|clk_sig_rxd[1] ; clock:inst|clk_sig_rxd[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.722 ns                ;
+; N/A                                     ; 185.01 MHz ( period = 5.405 ns )                    ; uart:inst1|h[3]           ; uart:inst1|i              ; clk_in     ; clk_in   ; None                        ; None                      ; 4.696 ns                ;
+; N/A                                     ; 186.15 MHz ( period = 5.372 ns )                    ; uart:inst1|a[0]           ; uart:inst1|a[3]           ; clk_in     ; clk_in   ; None                        ; None                      ; 4.663 ns                ;
+; N/A                                     ; 186.60 MHz ( period = 5.359 ns )                    ; clock:inst|clk_sig_rxd[1] ; clock:inst|clk_sig_rxd[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.650 ns                ;
+; N/A                                     ; 187.30 MHz ( period = 5.339 ns )                    ; clock:inst|clk_sig_rxd[2] ; clock:inst|clk_sig_rxd[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.630 ns                ;
+; N/A                                     ; 187.34 MHz ( period = 5.338 ns )                    ; uart:inst1|h[1]           ; uart:inst1|rxd_out[7]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.629 ns                ;
+; N/A                                     ; 187.34 MHz ( period = 5.338 ns )                    ; uart:inst1|h[1]           ; uart:inst1|rxd_out[6]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.629 ns                ;
+; N/A                                     ; 187.34 MHz ( period = 5.338 ns )                    ; uart:inst1|h[1]           ; uart:inst1|rxd_out[1]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.629 ns                ;
+; N/A                                     ; 189.32 MHz ( period = 5.282 ns )                    ; clock:inst|clk_sig_rxd[0] ; clock:inst|clk_sig_rxd[8] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.573 ns                ;
+; N/A                                     ; 189.72 MHz ( period = 5.271 ns )                    ; clock:inst|clk_sig_rxd[5] ; clock:inst|clk_sig_rxd[8] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.562 ns                ;
+; N/A                                     ; 192.79 MHz ( period = 5.187 ns )                    ; uart:inst1|a[2]           ; uart:inst1|d              ; clk_in     ; clk_in   ; None                        ; None                      ; 4.478 ns                ;
+; N/A                                     ; 193.05 MHz ( period = 5.180 ns )                    ; uart:inst1|h[0]           ; uart:inst1|rxd_out[7]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.471 ns                ;
+; N/A                                     ; 193.05 MHz ( period = 5.180 ns )                    ; uart:inst1|h[0]           ; uart:inst1|rxd_out[6]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.471 ns                ;
+; N/A                                     ; 193.05 MHz ( period = 5.180 ns )                    ; uart:inst1|h[0]           ; uart:inst1|rxd_out[1]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.471 ns                ;
+; N/A                                     ; 194.51 MHz ( period = 5.141 ns )                    ; clock:inst|clk_sig_rxd[1] ; clock:inst|clk_sig_rxd[8] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.432 ns                ;
+; N/A                                     ; 195.20 MHz ( period = 5.123 ns )                    ; uart:inst1|h[1]           ; uart:inst1|h[2]           ; clk_in     ; clk_in   ; None                        ; None                      ; 4.414 ns                ;
+; N/A                                     ; 195.27 MHz ( period = 5.121 ns )                    ; clock:inst|clk_sig_rxd[7] ; clock:inst|clk_sig_rxd[8] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.412 ns                ;
+; N/A                                     ; 195.73 MHz ( period = 5.109 ns )                    ; clock:inst|clk_sig_rxd[5] ; clock:inst|clk_sig_rxd[6] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 196.16 MHz ( period = 5.098 ns )                    ; clock:inst|clk_sig_rxd[4] ; clock:inst|clk_sig_rxd[4] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.389 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; uart:inst1|rec_sig[8]     ; uart:inst1|rxd_out[4]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.386 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; uart:inst1|rec_sig[8]     ; uart:inst1|rxd_out[3]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.386 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; uart:inst1|rec_sig[8]     ; uart:inst1|rxd_out[2]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.386 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; uart:inst1|rec_sig[8]     ; uart:inst1|rxd_out[0]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.386 ns                ;
+; N/A                                     ; 196.93 MHz ( period = 5.078 ns )                    ; clock:inst|clk_sig_rxd[0] ; clock:inst|clk_sig_rxd[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.369 ns                ;
+; N/A                                     ; 197.43 MHz ( period = 5.065 ns )                    ; clock:inst|clk_sig_rxd[0] ; clock:inst|clk_sig_rxd[1] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.356 ns                ;
+; N/A                                     ; 198.18 MHz ( period = 5.046 ns )                    ; clock:inst|clk_sig_rxd[3] ; clock:inst|clk_sig_rxd[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.337 ns                ;
+; N/A                                     ; 198.22 MHz ( period = 5.045 ns )                    ; clock:inst|clk_sig_rxd[3] ; clock:inst|clk_rxd        ; clk_in     ; clk_in   ; None                        ; None                      ; 4.336 ns                ;
+; N/A                                     ; 198.57 MHz ( period = 5.036 ns )                    ; uart:inst1|a[0]           ; uart:inst1|d              ; clk_in     ; clk_in   ; None                        ; None                      ; 4.327 ns                ;
+; N/A                                     ; 199.28 MHz ( period = 5.018 ns )                    ; uart:inst1|h[3]           ; uart:inst1|rxd_out[7]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.309 ns                ;
+; N/A                                     ; 199.28 MHz ( period = 5.018 ns )                    ; uart:inst1|h[3]           ; uart:inst1|rxd_out[6]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.309 ns                ;
+; N/A                                     ; 199.28 MHz ( period = 5.018 ns )                    ; uart:inst1|h[3]           ; uart:inst1|rxd_out[1]     ; clk_in     ; clk_in   ; None                        ; None                      ; 4.309 ns                ;
+; N/A                                     ; 200.36 MHz ( period = 4.991 ns )                    ; uart:inst1|a[1]           ; uart:inst1|c              ; clk_in     ; clk_in   ; None                        ; None                      ; 4.282 ns                ;
+; N/A                                     ; 201.21 MHz ( period = 4.970 ns )                    ; clock:inst|clk_sig_rxd[4] ; clock:inst|clk_sig_rxd[8] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.261 ns                ;
+; N/A                                     ; 205.21 MHz ( period = 4.873 ns )                    ; uart:inst1|h[2]           ; uart:inst1|h[1]           ; clk_in     ; clk_in   ; None                        ; None                      ; 4.164 ns                ;
+; N/A                                     ; 205.25 MHz ( period = 4.872 ns )                    ; uart:inst1|h[2]           ; uart:inst1|h[3]           ; clk_in     ; clk_in   ; None                        ; None                      ; 4.163 ns                ;
+; N/A                                     ; 206.87 MHz ( period = 4.834 ns )                    ; clock:inst|clk_sig_rxd[6] ; clock:inst|clk_sig_rxd[8] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.125 ns                ;
+; N/A                                     ; 207.13 MHz ( period = 4.828 ns )                    ; clock:inst|clk_sig_rxd[2] ; clock:inst|clk_sig_rxd[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 4.119 ns                ;
+; N/A                                     ; 207.17 MHz ( period = 4.827 ns )                    ; clock:inst|clk_sig_rxd[2] ; clock:inst|clk_rxd        ; clk_in     ; clk_in   ; None                        ; None                      ; 4.118 ns                ;
+; N/A                                     ; 212.77 MHz ( period = 4.700 ns )                    ; clock:inst|clk_sig_rxd[7] ; clock:inst|clk_sig_rxd[7] ; clk_in     ; clk_in   ; None                        ; None                      ; 3.991 ns                ;
+; N/A                                     ; 218.87 MHz ( period = 4.569 ns )                    ; clock:inst|clk_sig_rxd[3] ; clock:inst|clk_sig_rxd[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 3.860 ns                ;
+; N/A                                     ; 219.88 MHz ( period = 4.548 ns )                    ; clock:inst|clk_sig_rxd[5] ; clock:inst|clk_sig_rxd[5] ; clk_in     ; clk_in   ; None                        ; None                      ; 3.839 ns                ;
+; N/A                                     ; 221.63 MHz ( period = 4.512 ns )                    ; uart:inst1|a[1]           ; uart:inst1|a[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.803 ns                ;
+; N/A                                     ; 221.78 MHz ( period = 4.509 ns )                    ; uart:inst1|a[1]           ; uart:inst1|a[2]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.800 ns                ;
+; N/A                                     ; 221.98 MHz ( period = 4.505 ns )                    ; uart:inst1|g[2]           ; uart:inst1|g[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.796 ns                ;
+; N/A                                     ; 222.12 MHz ( period = 4.502 ns )                    ; uart:inst1|g[1]           ; uart:inst1|g[2]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.793 ns                ;
+; N/A                                     ; 222.12 MHz ( period = 4.502 ns )                    ; clock:inst|clk_sig_rxd[3] ; clock:inst|clk_sig_rxd[3] ; clk_in     ; clk_in   ; None                        ; None                      ; 3.793 ns                ;
+; N/A                                     ; 222.42 MHz ( period = 4.496 ns )                    ; uart:inst1|g[2]           ; uart:inst1|g[3]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.787 ns                ;
+; N/A                                     ; 225.23 MHz ( period = 4.440 ns )                    ; clock:inst|clk_sig_rxd[6] ; clock:inst|clk_sig_rxd[6] ; clk_in     ; clk_in   ; None                        ; None                      ; 3.731 ns                ;
+; N/A                                     ; 226.35 MHz ( period = 4.418 ns )                    ; clock:inst|clk_sig_rxd[5] ; clock:inst|clk_sig_rxd[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 3.709 ns                ;
+; N/A                                     ; 229.83 MHz ( period = 4.351 ns )                    ; clock:inst|clk_sig_rxd[2] ; clock:inst|clk_sig_rxd[0] ; clk_in     ; clk_in   ; None                        ; None                      ; 3.642 ns                ;
+; N/A                                     ; 230.79 MHz ( period = 4.333 ns )                    ; uart:inst1|g[0]           ; uart:inst1|g[2]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.624 ns                ;
+; N/A                                     ; 231.59 MHz ( period = 4.318 ns )                    ; uart:inst1|rec_sig[8]     ; uart:inst1|rxd_out[5]     ; clk_in     ; clk_in   ; None                        ; None                      ; 3.609 ns                ;
+; N/A                                     ; 231.75 MHz ( period = 4.315 ns )                    ; uart:inst1|a[3]           ; uart:inst1|c              ; clk_in     ; clk_in   ; None                        ; None                      ; 3.606 ns                ;
+; N/A                                     ; 232.99 MHz ( period = 4.292 ns )                    ; uart:inst1|h[0]           ; uart:inst1|h[1]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.583 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; uart:inst1|h[0]           ; uart:inst1|h[3]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.582 ns                ;
+; N/A                                     ; 234.30 MHz ( period = 4.268 ns )                    ; clock:inst|clk_sig_rxd[7] ; clock:inst|clk_sig_rxd[2] ; clk_in     ; clk_in   ; None                        ; None                      ; 3.559 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                           ;                           ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+---------------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'clk_in'                                                                                                                                                                         ;
++------------------------------------------+--------------+-----------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From         ; To                    ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+--------------+-----------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; uart:inst1|e ; uart:inst1|g[1]       ; clk_in     ; clk_in   ; None                       ; None                       ; 1.549 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|b ; uart:inst1|a[1]       ; clk_in     ; clk_in   ; None                       ; None                       ; 1.563 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|b ; uart:inst1|d          ; clk_in     ; clk_in   ; None                       ; None                       ; 2.026 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|b ; uart:inst1|a[3]       ; clk_in     ; clk_in   ; None                       ; None                       ; 2.155 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|b ; uart:inst1|c          ; clk_in     ; clk_in   ; None                       ; None                       ; 3.233 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|b ; uart:inst1|a[2]       ; clk_in     ; clk_in   ; None                       ; None                       ; 3.270 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|b ; uart:inst1|a[0]       ; clk_in     ; clk_in   ; None                       ; None                       ; 3.270 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|e ; uart:inst1|g[2]       ; clk_in     ; clk_in   ; None                       ; None                       ; 3.446 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|e ; uart:inst1|i          ; clk_in     ; clk_in   ; None                       ; None                       ; 3.910 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|e ; uart:inst1|h[2]       ; clk_in     ; clk_in   ; None                       ; None                       ; 3.915 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|e ; uart:inst1|g[3]       ; clk_in     ; clk_in   ; None                       ; None                       ; 4.049 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|e ; uart:inst1|g[0]       ; clk_in     ; clk_in   ; None                       ; None                       ; 4.049 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|e ; uart:inst1|rec_sig[8] ; clk_in     ; clk_in   ; None                       ; None                       ; 4.862 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|e ; uart:inst1|h[3]       ; clk_in     ; clk_in   ; None                       ; None                       ; 4.862 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|e ; uart:inst1|h[1]       ; clk_in     ; clk_in   ; None                       ; None                       ; 4.862 ns                 ;
+; Not operational: Clock Skew > Data Delay ; uart:inst1|e ; uart:inst1|h[0]       ; clk_in     ; clk_in   ; None                       ; None                       ; 4.862 ns                 ;
++------------------------------------------+--------------+-----------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++-------------------------------------------------------------------------------+
+; tsu                                                                           ;
++-------+--------------+------------+--------+-----------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From   ; To                    ; To Clock ;
++-------+--------------+------------+--------+-----------------------+----------+
+; N/A   ; None         ; 1.825 ns   ; rxd_in ; uart:inst1|j          ; clk_in   ;
+; N/A   ; None         ; -3.430 ns  ; rxd_in ; uart:inst1|rec_sig[8] ; clk_in   ;
+; N/A   ; None         ; -3.890 ns  ; rxd_in ; uart:inst1|d          ; clk_in   ;
++-------+--------------+------------+--------+-----------------------+----------+
+
+
++-------------------------------------------------------------------------------------+
+; tco                                                                                 ;
++-------+--------------+------------+-----------------------+------------+------------+
+; Slack ; Required tco ; Actual tco ; From                  ; To         ; From Clock ;
++-------+--------------+------------+-----------------------+------------+------------+
+; N/A   ; None         ; 14.735 ns  ; uart:inst1|rxd_out[0] ; rxd_out[0] ; clk_in     ;
+; N/A   ; None         ; 14.680 ns  ; uart:inst1|rxd_out[3] ; rxd_out[3] ; clk_in     ;
+; N/A   ; None         ; 14.648 ns  ; uart:inst1|rxd_out[2] ; rxd_out[2] ; clk_in     ;
+; N/A   ; None         ; 14.541 ns  ; uart:inst1|rxd_out[4] ; rxd_out[4] ; clk_in     ;
+; N/A   ; None         ; 14.173 ns  ; uart:inst1|rxd_out[7] ; rxd_out[7] ; clk_in     ;
+; N/A   ; None         ; 13.176 ns  ; uart:inst1|rxd_out[6] ; rxd_out[6] ; clk_in     ;
+; N/A   ; None         ; 13.174 ns  ; uart:inst1|rxd_out[1] ; rxd_out[1] ; clk_in     ;
+; N/A   ; None         ; 12.527 ns  ; uart:inst1|rxd_out[5] ; rxd_out[5] ; clk_in     ;
++-------+--------------+------------+-----------------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------+
+; th                                                                                  ;
++---------------+-------------+-----------+--------+-----------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From   ; To                    ; To Clock ;
++---------------+-------------+-----------+--------+-----------------------+----------+
+; N/A           ; None        ; 4.444 ns  ; rxd_in ; uart:inst1|d          ; clk_in   ;
+; N/A           ; None        ; 3.984 ns  ; rxd_in ; uart:inst1|rec_sig[8] ; clk_in   ;
+; N/A           ; None        ; -1.271 ns ; rxd_in ; uart:inst1|j          ; clk_in   ;
++---------------+-------------+-----------+--------+-----------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Oct 04 16:32:31 2012
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off uart_bdf -c uart_bdf
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk_in" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "clock:inst|clk_rxd" as buffer
+Info: Clock "clk_in" has Internal fmax of 103.08 MHz between source register "uart:inst1|g[0]" and destination register "uart:inst1|rxd_out[4]" (period= 9.701 ns)
+    Info: + Longest register to register delay is 8.992 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X16_Y9_N5; Fanout = 5; REG Node = 'uart:inst1|g[0]'
+        Info: 2: + IC(2.803 ns) + CELL(0.914 ns) = 3.717 ns; Loc. = LC_X16_Y2_N0; Fanout = 4; COMB Node = 'uart:inst1|Equal2~0'
+        Info: 3: + IC(0.744 ns) + CELL(0.740 ns) = 5.201 ns; Loc. = LC_X16_Y2_N1; Fanout = 8; COMB Node = 'uart:inst1|rxd_out[7]~0'
+        Info: 4: + IC(2.548 ns) + CELL(1.243 ns) = 8.992 ns; Loc. = LC_X16_Y8_N5; Fanout = 1; REG Node = 'uart:inst1|rxd_out[4]'
+        Info: Total cell delay = 2.897 ns ( 32.22 % )
+        Info: Total interconnect delay = 6.095 ns ( 67.78 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk_in" to destination register is 9.062 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 14; CLK Node = 'clk_in'
+            Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X12_Y4_N7; Fanout = 33; REG Node = 'clock:inst|clk_rxd'
+            Info: 3: + IC(3.949 ns) + CELL(0.918 ns) = 9.062 ns; Loc. = LC_X16_Y8_N5; Fanout = 1; REG Node = 'uart:inst1|rxd_out[4]'
+            Info: Total cell delay = 3.375 ns ( 37.24 % )
+            Info: Total interconnect delay = 5.687 ns ( 62.76 % )
+        Info: - Longest clock path from clock "clk_in" to source register is 9.062 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 14; CLK Node = 'clk_in'
+            Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X12_Y4_N7; Fanout = 33; REG Node = 'clock:inst|clk_rxd'
+            Info: 3: + IC(3.949 ns) + CELL(0.918 ns) = 9.062 ns; Loc. = LC_X16_Y9_N5; Fanout = 5; REG Node = 'uart:inst1|g[0]'
+            Info: Total cell delay = 3.375 ns ( 37.24 % )
+            Info: Total interconnect delay = 5.687 ns ( 62.76 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Micro setup delay of destination is 0.333 ns
+Warning: Circuit may not operate. Detected 16 non-operational path(s) clocked by clock "clk_in" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "uart:inst1|e" and destination pin or register "uart:inst1|g[1]" for clock "clk_in" (Hold time is 3.539 ns)
+    Info: + Largest clock skew is 5.243 ns
+        Info: + Longest clock path from clock "clk_in" to destination register is 9.062 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 14; CLK Node = 'clk_in'
+            Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X12_Y4_N7; Fanout = 33; REG Node = 'clock:inst|clk_rxd'
+            Info: 3: + IC(3.949 ns) + CELL(0.918 ns) = 9.062 ns; Loc. = LC_X16_Y5_N6; Fanout = 5; REG Node = 'uart:inst1|g[1]'
+            Info: Total cell delay = 3.375 ns ( 37.24 % )
+            Info: Total interconnect delay = 5.687 ns ( 62.76 % )
+        Info: - Shortest clock path from clock "clk_in" to source register is 3.819 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 14; CLK Node = 'clk_in'
+            Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X16_Y5_N9; Fanout = 10; REG Node = 'uart:inst1|e'
+            Info: Total cell delay = 2.081 ns ( 54.49 % )
+            Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+    Info: - Micro clock to output delay of source is 0.376 ns
+    Info: - Shortest register to register delay is 1.549 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X16_Y5_N9; Fanout = 10; REG Node = 'uart:inst1|e'
+        Info: 2: + IC(0.958 ns) + CELL(0.591 ns) = 1.549 ns; Loc. = LC_X16_Y5_N6; Fanout = 5; REG Node = 'uart:inst1|g[1]'
+        Info: Total cell delay = 0.591 ns ( 38.15 % )
+        Info: Total interconnect delay = 0.958 ns ( 61.85 % )
+    Info: + Micro hold delay of destination is 0.221 ns
+Info: tsu for register "uart:inst1|j" (data pin = "rxd_in", clock pin = "clk_in") is 1.825 ns
+    Info: + Longest pin to register delay is 5.311 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_107; Fanout = 3; PIN Node = 'rxd_in'
+        Info: 2: + IC(3.118 ns) + CELL(1.061 ns) = 5.311 ns; Loc. = LC_X16_Y5_N4; Fanout = 3; REG Node = 'uart:inst1|j'
+        Info: Total cell delay = 2.193 ns ( 41.29 % )
+        Info: Total interconnect delay = 3.118 ns ( 58.71 % )
+    Info: + Micro setup delay of destination is 0.333 ns
+    Info: - Shortest clock path from clock "clk_in" to destination register is 3.819 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 14; CLK Node = 'clk_in'
+        Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X16_Y5_N4; Fanout = 3; REG Node = 'uart:inst1|j'
+        Info: Total cell delay = 2.081 ns ( 54.49 % )
+        Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+Info: tco from clock "clk_in" to destination pin "rxd_out[0]" through register "uart:inst1|rxd_out[0]" is 14.735 ns
+    Info: + Longest clock path from clock "clk_in" to source register is 9.062 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 14; CLK Node = 'clk_in'
+        Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X12_Y4_N7; Fanout = 33; REG Node = 'clock:inst|clk_rxd'
+        Info: 3: + IC(3.949 ns) + CELL(0.918 ns) = 9.062 ns; Loc. = LC_X16_Y8_N1; Fanout = 1; REG Node = 'uart:inst1|rxd_out[0]'
+        Info: Total cell delay = 3.375 ns ( 37.24 % )
+        Info: Total interconnect delay = 5.687 ns ( 62.76 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Longest register to pin delay is 5.297 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X16_Y8_N1; Fanout = 1; REG Node = 'uart:inst1|rxd_out[0]'
+        Info: 2: + IC(2.975 ns) + CELL(2.322 ns) = 5.297 ns; Loc. = PIN_79; Fanout = 0; PIN Node = 'rxd_out[0]'
+        Info: Total cell delay = 2.322 ns ( 43.84 % )
+        Info: Total interconnect delay = 2.975 ns ( 56.16 % )
+Info: th for register "uart:inst1|d" (data pin = "rxd_in", clock pin = "clk_in") is 4.444 ns
+    Info: + Longest clock path from clock "clk_in" to destination register is 9.062 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 14; CLK Node = 'clk_in'
+        Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X12_Y4_N7; Fanout = 33; REG Node = 'clock:inst|clk_rxd'
+        Info: 3: + IC(3.949 ns) + CELL(0.918 ns) = 9.062 ns; Loc. = LC_X16_Y5_N3; Fanout = 2; REG Node = 'uart:inst1|d'
+        Info: Total cell delay = 3.375 ns ( 37.24 % )
+        Info: Total interconnect delay = 5.687 ns ( 62.76 % )
+    Info: + Micro hold delay of destination is 0.221 ns
+    Info: - Shortest pin to register delay is 4.839 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_107; Fanout = 3; PIN Node = 'rxd_in'
+        Info: 2: + IC(3.116 ns) + CELL(0.591 ns) = 4.839 ns; Loc. = LC_X16_Y5_N3; Fanout = 2; REG Node = 'uart:inst1|d'
+        Info: Total cell delay = 1.723 ns ( 35.61 % )
+        Info: Total interconnect delay = 3.116 ns ( 64.39 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 165 megabytes
+    Info: Processing ended: Thu Oct 04 16:32:31 2012
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

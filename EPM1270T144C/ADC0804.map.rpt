@@ -1,0 +1,288 @@
+Analysis & Synthesis report for ADC0804
+Thu Oct 18 15:53:44 2012
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (No Restructuring Performed)
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Oct 18 15:53:44 2012        ;
+; Quartus II Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name               ; ADC0804                                      ;
+; Top-level Entity Name       ; ADC0804                                      ;
+; Family                      ; MAX II                                       ;
+; Total logic elements        ; 19                                           ;
+; Total pins                  ; 22                                           ;
+; Total virtual pins          ; 0                                            ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
++-----------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EPM1270T144C5      ;                    ;
+; Top-level entity name                                                      ; ADC0804            ; ADC0804            ;
+; Family name                                                                ; MAX II             ; Stratix II         ;
+; Optimization Technique                                                     ; Speed              ; Balanced           ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+
+; ADC0804.vhd                      ; yes             ; User VHDL File  ; C:/Users/Administrator/Desktop/EPM1270T144C/ADC0804.vhd ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Total logic elements                        ; 19      ;
+;     -- Combinational with no register       ; 19      ;
+;     -- Register only                        ; 0       ;
+;     -- Combinational with a register        ; 0       ;
+;                                             ;         ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 2       ;
+;     -- 3 input functions                    ; 13      ;
+;     -- 2 input functions                    ; 4       ;
+;     -- 1 input functions                    ; 0       ;
+;     -- 0 input functions                    ; 0       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 19      ;
+;     -- arithmetic mode                      ; 0       ;
+;     -- qfbk mode                            ; 0       ;
+;     -- register cascade mode                ; 0       ;
+;     -- synchronous clear/load mode          ; 0       ;
+;     -- asynchronous clear/load mode         ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+; I/O pins                                    ; 22      ;
+; Maximum fan-out node                        ; Mux11~1 ;
+; Maximum fan-out                             ; 9       ;
+; Total fan-out                               ; 66      ;
+; Average fan-out                             ; 1.61    ;
++---------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; |ADC0804                   ; 19 (19)     ; 0            ; 0          ; 22   ; 0            ; 19 (19)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ADC0804            ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; CS$latch                                            ; Mux15               ; yes                    ;
+; WR$latch                                            ; Mux15               ; yes                    ;
+; RD$latch                                            ; Mux15               ; yes                    ;
+; Data_out[0]$latch                                   ; Mux11               ; yes                    ;
+; Data_out[1]$latch                                   ; Mux11               ; yes                    ;
+; Data_out[2]$latch                                   ; Mux11               ; yes                    ;
+; Data_out[3]$latch                                   ; Mux11               ; yes                    ;
+; Data_out[4]$latch                                   ; Mux11               ; yes                    ;
+; Data_out[5]$latch                                   ; Mux11               ; yes                    ;
+; Data_out[6]$latch                                   ; Mux11               ; yes                    ;
+; Data_out[7]$latch                                   ; Mux11               ; yes                    ;
+; sta[0]                                              ; Mux10               ; yes                    ;
+; sta[1]                                              ; Mux10               ; yes                    ;
+; Number of user-specified and inferred latches = 13  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |ADC0804|Mux0              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Oct 18 15:53:43 2012
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ADC0804 -c ADC0804
+Info: Found 2 design units, including 1 entities, in source file adc0804.vhd
+    Info: Found design unit 1: ADC0804-a
+    Info: Found entity 1: ADC0804
+Info: Elaborating entity "ADC0804" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at ADC0804.vhd(27): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ADC0804.vhd(36): signal "INTR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ADC0804.vhd(46): signal "Data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ADC0804.vhd(20): inferring latch(es) for signal or variable "CS", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ADC0804.vhd(20): inferring latch(es) for signal or variable "WR", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ADC0804.vhd(20): inferring latch(es) for signal or variable "RD", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ADC0804.vhd(20): inferring latch(es) for signal or variable "sta", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ADC0804.vhd(20): inferring latch(es) for signal or variable "Data_out", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Data_out[0]" at ADC0804.vhd(20)
+Info (10041): Inferred latch for "Data_out[1]" at ADC0804.vhd(20)
+Info (10041): Inferred latch for "Data_out[2]" at ADC0804.vhd(20)
+Info (10041): Inferred latch for "Data_out[3]" at ADC0804.vhd(20)
+Info (10041): Inferred latch for "Data_out[4]" at ADC0804.vhd(20)
+Info (10041): Inferred latch for "Data_out[5]" at ADC0804.vhd(20)
+Info (10041): Inferred latch for "Data_out[6]" at ADC0804.vhd(20)
+Info (10041): Inferred latch for "Data_out[7]" at ADC0804.vhd(20)
+Info (10041): Inferred latch for "sta[0]" at ADC0804.vhd(20)
+Info (10041): Inferred latch for "sta[1]" at ADC0804.vhd(20)
+Info (10041): Inferred latch for "RD" at ADC0804.vhd(20)
+Info (10041): Inferred latch for "WR" at ADC0804.vhd(20)
+Info (10041): Inferred latch for "CS" at ADC0804.vhd(20)
+Warning: Latch CS$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal sta[1]
+Warning: Latch WR$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal sta[1]
+Warning: Latch RD$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal sta[1]
+Warning: Latch sta[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal sta[1]
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk_in"
+Info: Implemented 41 device resources after synthesis - the final resource count might be different
+    Info: Implemented 11 input pins
+    Info: Implemented 11 output pins
+    Info: Implemented 19 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 222 megabytes
+    Info: Processing ended: Thu Oct 18 15:53:44 2012
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

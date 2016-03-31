@@ -1,0 +1,15 @@
+|led_test
+led_com[0] <= <VCC>
+led_com[1] <= <GND>
+led_com[2] <= <GND>
+led_com[3] <= <GND>
+led_out[0] <= <GND>
+led_out[1] <= <GND>
+led_out[2] <= <GND>
+led_out[3] <= <GND>
+led_out[4] <= <GND>
+led_out[5] <= <GND>
+led_out[6] <= <GND>
+led_out[7] <= <VCC>
+
+

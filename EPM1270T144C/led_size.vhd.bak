@@ -1,0 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity led_size is 
+port(
+		clk_in: in std_logic;
+		sw_r : in std_logic_vector(3 downto 0);
+		sw_l : in std_logic_vector(3 downto 0);
+		led_out: out std_logic_vector(3 downto 0);
+		led_sig_in:out std_logic_vector(3 downto 0)
+);
+end led_size;
+
+architecture a of led_size is
+signal led_sig : std_logic_vector(3 downto 0):="0001"; 
+signal sw_size : std_logic_vector(3 downto 0):="0000";
+begin
+	process(clk_in)
+		begin
+			if clk_in'event and clk_in='1' then 
+				led_sig<=led_sig(2 downto 0) & led_sig(3);
+					if led_sig="0100" then 
+						led_sig<="0001";
+					end if;
+			end if;
+	end process;
+	process(sw_r,sw_l)
+		begin
+			if sw_r>sw_l then 
+				sw_size<="1010";
+			elsif sw_r<sw_l then
+				sw_size<="1011";
+			elsif sw_r=sw_l then
+				sw_size<="1100";
+			else
+			
+			end if;
+	end process;
+	led_sig_in<=led_sig;
+with led_sig select 
+	led_out<=sw_r when "0001",
+		    sw_size when "0010",
+		    sw_l when "0100",
+		    "0000" when others;
+	
+end a;

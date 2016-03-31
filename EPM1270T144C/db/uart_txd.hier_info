@@ -1,0 +1,24 @@
+|uart_txd
+clk_in => txd_out~reg0.CLK
+clk_in => dir_sig[0].CLK
+clk_in => dir_sig[1].CLK
+clk_in => dir_sig[2].CLK
+clk_in => dir_sig[3].CLK
+clk_in => dir[0].CLK
+clk_in => dir[1].CLK
+clk_in => dir[2].CLK
+clk_in => dir[3].CLK
+txd_ck => dir[3].IN1
+txd_ck => txd_out~reg0.ENA
+txd_ck => dir[3].ENA
+txd_ck => dir[2].ENA
+txd_ck => dir[1].ENA
+txd_ck => dir[0].ENA
+txd_ck => dir_sig[3].ENA
+txd_ck => dir_sig[2].ENA
+txd_ck => dir_sig[1].ENA
+txd_ck => dir_sig[0].ENA
+sel_sig <= <GND>
+txd_out <= txd_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

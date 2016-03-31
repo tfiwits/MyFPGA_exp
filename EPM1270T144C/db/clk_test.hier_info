@@ -1,0 +1,6 @@
+|clk_test
+clk_in => clk_out_sig.CLK
+clk_in => clk_sig.CLK
+clk_out_1hz <= clk_out_sig.DB_MAX_OUTPUT_PORT_TYPE
+
+

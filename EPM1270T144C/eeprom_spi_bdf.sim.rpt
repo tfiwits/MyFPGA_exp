@@ -1,0 +1,1124 @@
+Simulator report for eeprom_spi_bdf
+Tue Oct 23 10:21:42 2012
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 20.0 ms       ;
+; Simulation Netlist Size     ; 409 nodes     ;
+; Simulation Coverage         ;      32.19 %  ;
+; Total Number of Transitions ; 37403017      ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270T144C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      32.19 % ;
+; Total nodes checked                                 ; 409          ;
+; Total output ports checked                          ; 584          ;
+; Total output ports with complete 1/0-value coverage ; 188          ;
+; Total output ports with no 1/0-value coverage       ; 370          ;
+; Total output ports with no 1-value coverage         ; 380          ;
+; Total output ports with no 0-value coverage         ; 386          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                          ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; Node Name                                       ; Output Port Name                                ; Output Port Type ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp_s       ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp_s       ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_txd_sig          ; |eeprom_spi_bdf|clock:inst|clk_txd_sig          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~0    ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~0    ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan2~0    ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan2~0    ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~3        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~3        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~0         ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~0         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~1         ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~1         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~2         ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~2         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~3         ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~3         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~5         ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~5         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~6         ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~6         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st[0]          ; |eeprom_spi_bdf|eeprom_spi:inst1|st[0]          ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[2]       ; |eeprom_spi_bdf|clock:inst|clk_sig_txd[2]       ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[3]       ; |eeprom_spi_bdf|clock:inst|clk_sig_txd[3]       ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[0]       ; |eeprom_spi_bdf|clock:inst|clk_sig_txd[0]       ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[1]       ; |eeprom_spi_bdf|clock:inst|Equal5~0             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[1]       ; |eeprom_spi_bdf|clock:inst|clk_sig_txd[1]       ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[7]       ; |eeprom_spi_bdf|clock:inst|clk_sig_txd[7]       ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[5]       ; |eeprom_spi_bdf|clock:inst|clk_sig_txd[5]       ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[6]       ; |eeprom_spi_bdf|clock:inst|clk_sig_txd[6]       ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[4]       ; |eeprom_spi_bdf|clock:inst|Equal5~1             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[4]       ; |eeprom_spi_bdf|clock:inst|clk_sig_txd[4]       ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[9]       ; |eeprom_spi_bdf|clock:inst|clk_sig_txd[9]       ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[11]      ; |eeprom_spi_bdf|clock:inst|clk_sig_txd[11]      ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[10]      ; |eeprom_spi_bdf|clock:inst|clk_sig_txd[10]      ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[8]       ; |eeprom_spi_bdf|clock:inst|Equal5~2             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_txd[8]       ; |eeprom_spi_bdf|clock:inst|clk_sig_txd[8]       ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~8         ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~8         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~8         ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~10        ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~14        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~14        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~14        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~16        ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~20        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~20        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~188       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~188       ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~188       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~190       ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~0               ; |eeprom_spi_bdf|clock:inst|Add5~0               ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add5~0               ; |eeprom_spi_bdf|clock:inst|Add5~2COUT1_72       ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add5~5               ; |eeprom_spi_bdf|clock:inst|Add5~5               ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add5~5               ; |eeprom_spi_bdf|clock:inst|Add5~7COUT1_74       ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add5~10              ; |eeprom_spi_bdf|clock:inst|Add5~10              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add5~10              ; |eeprom_spi_bdf|clock:inst|Add5~12              ; cout             ;
+; |eeprom_spi_bdf|clock:inst|Add5~15              ; |eeprom_spi_bdf|clock:inst|Add5~15              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add5~15              ; |eeprom_spi_bdf|clock:inst|Add5~17COUT1_70      ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add5~20              ; |eeprom_spi_bdf|clock:inst|Add5~20              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add5~20              ; |eeprom_spi_bdf|clock:inst|Add5~22              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~25              ; |eeprom_spi_bdf|clock:inst|Add5~25              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add5~25              ; |eeprom_spi_bdf|clock:inst|Add5~27COUT1_76      ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add5~30              ; |eeprom_spi_bdf|clock:inst|Add5~30              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add5~30              ; |eeprom_spi_bdf|clock:inst|Add5~32              ; cout             ;
+; |eeprom_spi_bdf|clock:inst|Add5~35              ; |eeprom_spi_bdf|clock:inst|Add5~35              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add5~35              ; |eeprom_spi_bdf|clock:inst|Add5~37              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~40              ; |eeprom_spi_bdf|clock:inst|Add5~40              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add5~40              ; |eeprom_spi_bdf|clock:inst|Add5~42              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~45              ; |eeprom_spi_bdf|clock:inst|Add5~45              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add5~50              ; |eeprom_spi_bdf|clock:inst|Add5~50              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add5~50              ; |eeprom_spi_bdf|clock:inst|Add5~52              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~55              ; |eeprom_spi_bdf|clock:inst|Add5~55              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add5~55              ; |eeprom_spi_bdf|clock:inst|Add5~57              ; cout             ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[16] ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[16] ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[17] ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[17] ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[18] ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[18] ; regout           ;
+; |eeprom_spi_bdf|clock:inst|Equal7~0             ; |eeprom_spi_bdf|clock:inst|Equal7~0             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[14] ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[14] ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[13] ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[13] ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[12] ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[12] ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[15] ; |eeprom_spi_bdf|clock:inst|Equal7~1             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[15] ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[15] ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[9]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[9]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[10] ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[10] ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[8]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[8]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[11] ; |eeprom_spi_bdf|clock:inst|Equal7~2             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[11] ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[11] ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[6]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[6]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[5]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[5]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[4]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[4]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[7]  ; |eeprom_spi_bdf|clock:inst|Equal7~3             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[7]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[7]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[2]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[2]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[1]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[1]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[0]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[0]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[3]  ; |eeprom_spi_bdf|clock:inst|Equal7~4             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[3]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[3]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|Equal7~5             ; |eeprom_spi_bdf|clock:inst|Equal7~5             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_key_2ms          ; |eeprom_spi_bdf|clock:inst|clk_key_2ms          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~197       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~197       ; cout             ;
+; |eeprom_spi_bdf|clock:inst|Add7~0               ; |eeprom_spi_bdf|clock:inst|Add7~0               ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~0               ; |eeprom_spi_bdf|clock:inst|Add7~2COUT1_144      ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~5               ; |eeprom_spi_bdf|clock:inst|Add7~5               ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~5               ; |eeprom_spi_bdf|clock:inst|Add7~7COUT1_146      ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~10              ; |eeprom_spi_bdf|clock:inst|Add7~10              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~10              ; |eeprom_spi_bdf|clock:inst|Add7~12COUT1_148     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~15              ; |eeprom_spi_bdf|clock:inst|Add7~15              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~20              ; |eeprom_spi_bdf|clock:inst|Add7~20              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~20              ; |eeprom_spi_bdf|clock:inst|Add7~22              ; cout             ;
+; |eeprom_spi_bdf|clock:inst|Add7~25              ; |eeprom_spi_bdf|clock:inst|Add7~25              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~25              ; |eeprom_spi_bdf|clock:inst|Add7~27COUT1_142     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~30              ; |eeprom_spi_bdf|clock:inst|Add7~30              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~30              ; |eeprom_spi_bdf|clock:inst|Add7~32              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~35              ; |eeprom_spi_bdf|clock:inst|Add7~35              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~35              ; |eeprom_spi_bdf|clock:inst|Add7~37              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~40              ; |eeprom_spi_bdf|clock:inst|Add7~40              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~40              ; |eeprom_spi_bdf|clock:inst|Add7~42              ; cout             ;
+; |eeprom_spi_bdf|clock:inst|Add7~45              ; |eeprom_spi_bdf|clock:inst|Add7~45              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~45              ; |eeprom_spi_bdf|clock:inst|Add7~47              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~50              ; |eeprom_spi_bdf|clock:inst|Add7~50              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~50              ; |eeprom_spi_bdf|clock:inst|Add7~52              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~55              ; |eeprom_spi_bdf|clock:inst|Add7~55              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~55              ; |eeprom_spi_bdf|clock:inst|Add7~57COUT1_132     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~60              ; |eeprom_spi_bdf|clock:inst|Add7~60              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~60              ; |eeprom_spi_bdf|clock:inst|Add7~62COUT1_128     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~65              ; |eeprom_spi_bdf|clock:inst|Add7~65              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~65              ; |eeprom_spi_bdf|clock:inst|Add7~67COUT1_130     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~70              ; |eeprom_spi_bdf|clock:inst|Add7~70              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~70              ; |eeprom_spi_bdf|clock:inst|Add7~72COUT1_126     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~75              ; |eeprom_spi_bdf|clock:inst|Add7~75              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~75              ; |eeprom_spi_bdf|clock:inst|Add7~77              ; cout             ;
+; |eeprom_spi_bdf|clock:inst|Add7~80              ; |eeprom_spi_bdf|clock:inst|Add7~80              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~80              ; |eeprom_spi_bdf|clock:inst|Add7~82              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~80              ; |eeprom_spi_bdf|clock:inst|Add7~82COUT1_124     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~85              ; |eeprom_spi_bdf|clock:inst|Add7~85              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~85              ; |eeprom_spi_bdf|clock:inst|Add7~87              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~85              ; |eeprom_spi_bdf|clock:inst|Add7~87COUT1_122     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~90              ; |eeprom_spi_bdf|clock:inst|Add7~90              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~90              ; |eeprom_spi_bdf|clock:inst|Add7~92              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~90              ; |eeprom_spi_bdf|clock:inst|Add7~92COUT1_120     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~95              ; |eeprom_spi_bdf|clock:inst|Add7~95              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add7~95              ; |eeprom_spi_bdf|clock:inst|Add7~97              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~95              ; |eeprom_spi_bdf|clock:inst|Add7~97COUT1_118     ; cout1            ;
+; |eeprom_spi_bdf|key:inst4|key_st[1]             ; |eeprom_spi_bdf|key:inst4|key_st[1]             ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[16]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[16]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[0]   ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[0]   ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[2]   ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[2]   ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[3]   ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[3]   ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[1]   ; |eeprom_spi_bdf|clock:inst|Equal6~0             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[1]   ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[1]   ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[5]   ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[5]   ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[7]   ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[7]   ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[6]   ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[6]   ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[4]   ; |eeprom_spi_bdf|clock:inst|Equal6~1             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[4]   ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[4]   ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[9]   ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[9]   ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[10]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[10]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[11]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[11]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[8]   ; |eeprom_spi_bdf|clock:inst|Equal6~2             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[8]   ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[8]   ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[15]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[15]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[13]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[13]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[14]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[14]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[12]  ; |eeprom_spi_bdf|clock:inst|Equal6~3             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[12]  ; |eeprom_spi_bdf|clock:inst|clk_sig_key_2ms[12]  ; regout           ;
+; |eeprom_spi_bdf|clock:inst|Equal6~4             ; |eeprom_spi_bdf|clock:inst|Equal6~4             ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~0               ; |eeprom_spi_bdf|clock:inst|Add6~0               ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~5               ; |eeprom_spi_bdf|clock:inst|Add6~5               ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~5               ; |eeprom_spi_bdf|clock:inst|Add6~7               ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~5               ; |eeprom_spi_bdf|clock:inst|Add6~7COUT1_100      ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~10              ; |eeprom_spi_bdf|clock:inst|Add6~10              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~10              ; |eeprom_spi_bdf|clock:inst|Add6~12              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~10              ; |eeprom_spi_bdf|clock:inst|Add6~12COUT1_102     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~15              ; |eeprom_spi_bdf|clock:inst|Add6~15              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~15              ; |eeprom_spi_bdf|clock:inst|Add6~17              ; cout             ;
+; |eeprom_spi_bdf|clock:inst|Add6~20              ; |eeprom_spi_bdf|clock:inst|Add6~20              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~20              ; |eeprom_spi_bdf|clock:inst|Add6~22COUT1_104     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~25              ; |eeprom_spi_bdf|clock:inst|Add6~25              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~25              ; |eeprom_spi_bdf|clock:inst|Add6~27COUT1_108     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~30              ; |eeprom_spi_bdf|clock:inst|Add6~30              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~30              ; |eeprom_spi_bdf|clock:inst|Add6~32              ; cout             ;
+; |eeprom_spi_bdf|clock:inst|Add6~35              ; |eeprom_spi_bdf|clock:inst|Add6~35              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~35              ; |eeprom_spi_bdf|clock:inst|Add6~37COUT1_106     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~40              ; |eeprom_spi_bdf|clock:inst|Add6~40              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~40              ; |eeprom_spi_bdf|clock:inst|Add6~42COUT1_110     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~45              ; |eeprom_spi_bdf|clock:inst|Add6~45              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~45              ; |eeprom_spi_bdf|clock:inst|Add6~47              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~50              ; |eeprom_spi_bdf|clock:inst|Add6~50              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~50              ; |eeprom_spi_bdf|clock:inst|Add6~52              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~55              ; |eeprom_spi_bdf|clock:inst|Add6~55              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~55              ; |eeprom_spi_bdf|clock:inst|Add6~57              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~60              ; |eeprom_spi_bdf|clock:inst|Add6~60              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~60              ; |eeprom_spi_bdf|clock:inst|Add6~62              ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~65              ; |eeprom_spi_bdf|clock:inst|Add6~65              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~65              ; |eeprom_spi_bdf|clock:inst|Add6~67COUT1_124     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~70              ; |eeprom_spi_bdf|clock:inst|Add6~70              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~70              ; |eeprom_spi_bdf|clock:inst|Add6~72              ; cout             ;
+; |eeprom_spi_bdf|clock:inst|Add6~75              ; |eeprom_spi_bdf|clock:inst|Add6~75              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~75              ; |eeprom_spi_bdf|clock:inst|Add6~77COUT1_120     ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~80              ; |eeprom_spi_bdf|clock:inst|Add6~80              ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~80              ; |eeprom_spi_bdf|clock:inst|Add6~82COUT1_122     ; cout1            ;
+; |eeprom_spi_bdf|clk_in                          ; |eeprom_spi_bdf|clk_in~corein                   ; combout          ;
+; |eeprom_spi_bdf|di                              ; |eeprom_spi_bdf|di                              ; padio            ;
+; |eeprom_spi_bdf|sk                              ; |eeprom_spi_bdf|sk                              ; padio            ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                               ;
++-----------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                                    ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------------+------------------+
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[7]  ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[7]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[6]  ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[6]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[5]  ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[5]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[4]  ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[4]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[3]  ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[3]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[2]  ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[2]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[1]  ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[1]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[0]  ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[0]        ; regout           ;
+; |eeprom_spi_bdf|key:inst4|row_sig[1]          ; |eeprom_spi_bdf|key:inst4|row_sig[1]                ; regout           ;
+; |eeprom_spi_bdf|key:inst4|row_sig[0]          ; |eeprom_spi_bdf|key:inst4|row_sig[0]                ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~2  ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~2        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~3  ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~3        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~4  ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~4        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~6  ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~6        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~7  ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~7        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~8  ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~8        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~9  ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~9        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~10 ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~10       ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan2~1  ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan2~1        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|sta[1]       ; |eeprom_spi_bdf|eeprom_spi:inst1|sta[1]             ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|sta[0]       ; |eeprom_spi_bdf|eeprom_spi:inst1|sta[0]             ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[5]    ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[5]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|sta[2]       ; |eeprom_spi_bdf|eeprom_spi:inst1|sta[2]             ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~8     ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~8           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|sta~0        ; |eeprom_spi_bdf|eeprom_spi:inst1|sta~0              ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~0      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~0            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux1~14      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux1~14            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~0     ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~0           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~2      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~2            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~4      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~4            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[16]   ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[16]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[14]   ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[14]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[12]   ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[12]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[18]   ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[18]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[19]   ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[19]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[17]   ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[17]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~4       ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~4             ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[15]   ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[15]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[13]   ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[13]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~8       ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~8             ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[7]   ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[7]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~5      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~5            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[6]   ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[6]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[5]   ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[5]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[4]   ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[4]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[3]   ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[3]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[2]   ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[2]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[1]   ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[1]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[0]   ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[0]         ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_key_20ms       ; |eeprom_spi_bdf|clock:inst|clk_key_20ms             ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~8       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~10COUT1_231   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~4      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~4            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~5      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~5            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~14      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~16COUT1_229   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~20      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~22            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~20      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~22COUT1_233   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~26      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~26            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~26      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~28            ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~31      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~31            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~33      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~33            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~33      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~35            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~33      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~35COUT1_235   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~39      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~39            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~39      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~41            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~39      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~41COUT1_237   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~45      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~45            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~45      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~47            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~45      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~47COUT1_239   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~51      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~51            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~51      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~53            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~51      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~53COUT1_241   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~57      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~57            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~57      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~59            ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~63      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~63            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~63      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~65            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~63      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~65COUT1_243   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~69      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~69            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~69      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~71            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~69      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~71COUT1_245   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~75      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~75            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~75      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~77            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~75      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~77COUT1_247   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~81      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~81            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~81      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~83            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~81      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~83COUT1_249   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~87      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~87            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~87      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~89            ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~93      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~93            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~93      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~95            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~93      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~95COUT1_251   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~99      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~99            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~99      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~101           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~99      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~101COUT1_253  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~105     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~105           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~105     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~107           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~105     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~107COUT1_255  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~111     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~111           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~111     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~113           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~111     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~113COUT1_257  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~117     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~117           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~117     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~119           ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~123     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~123           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~123     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~125           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~123     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~125COUT1_259  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~129     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~129           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~129     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~131           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~129     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~131COUT1_261  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~135     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~135           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~135     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~137           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~135     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~137COUT1_263  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~141     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~141           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~141     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~143           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~141     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~143COUT1_265  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~147     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~147           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~147     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~149           ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~153     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~153           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~153     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~155           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~153     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~155COUT1_267  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~159     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~159           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~159     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~161           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~159     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~161COUT1_269  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~165     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~165           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~165     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~167           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~165     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~167COUT1_273  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~171     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~171           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~171     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~173           ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~177     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~177           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~177     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~179           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~177     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~179COUT1_271  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~183     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~183           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[0]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[0]~1          ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[0]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[0]~1COUT1_27  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[1]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[1]~3          ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[1]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[1]~3COUT1_29  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[2]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[2]~5          ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[2]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[2]~5COUT1_31  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[3]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[3]~7          ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[3]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[3]~7COUT1_33  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Equal0~0     ; |eeprom_spi_bdf|eeprom_spi:inst1|Equal0~0           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[4]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[4]~11         ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[5]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[5]~13         ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[5]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[5]~13COUT1_35 ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[6]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[6]~15         ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[6]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[6]~15COUT1_37 ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[7]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[7]~17         ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[7]      ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[7]~17COUT1_39 ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Equal0~1     ; |eeprom_spi_bdf|eeprom_spi:inst1|Equal0~1           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~9     ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~9           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~1     ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~1           ; combout          ;
+; |eeprom_spi_bdf|key:inst4|eep_sig[1]          ; |eeprom_spi_bdf|key:inst4|eep_sig[1]                ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~2     ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~2           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~4     ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~4           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~5     ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~5           ; combout          ;
+; |eeprom_spi_bdf|key:inst4|eep_sig[0]          ; |eeprom_spi_bdf|key:inst4|eep_sig[0]                ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~10    ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~10          ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~11    ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~11          ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~12    ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~12          ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~5      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~5            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~6      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~6            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~8      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~8            ; combout          ;
+; |eeprom_spi_bdf|key:inst4|eep_sig[2]          ; |eeprom_spi_bdf|key:inst4|eep_sig[2]                ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~9      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~9            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux57~0      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux57~0            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|chk~0        ; |eeprom_spi_bdf|eeprom_spi:inst1|chk~0              ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~0       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~0             ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux98~0      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux98~0            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Equal0~2     ; |eeprom_spi_bdf|eeprom_spi:inst1|Equal0~2           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~188     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~190COUT1_227  ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add5~0             ; |eeprom_spi_bdf|clock:inst|Add5~2                   ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~5             ; |eeprom_spi_bdf|clock:inst|Add5~7                   ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~15            ; |eeprom_spi_bdf|clock:inst|Add5~17                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~20            ; |eeprom_spi_bdf|clock:inst|Add5~22COUT1_80          ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add5~25            ; |eeprom_spi_bdf|clock:inst|Add5~27                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~35            ; |eeprom_spi_bdf|clock:inst|Add5~37COUT1_78          ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add5~40            ; |eeprom_spi_bdf|clock:inst|Add5~42COUT1_84          ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add5~50            ; |eeprom_spi_bdf|clock:inst|Add5~52COUT1_82          ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[3]     ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[3]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~0   ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~0         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~1   ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~1         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[1]     ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[1]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[2]     ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[2]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~2   ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~2         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~3   ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~3         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~4   ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~4         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~5   ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~5         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~6   ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~6         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux118~0     ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux118~0           ; combout          ;
+; |eeprom_spi_bdf|key:inst4|key_code[1]         ; |eeprom_spi_bdf|key:inst4|key_code[1]               ; regout           ;
+; |eeprom_spi_bdf|key:inst4|Mux13~2             ; |eeprom_spi_bdf|key:inst4|Mux13~2                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux13~3             ; |eeprom_spi_bdf|key:inst4|Mux13~3                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux14~0             ; |eeprom_spi_bdf|key:inst4|Mux14~0                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux14~1             ; |eeprom_spi_bdf|key:inst4|Mux14~1                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux4~0              ; |eeprom_spi_bdf|key:inst4|Mux4~0                    ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux14~3             ; |eeprom_spi_bdf|key:inst4|Mux14~3                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux12~0             ; |eeprom_spi_bdf|key:inst4|Mux12~0                   ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~6       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~6             ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~6       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~8             ; cout             ;
+; |eeprom_spi_bdf|key:inst4|Mux11~0             ; |eeprom_spi_bdf|key:inst4|Mux11~0                   ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~11      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~11            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~11      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~13            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~11      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~13COUT1_222   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~18      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~18            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~18      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~20            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~18      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~20COUT1_218   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~24      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~24            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~24      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~26            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~24      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~26COUT1_220   ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~0             ; |eeprom_spi_bdf|clock:inst|Add7~2                   ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~5             ; |eeprom_spi_bdf|clock:inst|Add7~7                   ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~10            ; |eeprom_spi_bdf|clock:inst|Add7~12                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~25            ; |eeprom_spi_bdf|clock:inst|Add7~27                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~30            ; |eeprom_spi_bdf|clock:inst|Add7~32COUT1_140         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~35            ; |eeprom_spi_bdf|clock:inst|Add7~37COUT1_138         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~45            ; |eeprom_spi_bdf|clock:inst|Add7~47COUT1_136         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~50            ; |eeprom_spi_bdf|clock:inst|Add7~52COUT1_134         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~55            ; |eeprom_spi_bdf|clock:inst|Add7~57                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~60            ; |eeprom_spi_bdf|clock:inst|Add7~62                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~65            ; |eeprom_spi_bdf|clock:inst|Add7~67                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~70            ; |eeprom_spi_bdf|clock:inst|Add7~72                  ; cout0            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[0]          ; |eeprom_spi_bdf|key:inst4|key_stt[0]~3              ; cout0            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[0]          ; |eeprom_spi_bdf|key:inst4|key_stt[0]~3COUT1_16      ; cout1            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[1]          ; |eeprom_spi_bdf|key:inst4|key_stt[1]~5              ; cout0            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[1]          ; |eeprom_spi_bdf|key:inst4|key_stt[1]~5COUT1_18      ; cout1            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[2]          ; |eeprom_spi_bdf|key:inst4|key_stt[2]~7              ; cout0            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[2]          ; |eeprom_spi_bdf|key:inst4|key_stt[2]~7COUT1_20      ; cout1            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[3]          ; |eeprom_spi_bdf|key:inst4|key_stt[3]~9              ; cout0            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[3]          ; |eeprom_spi_bdf|key:inst4|key_stt[3]~9COUT1_22      ; cout1            ;
+; |eeprom_spi_bdf|key:inst4|Equal3~0            ; |eeprom_spi_bdf|key:inst4|Equal3~0                  ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux17~0             ; |eeprom_spi_bdf|key:inst4|Mux17~0                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|col_tmp[0]          ; |eeprom_spi_bdf|key:inst4|col_tmp[0]                ; regout           ;
+; |eeprom_spi_bdf|key:inst4|col_tmp[1]          ; |eeprom_spi_bdf|key:inst4|col_tmp[1]                ; regout           ;
+; |eeprom_spi_bdf|key:inst4|Mux17~1             ; |eeprom_spi_bdf|key:inst4|Mux17~1                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Equal1~0            ; |eeprom_spi_bdf|key:inst4|Equal1~0                  ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux18~0             ; |eeprom_spi_bdf|key:inst4|Mux18~0                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux18~1             ; |eeprom_spi_bdf|key:inst4|Mux18~1                   ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[30]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[30]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~30      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~30            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~30      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~32            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~30      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~32COUT1_264   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~37      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~37            ; cout             ;
+; |eeprom_spi_bdf|key:inst4|Mux14~4             ; |eeprom_spi_bdf|key:inst4|Mux14~4                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux11~2             ; |eeprom_spi_bdf|key:inst4|Mux11~2                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux16~0             ; |eeprom_spi_bdf|key:inst4|Mux16~0                   ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~20            ; |eeprom_spi_bdf|clock:inst|Add6~22                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~25            ; |eeprom_spi_bdf|clock:inst|Add6~27                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~35            ; |eeprom_spi_bdf|clock:inst|Add6~37                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~40            ; |eeprom_spi_bdf|clock:inst|Add6~42                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~45            ; |eeprom_spi_bdf|clock:inst|Add6~47COUT1_114         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~50            ; |eeprom_spi_bdf|clock:inst|Add6~52COUT1_116         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~55            ; |eeprom_spi_bdf|clock:inst|Add6~57COUT1_112         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~60            ; |eeprom_spi_bdf|clock:inst|Add6~62COUT1_118         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~65            ; |eeprom_spi_bdf|clock:inst|Add6~67                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~75            ; |eeprom_spi_bdf|clock:inst|Add6~77                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~80            ; |eeprom_spi_bdf|clock:inst|Add6~82                  ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[29]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[29]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~41      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~41            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~41      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~43            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~41      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~43COUT1_262   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[28]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[28]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~47      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~47            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~47      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~49            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~47      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~49COUT1_260   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[27]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[27]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~53      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~53            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~53      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~55            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~53      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~55COUT1_258   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[26]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[26]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~59      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~59            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~59      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~61            ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[25]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[25]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~65      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~65            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~65      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~67            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~65      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~67COUT1_256   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[24]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[24]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~71      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~71            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~71      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~73            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~71      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~73COUT1_254   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[23]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[23]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~77      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~77            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~77      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~79            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~77      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~79COUT1_252   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[22]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[22]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~83      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~83            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~83      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~85            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~83      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~85COUT1_250   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[21]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[21]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~89      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~89            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~89      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~91            ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[20]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[20]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~95      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~95            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~95      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~97            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~95      ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~97COUT1_248   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[19]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[19]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~101     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~101           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~101     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~103           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~101     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~103COUT1_246  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[18]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[18]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~107     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~107           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~107     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~109           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~107     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~109COUT1_244  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[17]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[17]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~113     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~113           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~113     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~115           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~113     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~115COUT1_242  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[16]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[16]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~119     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~119           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~119     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~121           ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[15]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[15]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~125     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~125           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~125     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~127           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~125     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~127COUT1_240  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[14]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[14]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~131     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~131           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~131     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~133           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~131     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~133COUT1_238  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[13]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[13]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~137     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~137           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~137     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~139           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~137     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~139COUT1_236  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[12]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[12]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~143     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~143           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~143     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~145           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~143     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~145COUT1_234  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[11]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[11]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~149     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~149           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~149     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~151           ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[10]    ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[10]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~155     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~155           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~155     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~157           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~155     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~157COUT1_232  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[9]     ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[9]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~161     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~161           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~161     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~163           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~161     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~163COUT1_230  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[8]     ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[8]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~167     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~167           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~167     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~169           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~167     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~169COUT1_228  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[7]     ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[7]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~173     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~173           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~173     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~175           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~173     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~175COUT1_226  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[6]     ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[6]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~179     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~179           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~179     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~181           ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[5]     ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[5]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~185     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~185           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~185     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~187           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~185     ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~187COUT1_224  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[4]     ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[4]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux1~17      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux1~17            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~6      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~6            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~6      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~6            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~11     ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~11           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~7      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~7            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux1~18      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux1~18            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~14    ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~14          ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~7      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~7            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~8      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~8            ; combout          ;
+; |eeprom_spi_bdf|do                            ; |eeprom_spi_bdf|do~corein                           ; combout          ;
+; |eeprom_spi_bdf|addr[4]                       ; |eeprom_spi_bdf|addr[4]~corein                      ; combout          ;
+; |eeprom_spi_bdf|addr[2]                       ; |eeprom_spi_bdf|addr[2]~corein                      ; combout          ;
+; |eeprom_spi_bdf|addr[0]                       ; |eeprom_spi_bdf|addr[0]~corein                      ; combout          ;
+; |eeprom_spi_bdf|addr[6]                       ; |eeprom_spi_bdf|addr[6]~corein                      ; combout          ;
+; |eeprom_spi_bdf|addr[5]                       ; |eeprom_spi_bdf|addr[5]~corein                      ; combout          ;
+; |eeprom_spi_bdf|addr[3]                       ; |eeprom_spi_bdf|addr[3]~corein                      ; combout          ;
+; |eeprom_spi_bdf|addr[1]                       ; |eeprom_spi_bdf|addr[1]~corein                      ; combout          ;
+; |eeprom_spi_bdf|col[1]                        ; |eeprom_spi_bdf|col[1]~corein                       ; combout          ;
+; |eeprom_spi_bdf|col[0]                        ; |eeprom_spi_bdf|col[0]~corein                       ; combout          ;
+; |eeprom_spi_bdf|org                           ; |eeprom_spi_bdf|org                                 ; padio            ;
+; |eeprom_spi_bdf|data_out[7]                   ; |eeprom_spi_bdf|data_out[7]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[6]                   ; |eeprom_spi_bdf|data_out[6]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[5]                   ; |eeprom_spi_bdf|data_out[5]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[4]                   ; |eeprom_spi_bdf|data_out[4]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[3]                   ; |eeprom_spi_bdf|data_out[3]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[2]                   ; |eeprom_spi_bdf|data_out[2]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[1]                   ; |eeprom_spi_bdf|data_out[1]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[0]                   ; |eeprom_spi_bdf|data_out[0]                         ; padio            ;
+; |eeprom_spi_bdf|row[1]                        ; |eeprom_spi_bdf|row[1]                              ; padio            ;
+; |eeprom_spi_bdf|row[0]                        ; |eeprom_spi_bdf|row[0]                              ; padio            ;
++-----------------------------------------------+-----------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                 ;
++-------------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                       ; Output Port Name                                    ; Output Port Type ;
++-------------------------------------------------+-----------------------------------------------------+------------------+
+; |eeprom_spi_bdf|eeprom_spi:inst1|cs             ; |eeprom_spi_bdf|eeprom_spi:inst1|cs                 ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[7]    ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[7]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[6]    ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[6]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[5]    ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[5]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[4]    ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[4]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[3]    ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[3]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[2]    ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[2]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[1]    ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[1]        ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[0]    ; |eeprom_spi_bdf|eeprom_spi:inst1|data_out[0]        ; regout           ;
+; |eeprom_spi_bdf|key:inst4|row_sig[1]            ; |eeprom_spi_bdf|key:inst4|row_sig[1]                ; regout           ;
+; |eeprom_spi_bdf|key:inst4|row_sig[0]            ; |eeprom_spi_bdf|key:inst4|row_sig[0]                ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~1    ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~1        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~2    ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~2        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~3    ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~3        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~4    ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~4        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~5    ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~5        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~6    ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~6        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~7    ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~7        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~8    ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~8        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~9    ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan1~9        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan2~1    ; |eeprom_spi_bdf|eeprom_spi:inst1|LessThan2~1        ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|sta[1]         ; |eeprom_spi_bdf|eeprom_spi:inst1|sta[1]             ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|sta[0]         ; |eeprom_spi_bdf|eeprom_spi:inst1|sta[0]             ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[5]      ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[5]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|sta[2]         ; |eeprom_spi_bdf|eeprom_spi:inst1|sta[2]             ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~8       ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~8           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|sta~0          ; |eeprom_spi_bdf|eeprom_spi:inst1|sta~0              ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~0        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~0            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux1~14        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux1~14            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~0       ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~0           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|sta[3]         ; |eeprom_spi_bdf|eeprom_spi:inst1|sta[3]             ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~1        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~1            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~2        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux24~2            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[16]     ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[16]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[20]     ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[20]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[14]     ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[14]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[12]     ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[12]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[18]     ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[18]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[19]     ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[19]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[17]     ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[17]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~4         ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~4             ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[15]     ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[15]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[13]     ; |eeprom_spi_bdf|eeprom_spi:inst1|di_tmp[13]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~7         ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux0~7             ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[7]     ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[7]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~4        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~4            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~5        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~5            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[6]     ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[6]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[5]     ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[5]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[4]     ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[4]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[3]     ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[3]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[2]     ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[2]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[1]     ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[1]         ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[0]     ; |eeprom_spi_bdf|eeprom_spi:inst1|data_in[0]         ; regout           ;
+; |eeprom_spi_bdf|clock:inst|clk_key_20ms         ; |eeprom_spi_bdf|clock:inst|clk_key_20ms             ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~8         ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~10COUT1_231   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~14        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~16COUT1_229   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~20        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~22            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~20        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~22COUT1_233   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~26        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~26            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~26        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~28            ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~31        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~31            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~33        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~33            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~33        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~35            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~33        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~35COUT1_235   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~39        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~39            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~39        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~41            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~39        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~41COUT1_237   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~45        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~45            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~45        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~47            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~45        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~47COUT1_239   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~51        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~51            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~51        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~53            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~51        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~53COUT1_241   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~57        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~57            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~57        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~59            ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~63        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~63            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~63        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~65            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~63        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~65COUT1_243   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~69        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~69            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~69        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~71            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~69        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~71COUT1_245   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~75        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~75            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~75        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~77            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~75        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~77COUT1_247   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~81        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~81            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~81        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~83            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~81        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~83COUT1_249   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~87        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~87            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~87        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~89            ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~93        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~93            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~93        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~95            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~93        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~95COUT1_251   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~99        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~99            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~99        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~101           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~99        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~101COUT1_253  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~105       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~105           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~105       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~107           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~105       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~107COUT1_255  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~111       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~111           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~111       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~113           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~111       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~113COUT1_257  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~117       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~117           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~117       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~119           ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~123       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~123           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~123       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~125           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~123       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~125COUT1_259  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~129       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~129           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~129       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~131           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~129       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~131COUT1_261  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~135       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~135           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~135       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~137           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~135       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~137COUT1_263  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~141       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~141           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~141       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~143           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~141       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~143COUT1_265  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~147       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~147           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~147       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~149           ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~153       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~153           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~153       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~155           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~153       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~155COUT1_267  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~159       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~159           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~159       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~161           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~159       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~161COUT1_269  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~165       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~165           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~165       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~167           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~165       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~167COUT1_273  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~171       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~171           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~171       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~173           ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~177       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~177           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~177       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~179           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~177       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~179COUT1_271  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~183       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~183           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[0]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[0]~1          ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[0]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[0]~1COUT1_27  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[1]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[1]~3          ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[1]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[1]~3COUT1_29  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[2]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[2]~5          ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[2]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[2]~5COUT1_31  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[3]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[3]~7          ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[3]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[3]~7COUT1_33  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Equal0~0       ; |eeprom_spi_bdf|eeprom_spi:inst1|Equal0~0           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[4]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[4]~11         ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[5]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[5]~13         ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[5]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[5]~13COUT1_35 ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[6]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[6]~15         ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[6]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[6]~15COUT1_37 ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[7]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[7]~17         ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[7]        ; |eeprom_spi_bdf|eeprom_spi:inst1|st_a[7]~17COUT1_39 ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Equal0~1       ; |eeprom_spi_bdf|eeprom_spi:inst1|Equal0~1           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~9       ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~9           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~1       ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~1           ; combout          ;
+; |eeprom_spi_bdf|key:inst4|eep_sig[1]            ; |eeprom_spi_bdf|key:inst4|eep_sig[1]                ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~2       ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~2           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~3       ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~3           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~4       ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~4           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~5       ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux100~5           ; combout          ;
+; |eeprom_spi_bdf|key:inst4|eep_sig[0]            ; |eeprom_spi_bdf|key:inst4|eep_sig[0]                ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~10      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~10          ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~11      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~11          ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~12      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~12          ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~4        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~4            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~5        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~5            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~6        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~6            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~7        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~7            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~8        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~8            ; combout          ;
+; |eeprom_spi_bdf|key:inst4|eep_sig[2]            ; |eeprom_spi_bdf|key:inst4|eep_sig[2]                ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~9        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~9            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|chk~0          ; |eeprom_spi_bdf|eeprom_spi:inst1|chk~0              ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~0         ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~0             ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux98~0        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux98~0            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Equal0~2       ; |eeprom_spi_bdf|eeprom_spi:inst1|Equal0~2           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~188       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add1~190COUT1_227  ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add5~0               ; |eeprom_spi_bdf|clock:inst|Add5~2                   ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~5               ; |eeprom_spi_bdf|clock:inst|Add5~7                   ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~15              ; |eeprom_spi_bdf|clock:inst|Add5~17                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~20              ; |eeprom_spi_bdf|clock:inst|Add5~22COUT1_80          ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add5~25              ; |eeprom_spi_bdf|clock:inst|Add5~27                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add5~35              ; |eeprom_spi_bdf|clock:inst|Add5~37COUT1_78          ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add5~40              ; |eeprom_spi_bdf|clock:inst|Add5~42COUT1_84          ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add5~50              ; |eeprom_spi_bdf|clock:inst|Add5~52COUT1_82          ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[3]       ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[3]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~0     ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~0         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~1     ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~1         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[1]       ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[1]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[2]       ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[2]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~2     ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~2         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~3     ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~3         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~4     ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~4         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~5     ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~5         ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~6     ; |eeprom_spi_bdf|eeprom_spi:inst1|Decoder0~6         ; combout          ;
+; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[19] ; |eeprom_spi_bdf|clock:inst|clk_sig_key_20ms[19]     ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux118~0       ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux118~0           ; combout          ;
+; |eeprom_spi_bdf|key:inst4|key_code[1]           ; |eeprom_spi_bdf|key:inst4|key_code[1]               ; regout           ;
+; |eeprom_spi_bdf|key:inst4|Mux13~2               ; |eeprom_spi_bdf|key:inst4|Mux13~2                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux13~3               ; |eeprom_spi_bdf|key:inst4|Mux13~3                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|key_code[0]           ; |eeprom_spi_bdf|key:inst4|key_code[0]               ; regout           ;
+; |eeprom_spi_bdf|key:inst4|Mux14~1               ; |eeprom_spi_bdf|key:inst4|Mux14~1                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux4~0                ; |eeprom_spi_bdf|key:inst4|Mux4~0                    ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux12~0               ; |eeprom_spi_bdf|key:inst4|Mux12~0                   ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~6         ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~6             ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~6         ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~8             ; cout             ;
+; |eeprom_spi_bdf|key:inst4|Mux11~0               ; |eeprom_spi_bdf|key:inst4|Mux11~0                   ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~11        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~11            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~11        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~13            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~11        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~13COUT1_222   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~18        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~18            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~18        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~20            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~18        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~20COUT1_218   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~24        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~24            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~24        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~26            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~24        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~26COUT1_220   ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~0               ; |eeprom_spi_bdf|clock:inst|Add7~2                   ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~5               ; |eeprom_spi_bdf|clock:inst|Add7~7                   ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~10              ; |eeprom_spi_bdf|clock:inst|Add7~12                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~25              ; |eeprom_spi_bdf|clock:inst|Add7~27                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~30              ; |eeprom_spi_bdf|clock:inst|Add7~32COUT1_140         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~35              ; |eeprom_spi_bdf|clock:inst|Add7~37COUT1_138         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~45              ; |eeprom_spi_bdf|clock:inst|Add7~47COUT1_136         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~50              ; |eeprom_spi_bdf|clock:inst|Add7~52COUT1_134         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add7~55              ; |eeprom_spi_bdf|clock:inst|Add7~57                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~60              ; |eeprom_spi_bdf|clock:inst|Add7~62                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~65              ; |eeprom_spi_bdf|clock:inst|Add7~67                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add7~70              ; |eeprom_spi_bdf|clock:inst|Add7~72                  ; cout0            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[0]            ; |eeprom_spi_bdf|key:inst4|key_stt[0]~3              ; cout0            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[0]            ; |eeprom_spi_bdf|key:inst4|key_stt[0]~3COUT1_16      ; cout1            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[1]            ; |eeprom_spi_bdf|key:inst4|key_stt[1]~5              ; cout0            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[1]            ; |eeprom_spi_bdf|key:inst4|key_stt[1]~5COUT1_18      ; cout1            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[2]            ; |eeprom_spi_bdf|key:inst4|key_stt[2]~7              ; cout0            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[2]            ; |eeprom_spi_bdf|key:inst4|key_stt[2]~7COUT1_20      ; cout1            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[3]            ; |eeprom_spi_bdf|key:inst4|key_stt[3]~9              ; cout0            ;
+; |eeprom_spi_bdf|key:inst4|key_stt[3]            ; |eeprom_spi_bdf|key:inst4|key_stt[3]~9COUT1_22      ; cout1            ;
+; |eeprom_spi_bdf|key:inst4|Equal3~0              ; |eeprom_spi_bdf|key:inst4|Equal3~0                  ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux17~0               ; |eeprom_spi_bdf|key:inst4|Mux17~0                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|col_tmp[0]            ; |eeprom_spi_bdf|key:inst4|col_tmp[0]                ; regout           ;
+; |eeprom_spi_bdf|key:inst4|col_tmp[1]            ; |eeprom_spi_bdf|key:inst4|col_tmp[1]                ; regout           ;
+; |eeprom_spi_bdf|key:inst4|Mux17~1               ; |eeprom_spi_bdf|key:inst4|Mux17~1                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|key_st[0]~4           ; |eeprom_spi_bdf|key:inst4|key_st[0]~4               ; combout          ;
+; |eeprom_spi_bdf|key:inst4|key_st[2]             ; |eeprom_spi_bdf|key:inst4|key_st[2]                 ; regout           ;
+; |eeprom_spi_bdf|key:inst4|Equal1~0              ; |eeprom_spi_bdf|key:inst4|Equal1~0                  ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux18~0               ; |eeprom_spi_bdf|key:inst4|Mux18~0                   ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[30]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[30]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~30        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~30            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~30        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~32            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~30        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~32COUT1_264   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~37        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~37            ; cout             ;
+; |eeprom_spi_bdf|key:inst4|Mux14~4               ; |eeprom_spi_bdf|key:inst4|Mux14~4                   ; combout          ;
+; |eeprom_spi_bdf|key:inst4|Mux11~2               ; |eeprom_spi_bdf|key:inst4|Mux11~2                   ; combout          ;
+; |eeprom_spi_bdf|clock:inst|Add6~20              ; |eeprom_spi_bdf|clock:inst|Add6~22                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~25              ; |eeprom_spi_bdf|clock:inst|Add6~27                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~35              ; |eeprom_spi_bdf|clock:inst|Add6~37                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~40              ; |eeprom_spi_bdf|clock:inst|Add6~42                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~45              ; |eeprom_spi_bdf|clock:inst|Add6~47COUT1_114         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~50              ; |eeprom_spi_bdf|clock:inst|Add6~52COUT1_116         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~55              ; |eeprom_spi_bdf|clock:inst|Add6~57COUT1_112         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~60              ; |eeprom_spi_bdf|clock:inst|Add6~62COUT1_118         ; cout1            ;
+; |eeprom_spi_bdf|clock:inst|Add6~65              ; |eeprom_spi_bdf|clock:inst|Add6~67                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~75              ; |eeprom_spi_bdf|clock:inst|Add6~77                  ; cout0            ;
+; |eeprom_spi_bdf|clock:inst|Add6~80              ; |eeprom_spi_bdf|clock:inst|Add6~82                  ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[29]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[29]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~41        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~41            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~41        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~43            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~41        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~43COUT1_262   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[28]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[28]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~47        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~47            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~47        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~49            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~47        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~49COUT1_260   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[27]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[27]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~53        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~53            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~53        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~55            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~53        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~55COUT1_258   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[26]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[26]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~59        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~59            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~59        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~61            ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[25]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[25]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~65        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~65            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~65        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~67            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~65        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~67COUT1_256   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[24]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[24]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~71        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~71            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~71        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~73            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~71        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~73COUT1_254   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[23]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[23]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~77        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~77            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~77        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~79            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~77        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~79COUT1_252   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[22]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[22]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~83        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~83            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~83        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~85            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~83        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~85COUT1_250   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[21]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[21]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~89        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~89            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~89        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~91            ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[20]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[20]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~95        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~95            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~95        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~97            ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~95        ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~97COUT1_248   ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[19]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[19]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~101       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~101           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~101       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~103           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~101       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~103COUT1_246  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[18]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[18]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~107       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~107           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~107       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~109           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~107       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~109COUT1_244  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[17]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[17]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~113       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~113           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~113       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~115           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~113       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~115COUT1_242  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[16]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[16]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~119       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~119           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~119       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~121           ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[15]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[15]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~125       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~125           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~125       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~127           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~125       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~127COUT1_240  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[14]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[14]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~131       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~131           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~131       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~133           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~131       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~133COUT1_238  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[13]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[13]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~137       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~137           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~137       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~139           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~137       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~139COUT1_236  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[12]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[12]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~143       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~143           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~143       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~145           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~143       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~145COUT1_234  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[11]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[11]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~149       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~149           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~149       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~151           ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[10]      ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[10]          ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~155       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~155           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~155       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~157           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~155       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~157COUT1_232  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[9]       ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[9]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~161       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~161           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~161       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~163           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~161       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~163COUT1_230  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[8]       ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[8]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~167       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~167           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~167       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~169           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~167       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~169COUT1_228  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[7]       ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[7]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~173       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~173           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~173       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~175           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~173       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~175COUT1_226  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[6]       ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[6]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~179       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~179           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~179       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~181           ; cout             ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[5]       ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[5]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~185       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~185           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~185       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~187           ; cout0            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~185       ; |eeprom_spi_bdf|eeprom_spi:inst1|Add0~187COUT1_224  ; cout1            ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[4]       ; |eeprom_spi_bdf|eeprom_spi:inst1|do_st[4]           ; regout           ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux1~17        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux1~17            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~6        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~6            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~6        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~6            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~11       ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux99~11           ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~7        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux65~7            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux1~18        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux1~18            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~14      ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux101~14          ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~7        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~7            ; combout          ;
+; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~8        ; |eeprom_spi_bdf|eeprom_spi:inst1|Mux25~8            ; combout          ;
+; |eeprom_spi_bdf|do                              ; |eeprom_spi_bdf|do~corein                           ; combout          ;
+; |eeprom_spi_bdf|addr[4]                         ; |eeprom_spi_bdf|addr[4]~corein                      ; combout          ;
+; |eeprom_spi_bdf|addr[2]                         ; |eeprom_spi_bdf|addr[2]~corein                      ; combout          ;
+; |eeprom_spi_bdf|addr[0]                         ; |eeprom_spi_bdf|addr[0]~corein                      ; combout          ;
+; |eeprom_spi_bdf|addr[6]                         ; |eeprom_spi_bdf|addr[6]~corein                      ; combout          ;
+; |eeprom_spi_bdf|addr[5]                         ; |eeprom_spi_bdf|addr[5]~corein                      ; combout          ;
+; |eeprom_spi_bdf|addr[3]                         ; |eeprom_spi_bdf|addr[3]~corein                      ; combout          ;
+; |eeprom_spi_bdf|addr[1]                         ; |eeprom_spi_bdf|addr[1]~corein                      ; combout          ;
+; |eeprom_spi_bdf|col[1]                          ; |eeprom_spi_bdf|col[1]~corein                       ; combout          ;
+; |eeprom_spi_bdf|col[0]                          ; |eeprom_spi_bdf|col[0]~corein                       ; combout          ;
+; |eeprom_spi_bdf|cs                              ; |eeprom_spi_bdf|cs                                  ; padio            ;
+; |eeprom_spi_bdf|org                             ; |eeprom_spi_bdf|org                                 ; padio            ;
+; |eeprom_spi_bdf|data_out[7]                     ; |eeprom_spi_bdf|data_out[7]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[6]                     ; |eeprom_spi_bdf|data_out[6]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[5]                     ; |eeprom_spi_bdf|data_out[5]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[4]                     ; |eeprom_spi_bdf|data_out[4]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[3]                     ; |eeprom_spi_bdf|data_out[3]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[2]                     ; |eeprom_spi_bdf|data_out[2]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[1]                     ; |eeprom_spi_bdf|data_out[1]                         ; padio            ;
+; |eeprom_spi_bdf|data_out[0]                     ; |eeprom_spi_bdf|data_out[0]                         ; padio            ;
+; |eeprom_spi_bdf|row[1]                          ; |eeprom_spi_bdf|row[1]                              ; padio            ;
+; |eeprom_spi_bdf|row[0]                          ; |eeprom_spi_bdf|row[0]                              ; padio            ;
++-------------------------------------------------+-----------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Oct 23 10:19:52 2012
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off eeprom_spi_bdf -c eeprom_spi_bdf
+Info: Using vector source file "C:/Users/Administrator/Desktop/EPM1270T144C/eeprom_spi_bdf.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |eeprom_spi_bdf|key:inst4|row_sig[0]
+    Info: Register: |eeprom_spi_bdf|eeprom_spi:inst1|st[2]
+    Info: Register: |eeprom_spi_bdf|eeprom_spi:inst1|st[4]
+    Info: Register: |eeprom_spi_bdf|eeprom_spi:inst1|sta[3]
+    Info: Register: |eeprom_spi_bdf|eeprom_spi:inst1|st[0]
+    Info: Register: |eeprom_spi_bdf|eeprom_spi:inst1|do_st[0]
+    Info: Register: |eeprom_spi_bdf|eeprom_spi:inst1|do_st[1]
+    Info: Register: |eeprom_spi_bdf|eeprom_spi:inst1|do_st[2]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      32.19 %
+Info: Number of transitions in simulation is 37403017
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 153 megabytes
+    Info: Processing ended: Tue Oct 23 10:21:42 2012
+    Info: Elapsed time: 00:01:50
+    Info: Total CPU time (on all processors): 00:01:50
+
+

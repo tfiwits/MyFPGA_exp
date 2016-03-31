@@ -1,0 +1,13 @@
+|key
+clk_in => A_SIG.CLK
+clk_in => row_sig[0].CLK
+clk_in => row_sig[1].CLK
+row[0] <= row_sig[0].DB_MAX_OUTPUT_PORT_TYPE
+row[1] <= row_sig[1].DB_MAX_OUTPUT_PORT_TYPE
+col[0] => Mux0.IN3
+col[0] => Mux1.IN4
+col[1] => Mux0.IN2
+col[1] => Mux1.IN3
+A_out <= A_SIG.DB_MAX_OUTPUT_PORT_TYPE
+
+
